@@ -10,9 +10,9 @@
 
 @interface ClumsyEngine : NSObject
 
-+ (void)startEngine;
-+ (void)screenWasPreesed;
-+ (void)screenWasSwiped:(UISwipeGestureRecognizerDirection)direction;
-+ (void)iPhoneWasShaken;
+- (void)startEngine;
+- (void)screenWasPreesed;
+- (void)screenWasSwiped:(UISwipeGestureRecognizerDirection)direction;
+- (void)iPhoneWasShaken;
 
 @end

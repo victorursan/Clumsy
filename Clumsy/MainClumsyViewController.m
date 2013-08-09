@@ -17,6 +17,7 @@
 
 @property(strong, nonatomic) CustomMainUILabel *clumsyMainLabel;
 @property(strong, nonatomic) CustomClumsyMainView *mainView;
+@property(strong, nonatomic) ClumsyEngine *engine;
 
 @end
 
@@ -53,19 +54,19 @@
 
 - (void)screenWasPressed:(UIButton *)sender {
   if ([self.clumsyMainLabel.text isEqualToString:@"Start"]) {
-    [ClumsyEngine startEngine];
+    self.engine = [[ClumsyEngine alloc] init];
   } else {
-    [ClumsyEngine screenWasPreesed];
+    [self.engine screenWasPreesed];
   }
 }
 
 - (void)screenWasSwiped:(UISwipeGestureRecognizer *)swipeGesture {
-  [ClumsyEngine screenWasSwiped:[swipeGesture direction]];
+  [self.engine screenWasSwiped:[swipeGesture direction]];
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
   if (event.subtype == UIEventSubtypeMotionShake) {
-    [ClumsyEngine iPhoneWasShaken];
+    [self.engine iPhoneWasShaken];
   }
 }
 
