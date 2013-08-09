@@ -11,6 +11,7 @@
 #import "CustomMainUILabel.h"
 #import "CustomMainUIButton.h"
 #import "CustomUISwipeGesture.h"
+#import "ClumsyEngine.h"
 
 @interface MainClumsyViewController ()
 
@@ -27,7 +28,7 @@
   self.view = self.mainView;
   
   self.clumsyMainLabel = [[CustomMainUILabel alloc] initWithFrame:CGRectMake(0, 200, 320, 60)];
-  self.clumsyMainLabel.text = @"Clumsy";
+  self.clumsyMainLabel.text = @"Start";
   [self.view addSubview:self.clumsyMainLabel];
   
   [self.view addSubview:[[CustomMainUIButton alloc] initWithFrame:self.view.bounds andTarget:self]];
@@ -51,16 +52,20 @@
 }
 
 - (void)screenWasPressed:(UIButton *)sender {
-  NSLog(@"screen Was Pressed");
+  if ([self.clumsyMainLabel.text isEqualToString:@"Start"]) {
+    [ClumsyEngine startEngine];
+  } else {
+    [ClumsyEngine screenWasPreesed];
+  }
 }
 
 - (void)screenWasSwiped:(UISwipeGestureRecognizer *)swipeGesture {
-  NSLog(@"screen Was Swiped");
+  [ClumsyEngine screenWasSwiped:[swipeGesture direction]];
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
   if (event.subtype == UIEventSubtypeMotionShake) {
-    NSLog(@"iPhone was shaken");
+    [ClumsyEngine iPhoneWasShaken];
   }
 }
 
