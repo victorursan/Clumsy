@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomMainUIButtonDelegate.h"
 
-@interface MainClumsyViewController : UIViewController
+@interface MainClumsyViewController : UIViewController <CustomMainUIButtonDelegate>
 
 @end

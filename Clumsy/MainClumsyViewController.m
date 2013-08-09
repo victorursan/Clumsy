@@ -8,6 +8,7 @@
 
 #import "MainClumsyViewController.h"
 #import "CustomClumsyMainView.h"
+#import "CustomMainUIButton.h"
 
 @interface MainClumsyViewController ()
 
@@ -18,11 +19,16 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.view = [[CustomClumsyMainView alloc] initWithFrame:self.view.bounds];
+  [self.view addSubview:[[CustomMainUIButton alloc] initWithFrame:self.view.bounds andTarget:self]];
 }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (void)screenWasPressed:(UIButton *)sender {
+  NSLog(@"screen Was Pressed");
 }
 
 @end
