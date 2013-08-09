@@ -24,6 +24,8 @@
 		570980DB17B4EF6800192234 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980BA17B4EF6800192234 /* CoreData.framework */; };
 		570980E317B4EF6800192234 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 570980E117B4EF6800192234 /* InfoPlist.strings */; };
 		570980E617B4EF6800192234 /* ClumsyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980E517B4EF6800192234 /* ClumsyTests.m */; };
+		570980F117B4F26500192234 /* MainClumsyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980F017B4F26500192234 /* MainClumsyViewController.m */; };
+		570980F217B4F26500192234 /* MainClumsyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980F017B4F26500192234 /* MainClumsyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		570980E217B4EF6800192234 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		570980E417B4EF6800192234 /* ClumsyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClumsyTests.h; sourceTree = "<group>"; };
 		570980E517B4EF6800192234 /* ClumsyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClumsyTests.m; sourceTree = "<group>"; };
+		570980EF17B4F26500192234 /* MainClumsyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainClumsyViewController.h; sourceTree = "<group>"; };
+		570980F017B4F26500192234 /* MainClumsyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainClumsyViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 			children = (
 				570980C517B4EF6800192234 /* AppDelegate.h */,
 				570980C617B4EF6800192234 /* AppDelegate.m */,
+				570980EF17B4F26500192234 /* MainClumsyViewController.h */,
+				570980F017B4F26500192234 /* MainClumsyViewController.m */,
 				570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */,
 				570980BD17B4EF6800192234 /* Supporting Files */,
 			);
@@ -273,6 +279,7 @@
 				570980C317B4EF6800192234 /* main.m in Sources */,
 				570980C717B4EF6800192234 /* AppDelegate.m in Sources */,
 				570980D017B4EF6800192234 /* Clumsy.xcdatamodeld in Sources */,
+				570980F117B4F26500192234 /* MainClumsyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				570980E617B4EF6800192234 /* ClumsyTests.m in Sources */,
+				570980F217B4F26500192234 /* MainClumsyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +453,7 @@
 				570980EB17B4EF6800192234 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		570980EC17B4EF6800192234 /* Build configuration list for PBXNativeTarget "ClumsyTests" */ = {
 			isa = XCConfigurationList;
@@ -453,6 +462,7 @@
 				570980EE17B4EF6800192234 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
