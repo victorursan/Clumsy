@@ -19,6 +19,11 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.view = [[CustomClumsyMainView alloc] initWithFrame:self.view.bounds];
+  
+  self.clumsyMainLabel = [[CustomMainUILabel alloc] initWithFrame:CGRectMake(0, 200, 320, 60)];
+  self.clumsyMainLabel.text = @"Clumsy";
+  [self.view addSubview:self.clumsyMainLabel];
+  
   [self.view addSubview:[[CustomMainUIButton alloc] initWithFrame:self.view.bounds andTarget:self]];
 }
 

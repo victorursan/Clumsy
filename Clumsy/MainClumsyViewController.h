@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomMainUIButtonDelegate.h"
+#import "CustomMainUILabel.h"
 
 @interface MainClumsyViewController : UIViewController <CustomMainUIButtonDelegate>
+
+@property(strong, nonatomic) CustomMainUILabel *clumsyMainLabel;
 
 @end
