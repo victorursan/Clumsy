@@ -12,4 +12,6 @@
 
 @interface MainClumsyViewController : UIViewController <CustomMainUIButtonDelegate, CustomUISwipeGestureDelegate, UIGestureRecognizerDelegate>
 
+- (void)setClumsyMainLabelTextTo:(NSString *)text;
+
 @end

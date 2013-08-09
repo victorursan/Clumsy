@@ -15,6 +15,7 @@
 @interface MainClumsyViewController ()
 
 @property(strong, nonatomic) CustomMainUILabel *clumsyMainLabel;
+@property(strong, nonatomic) CustomClumsyMainView *mainView;
 
 @end
 
@@ -22,7 +23,8 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.view = [[CustomClumsyMainView alloc] initWithFrame:self.view.bounds];
+  self.mainView = [[CustomClumsyMainView alloc] initWithFrame:self.view.bounds];
+  self.view = self.mainView;
   
   self.clumsyMainLabel = [[CustomMainUILabel alloc] initWithFrame:CGRectMake(0, 200, 320, 60)];
   self.clumsyMainLabel.text = @"Clumsy";
@@ -60,6 +62,10 @@
   if (event.subtype == UIEventSubtypeMotionShake) {
     NSLog(@"iPhone was shaken");
   }
+}
+
+- (void)setClumsyMainLabelTextTo:(NSString *)text {
+  self.clumsyMainLabel.text = text;
 }
 
 - (void)didReceiveMemoryWarning {

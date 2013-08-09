@@ -8,15 +8,30 @@
 
 #import "CustomClumsyMainView.h"
 
+@interface CustomClumsyMainView ()
+
+@property(strong, nonatomic) UIColor *color;
+
+@end
+
 @implementation CustomClumsyMainView
 
 - (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
-    self.backgroundColor = [UIColor redColor];
+    self.backgroundColor = [UIColor purpleColor];
   }
   return self;
 }
+
+- (void)viewWithRedColor {
+  self.backgroundColor = [UIColor redColor];
+}
+
+- (void)viewWithYellowColor {
+  self.backgroundColor = [UIColor yellowColor];
+}
+
 
 /*
  // Only override drawRect: if you perform custom drawing.

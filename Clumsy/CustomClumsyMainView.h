@@ -10,4 +10,7 @@
 
 @interface CustomClumsyMainView : UIView
 
+- (void)viewWithYellowColor;
+- (void)viewWithRedColor;
+
 @end
