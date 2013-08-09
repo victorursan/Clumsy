@@ -30,6 +30,10 @@
   [self addSwipes];
 }
 
+-(BOOL)canBecomeFirstResponder {
+  return YES;
+}
+
 - (void)addSwipes {
   [self.view addGestureRecognizer:[self addSwipeWithDirection:UISwipeGestureRecognizerDirectionUp]];
   [self.view addGestureRecognizer:[self addSwipeWithDirection:UISwipeGestureRecognizerDirectionDown]];
@@ -47,6 +51,12 @@
 
 - (void)screenWasSwiped:(UISwipeGestureRecognizer *)swipeGesture {
   NSLog(@"screen Was Swiped");
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+  if (event.subtype == UIEventSubtypeMotionShake) {
+    NSLog(@"iPhone was shaken");
+  }
 }
 
 - (void)didReceiveMemoryWarning {
