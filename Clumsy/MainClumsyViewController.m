@@ -8,10 +8,13 @@
 
 #import "MainClumsyViewController.h"
 #import "CustomClumsyMainView.h"
+#import "CustomMainUILabel.h"
 #import "CustomMainUIButton.h"
 #import "CustomUISwipeGesture.h"
 
 @interface MainClumsyViewController ()
+
+@property(strong, nonatomic) CustomMainUILabel *clumsyMainLabel;
 
 @end
 

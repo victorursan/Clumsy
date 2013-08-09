@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomMainUIButtonDelegate.h"
-#import "CustomMainUILabel.h"
 #import "CustomUISwipeGestureDelegate.h"
 
 @interface MainClumsyViewController : UIViewController <CustomMainUIButtonDelegate, CustomUISwipeGestureDelegate, UIGestureRecognizerDelegate>
-
-@property(strong, nonatomic) CustomMainUILabel *clumsyMainLabel;
 
 @end
