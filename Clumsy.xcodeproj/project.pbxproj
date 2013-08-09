@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		570980B517B4EF6800192234 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980B417B4EF6800192234 /* UIKit.framework */; };
+		570980B717B4EF6800192234 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980B617B4EF6800192234 /* Foundation.framework */; };
+		570980B917B4EF6800192234 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980B817B4EF6800192234 /* CoreGraphics.framework */; };
+		570980BB17B4EF6800192234 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980BA17B4EF6800192234 /* CoreData.framework */; };
+		570980C117B4EF6800192234 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 570980BF17B4EF6800192234 /* InfoPlist.strings */; };
+		570980C317B4EF6800192234 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980C217B4EF6800192234 /* main.m */; };
+		570980C717B4EF6800192234 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980C617B4EF6800192234 /* AppDelegate.m */; };
+		570980C917B4EF6800192234 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 570980C817B4EF6800192234 /* Default.png */; };
+		570980CB17B4EF6800192234 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 570980CA17B4EF6800192234 /* Default@2x.png */; };
+		570980CD17B4EF6800192234 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 570980CC17B4EF6800192234 /* Default-568h@2x.png */; };
+		570980D017B4EF6800192234 /* Clumsy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */; };
+		570980D817B4EF6800192234 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980D717B4EF6800192234 /* SenTestingKit.framework */; };
+		570980D917B4EF6800192234 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980B417B4EF6800192234 /* UIKit.framework */; };
+		570980DA17B4EF6800192234 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980B617B4EF6800192234 /* Foundation.framework */; };
+		570980DB17B4EF6800192234 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980BA17B4EF6800192234 /* CoreData.framework */; };
+		570980E317B4EF6800192234 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 570980E117B4EF6800192234 /* InfoPlist.strings */; };
+		570980E617B4EF6800192234 /* ClumsyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980E517B4EF6800192234 /* ClumsyTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		570980DC17B4EF6800192234 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 570980A917B4EF6800192234 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 570980B017B4EF6800192234;
+			remoteInfo = Clumsy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		570980B117B4EF6800192234 /* Clumsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clumsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		570980B417B4EF6800192234 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		570980B617B4EF6800192234 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		570980B817B4EF6800192234 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		570980BA17B4EF6800192234 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		570980BE17B4EF6800192234 /* Clumsy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Clumsy-Info.plist"; sourceTree = "<group>"; };
+		570980C017B4EF6800192234 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		570980C217B4EF6800192234 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		570980C417B4EF6800192234 /* Clumsy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Clumsy-Prefix.pch"; sourceTree = "<group>"; };
+		570980C517B4EF6800192234 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		570980C617B4EF6800192234 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		570980C817B4EF6800192234 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		570980CA17B4EF6800192234 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		570980CC17B4EF6800192234 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		570980CF17B4EF6800192234 /* Clumsy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Clumsy.xcdatamodel; sourceTree = "<group>"; };
+		570980D617B4EF6800192234 /* ClumsyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClumsyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		570980D717B4EF6800192234 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		570980E017B4EF6800192234 /* ClumsyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ClumsyTests-Info.plist"; sourceTree = "<group>"; };
+		570980E217B4EF6800192234 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		570980E417B4EF6800192234 /* ClumsyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClumsyTests.h; sourceTree = "<group>"; };
+		570980E517B4EF6800192234 /* ClumsyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClumsyTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		570980AE17B4EF6800192234 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				570980B517B4EF6800192234 /* UIKit.framework in Frameworks */,
+				570980B717B4EF6800192234 /* Foundation.framework in Frameworks */,
+				570980B917B4EF6800192234 /* CoreGraphics.framework in Frameworks */,
+				570980BB17B4EF6800192234 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		570980D217B4EF6800192234 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				570980D817B4EF6800192234 /* SenTestingKit.framework in Frameworks */,
+				570980D917B4EF6800192234 /* UIKit.framework in Frameworks */,
+				570980DA17B4EF6800192234 /* Foundation.framework in Frameworks */,
+				570980DB17B4EF6800192234 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		570980A817B4EF6800192234 = {
+			isa = PBXGroup;
+			children = (
+				570980BC17B4EF6800192234 /* Clumsy */,
+				570980DE17B4EF6800192234 /* ClumsyTests */,
+				570980B317B4EF6800192234 /* Frameworks */,
+				570980B217B4EF6800192234 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		570980B217B4EF6800192234 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				570980B117B4EF6800192234 /* Clumsy.app */,
+				570980D617B4EF6800192234 /* ClumsyTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		570980B317B4EF6800192234 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				570980B417B4EF6800192234 /* UIKit.framework */,
+				570980B617B4EF6800192234 /* Foundation.framework */,
+				570980B817B4EF6800192234 /* CoreGraphics.framework */,
+				570980BA17B4EF6800192234 /* CoreData.framework */,
+				570980D717B4EF6800192234 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		570980BC17B4EF6800192234 /* Clumsy */ = {
+			isa = PBXGroup;
+			children = (
+				570980C517B4EF6800192234 /* AppDelegate.h */,
+				570980C617B4EF6800192234 /* AppDelegate.m */,
+				570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */,
+				570980BD17B4EF6800192234 /* Supporting Files */,
+			);
+			path = Clumsy;
+			sourceTree = "<group>";
+		};
+		570980BD17B4EF6800192234 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				570980BE17B4EF6800192234 /* Clumsy-Info.plist */,
+				570980BF17B4EF6800192234 /* InfoPlist.strings */,
+				570980C217B4EF6800192234 /* main.m */,
+				570980C417B4EF6800192234 /* Clumsy-Prefix.pch */,
+				570980C817B4EF6800192234 /* Default.png */,
+				570980CA17B4EF6800192234 /* Default@2x.png */,
+				570980CC17B4EF6800192234 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		570980DE17B4EF6800192234 /* ClumsyTests */ = {
+			isa = PBXGroup;
+			children = (
+				570980E417B4EF6800192234 /* ClumsyTests.h */,
+				570980E517B4EF6800192234 /* ClumsyTests.m */,
+				570980DF17B4EF6800192234 /* Supporting Files */,
+			);
+			path = ClumsyTests;
+			sourceTree = "<group>";
+		};
+		570980DF17B4EF6800192234 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				570980E017B4EF6800192234 /* ClumsyTests-Info.plist */,
+				570980E117B4EF6800192234 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		570980B017B4EF6800192234 /* Clumsy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 570980E917B4EF6800192234 /* Build configuration list for PBXNativeTarget "Clumsy" */;
+			buildPhases = (
+				570980AD17B4EF6800192234 /* Sources */,
+				570980AE17B4EF6800192234 /* Frameworks */,
+				570980AF17B4EF6800192234 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Clumsy;
+			productName = Clumsy;
+			productReference = 570980B117B4EF6800192234 /* Clumsy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		570980D517B4EF6800192234 /* ClumsyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 570980EC17B4EF6800192234 /* Build configuration list for PBXNativeTarget "ClumsyTests" */;
+			buildPhases = (
+				570980D117B4EF6800192234 /* Sources */,
+				570980D217B4EF6800192234 /* Frameworks */,
+				570980D317B4EF6800192234 /* Resources */,
+				570980D417B4EF6800192234 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				570980DD17B4EF6800192234 /* PBXTargetDependency */,
+			);
+			name = ClumsyTests;
+			productName = ClumsyTests;
+			productReference = 570980D617B4EF6800192234 /* ClumsyTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		570980A917B4EF6800192234 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Victor Ursan";
+			};
+			buildConfigurationList = 570980AC17B4EF6800192234 /* Build configuration list for PBXProject "Clumsy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 570980A817B4EF6800192234;
+			productRefGroup = 570980B217B4EF6800192234 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				570980B017B4EF6800192234 /* Clumsy */,
+				570980D517B4EF6800192234 /* ClumsyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		570980AF17B4EF6800192234 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				570980C117B4EF6800192234 /* InfoPlist.strings in Resources */,
+				570980C917B4EF6800192234 /* Default.png in Resources */,
+				570980CB17B4EF6800192234 /* Default@2x.png in Resources */,
+				570980CD17B4EF6800192234 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		570980D317B4EF6800192234 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				570980E317B4EF6800192234 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		570980D417B4EF6800192234 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		570980AD17B4EF6800192234 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				570980C317B4EF6800192234 /* main.m in Sources */,
+				570980C717B4EF6800192234 /* AppDelegate.m in Sources */,
+				570980D017B4EF6800192234 /* Clumsy.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		570980D117B4EF6800192234 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				570980E617B4EF6800192234 /* ClumsyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		570980DD17B4EF6800192234 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 570980B017B4EF6800192234 /* Clumsy */;
+			targetProxy = 570980DC17B4EF6800192234 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		570980BF17B4EF6800192234 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				570980C017B4EF6800192234 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		570980E117B4EF6800192234 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				570980E217B4EF6800192234 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		570980E717B4EF6800192234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		570980E817B4EF6800192234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		570980EA17B4EF6800192234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
+				INFOPLIST_FILE = "Clumsy/Clumsy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		570980EB17B4EF6800192234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
+				INFOPLIST_FILE = "Clumsy/Clumsy-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		570980ED17B4EF6800192234 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Clumsy.app/Clumsy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
+				INFOPLIST_FILE = "ClumsyTests/ClumsyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		570980EE17B4EF6800192234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Clumsy.app/Clumsy";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
+				INFOPLIST_FILE = "ClumsyTests/ClumsyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		570980AC17B4EF6800192234 /* Build configuration list for PBXProject "Clumsy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				570980E717B4EF6800192234 /* Debug */,
+				570980E817B4EF6800192234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		570980E917B4EF6800192234 /* Build configuration list for PBXNativeTarget "Clumsy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				570980EA17B4EF6800192234 /* Debug */,
+				570980EB17B4EF6800192234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		570980EC17B4EF6800192234 /* Build configuration list for PBXNativeTarget "ClumsyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				570980ED17B4EF6800192234 /* Debug */,
+				570980EE17B4EF6800192234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				570980CF17B4EF6800192234 /* Clumsy.xcdatamodel */,
+			);
+			currentVersion = 570980CF17B4EF6800192234 /* Clumsy.xcdatamodel */;
+			path = Clumsy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 570980A917B4EF6800192234 /* Project object */;
+}
