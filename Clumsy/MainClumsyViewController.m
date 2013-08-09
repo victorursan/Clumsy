@@ -7,6 +7,7 @@
 //
 
 #import "MainClumsyViewController.h"
+#import "CustomClumsyMainView.h"
 
 @interface MainClumsyViewController ()
 
@@ -16,7 +17,7 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.view.backgroundColor = [UIColor redColor];
+  self.view = [[CustomClumsyMainView alloc] initWithFrame:self.view.bounds];
 }
 
 - (void)didReceiveMemoryWarning {

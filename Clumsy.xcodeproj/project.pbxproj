@@ -26,6 +26,7 @@
 		570980E617B4EF6800192234 /* ClumsyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980E517B4EF6800192234 /* ClumsyTests.m */; };
 		570980F117B4F26500192234 /* MainClumsyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980F017B4F26500192234 /* MainClumsyViewController.m */; };
 		570980F217B4F26500192234 /* MainClumsyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980F017B4F26500192234 /* MainClumsyViewController.m */; };
+		570980F617B4F5F000192234 /* CustomClumsyMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980F517B4F5F000192234 /* CustomClumsyMainView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		570980E517B4EF6800192234 /* ClumsyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClumsyTests.m; sourceTree = "<group>"; };
 		570980EF17B4F26500192234 /* MainClumsyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainClumsyViewController.h; sourceTree = "<group>"; };
 		570980F017B4F26500192234 /* MainClumsyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainClumsyViewController.m; sourceTree = "<group>"; };
+		570980F417B4F5F000192234 /* CustomClumsyMainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomClumsyMainView.h; sourceTree = "<group>"; };
+		570980F517B4F5F000192234 /* CustomClumsyMainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomClumsyMainView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				570980C617B4EF6800192234 /* AppDelegate.m */,
 				570980EF17B4F26500192234 /* MainClumsyViewController.h */,
 				570980F017B4F26500192234 /* MainClumsyViewController.m */,
+				570980F417B4F5F000192234 /* CustomClumsyMainView.h */,
+				570980F517B4F5F000192234 /* CustomClumsyMainView.m */,
 				570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */,
 				570980BD17B4EF6800192234 /* Supporting Files */,
 			);
@@ -280,6 +285,7 @@
 				570980C717B4EF6800192234 /* AppDelegate.m in Sources */,
 				570980D017B4EF6800192234 /* Clumsy.xcdatamodeld in Sources */,
 				570980F117B4F26500192234 /* MainClumsyViewController.m in Sources */,
+				570980F617B4F5F000192234 /* CustomClumsyMainView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
