@@ -9,6 +9,7 @@
 #import "MainClumsyViewController.h"
 #import "CustomClumsyMainView.h"
 #import "CustomMainUIButton.h"
+#import "CustomUISwipeGesture.h"
 
 @interface MainClumsyViewController ()
 
@@ -25,15 +26,32 @@
   [self.view addSubview:self.clumsyMainLabel];
   
   [self.view addSubview:[[CustomMainUIButton alloc] initWithFrame:self.view.bounds andTarget:self]];
+
+  [self addSwipes];
+}
+
+- (void)addSwipes {
+  [self.view addGestureRecognizer:[self addSwipeWithDirection:UISwipeGestureRecognizerDirectionUp]];
+  [self.view addGestureRecognizer:[self addSwipeWithDirection:UISwipeGestureRecognizerDirectionDown]];
+  [self.view addGestureRecognizer:[self addSwipeWithDirection:UISwipeGestureRecognizerDirectionLeft]];
+  [self.view addGestureRecognizer:[self addSwipeWithDirection:UISwipeGestureRecognizerDirectionRight]];
+}
+
+- (UISwipeGestureRecognizer *)addSwipeWithDirection:(UISwipeGestureRecognizerDirection)direction{
+  return [CustomUISwipeGesture swipeWithTarget:self andDirection:direction];
+}
+
+- (void)screenWasPressed:(UIButton *)sender {
+  NSLog(@"screen Was Pressed");
+}
+
+- (void)screenWasSwiped:(UISwipeGestureRecognizer *)swipeGesture {
+  NSLog(@"screen Was Swiped");
 }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
-}
-
-- (void)screenWasPressed:(UIButton *)sender {
-  NSLog(@"screen Was Pressed");
 }
 
 @end

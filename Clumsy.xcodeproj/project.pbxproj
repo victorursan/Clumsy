@@ -29,6 +29,7 @@
 		570980F617B4F5F000192234 /* CustomClumsyMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980F517B4F5F000192234 /* CustomClumsyMainView.m */; };
 		570980F917B4F81500192234 /* CustomMainUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980F817B4F81500192234 /* CustomMainUIButton.m */; };
 		570980FD17B4FA2E00192234 /* CustomMainUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980FC17B4FA2E00192234 /* CustomMainUILabel.m */; };
+		5709810617B4FFFF00192234 /* CustomUISwipeGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5709810517B4FFFF00192234 /* CustomUISwipeGesture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,9 @@
 		570980FA17B4F84600192234 /* CustomMainUIButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMainUIButtonDelegate.h; sourceTree = "<group>"; };
 		570980FB17B4FA2D00192234 /* CustomMainUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMainUILabel.h; sourceTree = "<group>"; };
 		570980FC17B4FA2E00192234 /* CustomMainUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMainUILabel.m; sourceTree = "<group>"; };
+		5709810417B4FFFF00192234 /* CustomUISwipeGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUISwipeGesture.h; sourceTree = "<group>"; };
+		5709810517B4FFFF00192234 /* CustomUISwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUISwipeGesture.m; sourceTree = "<group>"; };
+		5709810717B500BF00192234 /* CustomUISwipeGestureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUISwipeGestureDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,11 +144,14 @@
 				570980F017B4F26500192234 /* MainClumsyViewController.m */,
 				570980F417B4F5F000192234 /* CustomClumsyMainView.h */,
 				570980F517B4F5F000192234 /* CustomClumsyMainView.m */,
+				570980FB17B4FA2D00192234 /* CustomMainUILabel.h */,
+				570980FC17B4FA2E00192234 /* CustomMainUILabel.m */,
 				570980F717B4F81500192234 /* CustomMainUIButton.h */,
 				570980F817B4F81500192234 /* CustomMainUIButton.m */,
 				570980FA17B4F84600192234 /* CustomMainUIButtonDelegate.h */,
-				570980FB17B4FA2D00192234 /* CustomMainUILabel.h */,
-				570980FC17B4FA2E00192234 /* CustomMainUILabel.m */,
+				5709810417B4FFFF00192234 /* CustomUISwipeGesture.h */,
+				5709810517B4FFFF00192234 /* CustomUISwipeGesture.m */,
+				5709810717B500BF00192234 /* CustomUISwipeGestureDelegate.h */,
 				570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */,
 				570980BD17B4EF6800192234 /* Supporting Files */,
 			);
@@ -300,6 +307,7 @@
 				570980F617B4F5F000192234 /* CustomClumsyMainView.m in Sources */,
 				570980F917B4F81500192234 /* CustomMainUIButton.m in Sources */,
 				570980FD17B4FA2E00192234 /* CustomMainUILabel.m in Sources */,
+				5709810617B4FFFF00192234 /* CustomUISwipeGesture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
