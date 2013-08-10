@@ -64,8 +64,7 @@
 - (void)failedAction {
   [self.actionTimer invalidate];
   self.actionTimer = nil;
-  [self.delegate setClumsyMainLabelTextTo:[[ClumsyActionObject alloc] initWithAction:@"Start"]];
-  NSLog(@"failed");
+  [self.delegate failedClumsyAction];
 }
 
 @end

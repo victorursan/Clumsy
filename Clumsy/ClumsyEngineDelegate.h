@@ -12,5 +12,6 @@
 @protocol ClumsyEngineDelegate <NSObject>
 
 - (void)setClumsyMainLabelTextTo:(ClumsyActionObject *)clumsyObject;
+- (void)failedClumsyAction;
 
 @end

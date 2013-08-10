@@ -75,6 +75,11 @@
   self.clumsyMainLabel.text = clumsyObject.text;
 }
 
+- (void)failedClumsyAction {
+  self.engine = nil;
+  self.clumsyMainLabel.text = @"Start";
+}
+
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
