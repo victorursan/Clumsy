@@ -57,17 +57,17 @@
   if ([self.clumsyMainLabel.text isEqualToString:@"Start"]) {
     self.engine = [ClumsyEngine startEngineWithTarget:self];
   } else {
-    [self.engine actionWithClumsyObject:[ClumsyActionObject screenWasPressed]];
+    [self.engine verifyClumsyActionTaken:[ClumsyActionObject screenWasPressed]];
   }
 }
 
 - (void)screenWasSwiped:(UISwipeGestureRecognizer *)swipeGesture {
-  [self.engine actionWithClumsyObject:[ClumsyActionObject screenWasSwipedInDirection:swipeGesture]];
+  [self.engine verifyClumsyActionTaken:[ClumsyActionObject screenWasSwipedInDirection:swipeGesture]];
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
   if (event.subtype == UIEventSubtypeMotionShake) {
-    [self.engine actionWithClumsyObject:[ClumsyActionObject iPhoneWasShaken]];
+    [self.engine verifyClumsyActionTaken:[ClumsyActionObject iPhoneWasShaken]];
   }
 }
 

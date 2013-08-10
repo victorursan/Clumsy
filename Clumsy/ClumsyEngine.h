@@ -14,6 +14,6 @@
 @property(strong, nonatomic) id<ClumsyEngineDelegate>delegate;
 
 + (id)startEngineWithTarget:(id)delegate;
-- (void)actionWithClumsyObject:(ClumsyActionObject *)clumsyObject;
+- (void)verifyClumsyActionTaken:(ClumsyActionObject *)clumsyObject;
 
 @end

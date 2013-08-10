@@ -23,6 +23,7 @@
   if (self) {
     self.delegate = delegate;
     [self setNewClumsyObject];
+    [self startTimer];
   }
   return self;
 }
@@ -31,9 +32,13 @@
   return [[ClumsyEngine alloc] initWithTarget:delegate];
 }
 
-- (void)actionWithClumsyObject:(ClumsyActionObject *)clumsyObject {
-  NSLog(@"%@",clumsyObject.text);
-  [self setNewClumsyObject];
+- (void)verifyClumsyActionTaken:(ClumsyActionObject *)clumsyObject {
+  if ([clumsyObject.text isEqual:self.clumsyObject.text]) {
+    [self resetTimer];
+    [self setNewClumsyObject];
+  } else {
+    [self failedAction];
+  }
 }
 
 - (void)setNewClumsyObject {
