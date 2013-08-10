@@ -10,4 +10,6 @@
 
 @interface ClumsyScoreAlert : UIAlertView
 
+- (id)initWithScore:(NSNumber *)score;
+
 @end

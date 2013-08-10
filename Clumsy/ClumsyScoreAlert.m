@@ -10,11 +10,11 @@
 
 @implementation ClumsyScoreAlert
 
-- (id)init {
+- (id)initWithScore:(NSNumber *)score {
     self = [super init];
     if (self) {
       self.title = @"You were Clumsy";
-      self.message = [NSString stringWithFormat:@"Your score:%d", 5];
+      self.message = [NSString stringWithFormat:@"Your score:%@", score];
       [self addButtonWithTitle:@"ok"];
       self.cancelButtonIndex = 0;
       

@@ -77,11 +77,11 @@
   [self.mainView nextBackgroundColor];
 }
 
-- (void)failedClumsyAction {
+- (void)failedClumsyActionWithScore:(NSNumber *)score {
   self.engine = nil;
   self.clumsyMainLabel.text = @"Start";
-  ClumsyScoreAlert *score = [[ClumsyScoreAlert alloc] init];
-  [score show];
+  ClumsyScoreAlert *clumsyAlert = [[ClumsyScoreAlert alloc] initWithScore:score];
+  [clumsyAlert show];
   [self.mainView nextBackgroundColor];
 }
 

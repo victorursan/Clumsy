@@ -64,7 +64,7 @@
 - (void)failedAction {
   [self.actionTimer invalidate];
   self.actionTimer = nil;
-  [self.delegate failedClumsyAction];
+  [self.delegate failedClumsyActionWithScore:@6];
 }
 
 @end
