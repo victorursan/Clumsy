@@ -13,6 +13,7 @@
 #import "CustomUISwipeGesture.h"
 #import "ClumsyEngine.h"
 #import "ClumsyActionObject.h"
+#import "ClumsyScoreAlert.h"
 
 @interface MainClumsyViewController ()
 
@@ -79,6 +80,8 @@
 - (void)failedClumsyAction {
   self.engine = nil;
   self.clumsyMainLabel.text = @"Start";
+  ClumsyScoreAlert *score = [[ClumsyScoreAlert alloc] init];
+  [score show];
   [self.mainView nextBackgroundColor];
 }
 
