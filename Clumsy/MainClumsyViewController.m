@@ -73,11 +73,13 @@
 
 - (void)setClumsyMainLabelTextTo:(ClumsyActionObject *)clumsyObject {
   self.clumsyMainLabel.text = clumsyObject.text;
+  [self.mainView nextBackgroundColor];
 }
 
 - (void)failedClumsyAction {
   self.engine = nil;
   self.clumsyMainLabel.text = @"Start";
+  [self.mainView nextBackgroundColor];
 }
 
 - (void)didReceiveMemoryWarning {

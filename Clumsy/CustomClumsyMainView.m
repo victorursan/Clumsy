@@ -10,29 +10,33 @@
 
 @interface CustomClumsyMainView ()
 
-@property(strong, nonatomic) UIColor *color;
+@property(strong, nonatomic) NSArray *allUIColors;
 
 @end
 
-@implementation CustomClumsyMainView
+@implementation CustomClumsyMainView {
+  int count;
+}
 
 - (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
     self.backgroundColor = [UIColor orangeColor];
+    count = 1;
   }
   return self;
 }
 
-- (void)viewWithRedColor {
-  self.backgroundColor = [UIColor redColor];
+- (void)implementAllUIColors {
+  self.allUIColors = @[[UIColor orangeColor],[UIColor redColor],[UIColor blueColor],[UIColor purpleColor],[UIColor darkGrayColor]];
 }
 
-- (void)viewWithYellowColor {
-  self.backgroundColor = [UIColor yellowColor];
+- (void)nextBackgroundColor {
+  [self implementAllUIColors];
+  if (count >= 5) count = 0;
+  self.backgroundColor = self.allUIColors[count];
+  count ++;
 }
-
-
 /*
  // Only override drawRect: if you perform custom drawing.
  // An empty implementation adversely affects performance during animation.
