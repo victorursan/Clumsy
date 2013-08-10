@@ -79,6 +79,7 @@
 		5709810717B500BF00192234 /* CustomUISwipeGestureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUISwipeGestureDelegate.h; sourceTree = "<group>"; };
 		5709810B17B5367700192234 /* ClumsyEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyEngine.h; sourceTree = "<group>"; };
 		5709810C17B5367800192234 /* ClumsyEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyEngine.m; sourceTree = "<group>"; };
+		5709810E17B694D100192234 /* ClumsyEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyEngineDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +148,7 @@
 				570980F017B4F26500192234 /* MainClumsyViewController.m */,
 				5709810B17B5367700192234 /* ClumsyEngine.h */,
 				5709810C17B5367800192234 /* ClumsyEngine.m */,
+				5709810E17B694D100192234 /* ClumsyEngineDelegate.h */,
 				570980F417B4F5F000192234 /* CustomClumsyMainView.h */,
 				570980F517B4F5F000192234 /* CustomClumsyMainView.m */,
 				570980FB17B4FA2D00192234 /* CustomMainUILabel.h */,

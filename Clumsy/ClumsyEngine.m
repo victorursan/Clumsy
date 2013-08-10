@@ -16,10 +16,10 @@
 
 @implementation ClumsyEngine
 
-- (id)init {
+- (id)initWithTarget:(id)delegate {
   self = [super init];
   if (self) {
-    [self startEngine];
+    self.delegate = delegate;
   }
   return self;
 }
@@ -27,6 +27,7 @@
 - (void)startEngine {
   NSLog(@"enginge started");
   [self startTimer];
+  [self.delegate setClumsyMainLabelTextTo:@"Clumsy"];
 }
 
 - (void)screenWasPreesed {
@@ -62,6 +63,7 @@
 - (void)failedAction {
   [self.actionTimer invalidate];
   self.actionTimer = nil;
+  [self.delegate setClumsyMainLabelTextTo:@"Start"];
   NSLog(@"failed");
 }
 

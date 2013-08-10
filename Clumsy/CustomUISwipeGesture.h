@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CustomMainUIButtonDelegate.h"
+#import "CustomUISwipeGestureDelegate.h"
 
 @interface CustomUISwipeGesture : UISwipeGestureRecognizer
 
-@property(strong, nonatomic) id<CustomMainUIButtonDelegate>delegate;
+@property(strong, nonatomic) id<CustomUISwipeGestureDelegate>delegate;
 
 - (id)initWithTarget:(id)delegate andDirection:(UISwipeGestureRecognizerDirection)direction;
 + (id)swipeWithTarget:(id)delegate andDirection:(UISwipeGestureRecognizerDirection)direction;

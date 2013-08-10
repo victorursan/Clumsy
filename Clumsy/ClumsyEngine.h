@@ -7,8 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ClumsyEngineDelegate.h"
 
 @interface ClumsyEngine : NSObject
+
+@property(strong, nonatomic) id<ClumsyEngineDelegate>delegate;
+
+- (id)initWithTarget:(id)delegate;
 
 - (void)startEngine;
 - (void)screenWasPreesed;

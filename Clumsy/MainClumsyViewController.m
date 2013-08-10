@@ -33,7 +33,7 @@
   [self.view addSubview:self.clumsyMainLabel];
   
   [self.view addSubview:[[CustomMainUIButton alloc] initWithFrame:self.view.bounds andTarget:self]];
-
+  
   [self addSwipes];
 }
 
@@ -54,7 +54,8 @@
 
 - (void)screenWasPressed:(UIButton *)sender {
   if ([self.clumsyMainLabel.text isEqualToString:@"Start"]) {
-    self.engine = [[ClumsyEngine alloc] init];
+    self.engine = [[ClumsyEngine alloc] initWithTarget:self];
+    [self.engine startEngine];
   } else {
     [self.engine screenWasPreesed];
   }

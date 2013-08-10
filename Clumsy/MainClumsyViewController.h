@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "CustomMainUIButtonDelegate.h"
 #import "CustomUISwipeGestureDelegate.h"
+#import "ClumsyEngineDelegate.h"
 
-@interface MainClumsyViewController : UIViewController <CustomMainUIButtonDelegate, CustomUISwipeGestureDelegate, UIGestureRecognizerDelegate>
+@interface MainClumsyViewController : UIViewController <ClumsyEngineDelegate, CustomMainUIButtonDelegate, CustomUISwipeGestureDelegate, UIGestureRecognizerDelegate>
 
 - (void)setClumsyMainLabelTextTo:(NSString *)text;
 
