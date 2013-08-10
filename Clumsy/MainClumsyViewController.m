@@ -12,6 +12,7 @@
 #import "CustomMainUIButton.h"
 #import "CustomUISwipeGesture.h"
 #import "ClumsyEngine.h"
+#import "ClumsyActionObject.h"
 
 @interface MainClumsyViewController ()
 
@@ -48,7 +49,7 @@
   [self.view addGestureRecognizer:[self addSwipeWithDirection:UISwipeGestureRecognizerDirectionRight]];
 }
 
-- (UISwipeGestureRecognizer *)addSwipeWithDirection:(UISwipeGestureRecognizerDirection)direction{
+- (id)addSwipeWithDirection:(UISwipeGestureRecognizerDirection)direction{
   return [CustomUISwipeGesture swipeWithTarget:self andDirection:direction];
 }
 
@@ -62,7 +63,8 @@
 }
 
 - (void)screenWasSwiped:(UISwipeGestureRecognizer *)swipeGesture {
-  [self.engine screenWasSwiped:[swipeGesture direction]];
+  //[ClumsyActionObject screenWasSwipedInDirection:swipeGesture];
+  //[self.engine screenWasSwiped:[swipeGesture direction]];
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {

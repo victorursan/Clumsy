@@ -1,0 +1,67 @@
+//
+//  ClumsyActionObject.m
+//  Clumsy
+//
+//  Created by Victor Ursan on 8/10/13.
+//  Copyright (c) 2013 Victor Ursan. All rights reserved.
+//
+
+#import "ClumsyActionObject.h"
+#import "CustomUISwipeGesture.h"
+
+@interface ClumsyActionObject ()
+
+@property(strong, nonatomic) NSArray *allClumsyObjects;
+
+@end
+
+@implementation ClumsyActionObject
+
+- (id)initWithAction:(NSString *)action {
+  self = [super init];
+  if (self) {
+    self.text = action;
+  }
+  return self;
+}
+
++ (id)screenWasSwipedInDirection:(UISwipeGestureRecognizer *)swipe {
+  NSString *swipeToString = [NSString stringWithFormat:@"%u",[swipe direction]];
+  NSDictionary *swipeDirection = @{@"1":@"Swipe Right",
+                                   @"2":@"Swipe Left",
+                                   @"4":@"Swipe Up",
+                                   @"8":@"Swipe Down"};
+  return [[ClumsyActionObject alloc] initWithAction:swipeDirection[swipeToString]];
+}
+
++ (id)screenWasPressed {
+  return [[ClumsyActionObject alloc] initWithAction:@"Press"];
+}
+
++ (id)iPhoneWasShaken {
+  return [[ClumsyActionObject alloc] initWithAction:@"Shake"];
+}
+
+- (void)createAllClumsyObjects {
+  self.allClumsyObjects = @[[ClumsyActionObject screenWasPressed],
+                            [ClumsyActionObject iPhoneWasShaken],
+                            [ClumsyActionObject screenWasSwipedInDirection:[CustomUISwipeGesture swipeWithTarget:nil
+                                                                                                    andDirection:UISwipeGestureRecognizerDirectionUp]],
+                            [ClumsyActionObject screenWasSwipedInDirection:[CustomUISwipeGesture swipeWithTarget:nil
+                                                                                                    andDirection:UISwipeGestureRecognizerDirectionRight]],
+                            [ClumsyActionObject screenWasSwipedInDirection:[CustomUISwipeGesture swipeWithTarget:nil
+                                                                                                    andDirection:UISwipeGestureRecognizerDirectionLeft]],
+                            [ClumsyActionObject screenWasSwipedInDirection:[CustomUISwipeGesture swipeWithTarget:nil
+                                                                                                    andDirection:UISwipeGestureRecognizerDirectionDown]]];
+}
+
+- (id)createRandomClumsyObject {
+  int count = [self.allClumsyObjects count];
+  return self.allClumsyObjects[arc4random()%count];
+}
+
++ (id)randomClumsyObject {
+  return [[[ClumsyActionObject alloc] init] createRandomClumsyObject];
+}
+
+@end
