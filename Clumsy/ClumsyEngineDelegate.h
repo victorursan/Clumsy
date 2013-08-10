@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ClumsyActionObject.h"
 
 @protocol ClumsyEngineDelegate <NSObject>
 
-- (void)setClumsyMainLabelTextTo:(NSString *)text;
+- (void)setClumsyMainLabelTextTo:(ClumsyActionObject *)clumsyObject;
 
 @end

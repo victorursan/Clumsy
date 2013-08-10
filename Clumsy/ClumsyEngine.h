@@ -13,11 +13,7 @@
 
 @property(strong, nonatomic) id<ClumsyEngineDelegate>delegate;
 
-- (id)initWithTarget:(id)delegate;
-
-- (void)startEngine;
-- (void)screenWasPreesed;
-- (void)screenWasSwiped:(UISwipeGestureRecognizerDirection)direction;
-- (void)iPhoneWasShaken;
++ (id)startEngineWithTarget:(id)delegate;
+- (void)actionWithClumsyObject:(ClumsyActionObject *)clumsyObject;
 
 @end

@@ -55,26 +55,24 @@
 
 - (void)screenWasPressed:(UIButton *)sender {
   if ([self.clumsyMainLabel.text isEqualToString:@"Start"]) {
-    self.engine = [[ClumsyEngine alloc] initWithTarget:self];
-    [self.engine startEngine];
+    self.engine = [ClumsyEngine startEngineWithTarget:self];
   } else {
-    [self.engine screenWasPreesed];
+    [self.engine actionWithClumsyObject:[ClumsyActionObject screenWasPressed]];
   }
 }
 
 - (void)screenWasSwiped:(UISwipeGestureRecognizer *)swipeGesture {
-  //[ClumsyActionObject screenWasSwipedInDirection:swipeGesture];
-  //[self.engine screenWasSwiped:[swipeGesture direction]];
+  [self.engine actionWithClumsyObject:[ClumsyActionObject screenWasSwipedInDirection:swipeGesture]];
 }
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
   if (event.subtype == UIEventSubtypeMotionShake) {
-    [self.engine iPhoneWasShaken];
+    [self.engine actionWithClumsyObject:[ClumsyActionObject iPhoneWasShaken]];
   }
 }
 
-- (void)setClumsyMainLabelTextTo:(NSString *)text {
-  self.clumsyMainLabel.text = text;
+- (void)setClumsyMainLabelTextTo:(ClumsyActionObject *)clumsyObject {
+  self.clumsyMainLabel.text = clumsyObject.text;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,10 +7,12 @@
 //
 
 #import "ClumsyEngine.h"
+#import "ClumsyActionObject.h"
 
 @interface ClumsyEngine ()
 
 @property(strong, nonatomic) NSTimer *actionTimer;
+@property(strong, nonatomic) ClumsyActionObject *clumsyObject;
 
 @end
 
@@ -20,31 +22,25 @@
   self = [super init];
   if (self) {
     self.delegate = delegate;
+    [self setNewClumsyObject];
   }
   return self;
 }
 
-- (void)startEngine {
-  NSLog(@"enginge started");
-  [self startTimer];
-  [self.delegate setClumsyMainLabelTextTo:@"Clumsy"];
++ (id)startEngineWithTarget:(id)delegate {
+  return [[ClumsyEngine alloc] initWithTarget:delegate];
 }
 
-- (void)screenWasPreesed {
-  NSLog(@"screen was pressed");
-  [self resetTimer];
+- (void)actionWithClumsyObject:(ClumsyActionObject *)clumsyObject {
+  NSLog(@"%@",clumsyObject.text);
+  [self setNewClumsyObject];
 }
 
-- (void)screenWasSwiped:(UISwipeGestureRecognizerDirection)direction {
-  NSLog(@"screen was swiped in the direction of: %u", direction);
-  [self resetTimer];
+- (void)setNewClumsyObject {
+  self.clumsyObject = [ClumsyActionObject randomClumsyObject];
+  NSLog(@"%@",self.clumsyObject.text);
+  [self.delegate setClumsyMainLabelTextTo:self.clumsyObject];
 }
-
-- (void)iPhoneWasShaken {
-  NSLog(@"iPhone was shaken");
-  [self resetTimer];
-}
-
 
 - (void)startTimer {
   self.actionTimer = [NSTimer scheduledTimerWithTimeInterval:1.5
@@ -63,7 +59,7 @@
 - (void)failedAction {
   [self.actionTimer invalidate];
   self.actionTimer = nil;
-  [self.delegate setClumsyMainLabelTextTo:@"Start"];
+  [self.delegate setClumsyMainLabelTextTo:[[ClumsyActionObject alloc] initWithAction:@"Start"]];
   NSLog(@"failed");
 }
 

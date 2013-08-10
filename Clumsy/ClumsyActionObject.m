@@ -56,6 +56,7 @@
 }
 
 - (id)createRandomClumsyObject {
+  [self createAllClumsyObjects];
   int count = [self.allClumsyObjects count];
   return self.allClumsyObjects[arc4random()%count];
 }
