@@ -16,7 +16,9 @@
 
 @end
 
-@implementation ClumsyEngine
+@implementation ClumsyEngine {
+  int score;
+}
 
 - (id)initWithTarget:(id)delegate {
   self = [super init];
@@ -24,6 +26,7 @@
     self.delegate = delegate;
     [self setNewClumsyObject];
     [self startTimer];
+    score = 0;
   }
   return self;
 }
@@ -36,6 +39,7 @@
   if ([clumsyObject.text isEqual:self.clumsyObject.text]) {
     [self resetTimer];
     [self setNewClumsyObject];
+    score ++;
   } else {
     [self failedAction];
   }
@@ -64,7 +68,7 @@
 - (void)failedAction {
   [self.actionTimer invalidate];
   self.actionTimer = nil;
-  [self.delegate failedClumsyActionWithScore:@6];
+  [self.delegate failedClumsyActionWithScore:[NSNumber numberWithInt:score]];
 }
 
 @end

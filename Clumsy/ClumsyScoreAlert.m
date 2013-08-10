@@ -15,9 +15,8 @@
     if (self) {
       self.title = @"You were Clumsy";
       self.message = [NSString stringWithFormat:@"Your score:%@", score];
-      [self addButtonWithTitle:@"ok"];
+      [self addButtonWithTitle:@"OK"];
       self.cancelButtonIndex = 0;
-      
     }
     return self;
 }
