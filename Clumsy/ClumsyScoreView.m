@@ -10,6 +10,7 @@
 #import "ClumsyScoreButton.h"
 #import "ClumsyScoreInnerBoxView.h"
 #import "ClumsyTitleScoreLabel.h"
+#import "ClumsyScoreLable.h"
 
 @implementation ClumsyScoreView
 
@@ -18,6 +19,9 @@
   if (self) {
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     [self addSubview:[ClumsyScoreInnerBoxView viewWithFrame:CGRectMake(40, 160, 240, 140)]];
+    [self addSubview:[ClumsyTitleScoreLabel labelWithFrame:CGRectMake(40, 160, 240, 40)]];
+    [self addSubview:[ClumsyScoreLable lableWithFrame:CGRectMake(40, 200, 240, 35) andScore:score]];
+    [self addSubview:[ClumsyScoreLable lableForNameWithFrame:CGRectMake(40, 235, 100, 35)]];
     [self addSubview:[ClumsyScoreButton  buttonWithFrame:CGRectMake(220, 270, 60, 30)
                                                    title:@"Save"
                                                   target:self
@@ -26,7 +30,6 @@
                                                   title:@"Cancel"
                                                  target:self
                                                  action:@selector(cancelButtonPressed:)]];
-    [self addSubview:[ClumsyTitleScoreLabel labelWithFrame:CGRectMake(40, 160, 240, 30)]];
   }
   return self;
 }
