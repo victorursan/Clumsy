@@ -1,5 +1,5 @@
 //
-//  ClumsyScoreInnerBoxView.h
+//  ClumsyTitleScoreLabel.h
 //  Clumsy
 //
 //  Created by Victor Ursan on 8/13/13.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ClumsyScoreInnerBoxView : UIView
+@interface ClumsyTitleScoreLabel : UILabel
 
-+ (id)viewWithFrame:(CGRect)frame;
++ (id)labelWithFrame:(CGRect)frame;
 
 @end

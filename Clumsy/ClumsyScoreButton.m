@@ -21,6 +21,10 @@
     return self;
 }
 
++ (id)buttonWithFrame:(CGRect)frame title:(NSString *)title target:(id)target action:(SEL)action {
+  return [[ClumsyScoreButton alloc] initWithFrame:frame title:title target:target action:action];
+}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

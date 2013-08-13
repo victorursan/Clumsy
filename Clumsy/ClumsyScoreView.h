@@ -11,5 +11,6 @@
 @interface ClumsyScoreView : UIView
 
 - (id)initWithFrame:(CGRect)frame andScore:(NSNumber *)score;
++ (id)viewWithFrame:(CGRect)frame andScore:(NSNumber *)score;
 
 @end

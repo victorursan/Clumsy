@@ -10,13 +10,16 @@
 
 @implementation ClumsyScoreInnerBoxView
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
        self.backgroundColor = [UIColor grayColor];
     }
     return self;
+}
+
++ (id)viewWithFrame:(CGRect)frame {
+  return [[ClumsyScoreInnerBoxView alloc] initWithFrame:frame];
 }
 
 /*

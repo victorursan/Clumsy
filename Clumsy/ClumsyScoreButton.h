@@ -11,5 +11,7 @@
 @interface ClumsyScoreButton : UIButton
 
 - (id)initWithFrame:(CGRect)frame title:(NSString *)title target:(id)target action:(SEL)action;
++ (id)buttonWithFrame:(CGRect)frame title:(NSString *)title target:(id)target action:(SEL)action;
+
 
 @end
