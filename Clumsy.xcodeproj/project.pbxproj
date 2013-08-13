@@ -34,6 +34,7 @@
 		5709811117B6A9A900192234 /* ClumsyActionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5709811017B6A9A900192234 /* ClumsyActionObject.m */; };
 		57572D1717BAA88000B8D7F9 /* ClumsyScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */; };
 		57572D1A17BAB20D00B8D7F9 /* ClumsyScoreButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1917BAB20D00B8D7F9 /* ClumsyScoreButton.m */; };
+		57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreView.m; sourceTree = "<group>"; };
 		57572D1817BAB20C00B8D7F9 /* ClumsyScoreButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreButton.h; sourceTree = "<group>"; };
 		57572D1917BAB20D00B8D7F9 /* ClumsyScoreButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreButton.m; sourceTree = "<group>"; };
+		57572D1B17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreInnerBoxView.h; sourceTree = "<group>"; };
+		57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreInnerBoxView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,8 @@
 				570980F017B4F26500192234 /* MainClumsyViewController.m */,
 				57572D1517BAA88000B8D7F9 /* ClumsyScoreView.h */,
 				57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */,
+				57572D1B17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.h */,
+				57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */,
 				57572D1817BAB20C00B8D7F9 /* ClumsyScoreButton.h */,
 				57572D1917BAB20D00B8D7F9 /* ClumsyScoreButton.m */,
 				5709810B17B5367700192234 /* ClumsyEngine.h */,
@@ -334,6 +339,7 @@
 				5709811117B6A9A900192234 /* ClumsyActionObject.m in Sources */,
 				57572D1717BAA88000B8D7F9 /* ClumsyScoreView.m in Sources */,
 				57572D1A17BAB20D00B8D7F9 /* ClumsyScoreButton.m in Sources */,
+				57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
