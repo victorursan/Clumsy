@@ -10,4 +10,6 @@
 
 @interface ClumsyScoreView : UIView
 
+- (id)initWithFrame:(CGRect)frame andScore:(NSNumber *)score;
+
 @end

@@ -81,7 +81,8 @@
   self.engine = nil;
   self.clumsyMainLabel.text = @"Start";
   
-  ClumsyScoreView *scoreView = [[ClumsyScoreView alloc] initWithFrame:self.view.bounds];
+  ClumsyScoreView *scoreView = [[ClumsyScoreView alloc] initWithFrame:self.view.bounds
+                                                             andScore:score];
   [self.view addSubview:scoreView];
   
   [self.mainView nextBackgroundColor];
