@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ClumsyScoreView : UIView
+@interface ClumsyScoreView : UIView <UITextFieldDelegate>
 
 - (id)initWithFrame:(CGRect)frame andScore:(NSNumber *)score;
 + (id)viewWithFrame:(CGRect)frame andScore:(NSNumber *)score;
