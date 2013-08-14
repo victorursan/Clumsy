@@ -37,6 +37,7 @@
 		57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */; };
 		57572D2117BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2017BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m */; };
 		57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */; };
+		57572D2B17BB976600B8D7F9 /* ClumsyScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2A17BB976500B8D7F9 /* ClumsyScore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,8 @@
 		57572D2017BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyTitleScoreLabel.m; sourceTree = "<group>"; };
 		57572D2317BAD21F00B8D7F9 /* ClumsyScoreLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreLable.h; sourceTree = "<group>"; };
 		57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreLable.m; sourceTree = "<group>"; };
+		57572D2917BB976500B8D7F9 /* ClumsyScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScore.h; sourceTree = "<group>"; };
+		57572D2A17BB976500B8D7F9 /* ClumsyScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +172,8 @@
 				5709810E17B694D100192234 /* ClumsyEngineDelegate.h */,
 				5709810F17B6A9A900192234 /* ClumsyActionObject.h */,
 				5709811017B6A9A900192234 /* ClumsyActionObject.m */,
+				57572D2917BB976500B8D7F9 /* ClumsyScore.h */,
+				57572D2A17BB976500B8D7F9 /* ClumsyScore.m */,
 				570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */,
 				570980BD17B4EF6800192234 /* Supporting Files */,
 			);
@@ -368,6 +373,7 @@
 				57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */,
 				57572D2117BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m in Sources */,
 				57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */,
+				57572D2B17BB976600B8D7F9 /* ClumsyScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

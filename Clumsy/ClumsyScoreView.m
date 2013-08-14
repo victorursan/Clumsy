@@ -11,6 +11,7 @@
 #import "ClumsyScoreInnerBoxView.h"
 #import "ClumsyTitleScoreLabel.h"
 #import "ClumsyScoreLable.h"
+#import "ClumsyScore.h"
 
 @interface ClumsyScoreView ()
 
@@ -58,8 +59,7 @@
 }
 
 - (void)saveButtonPressed:(UIButton *)sender {
-  NSLog(@"Name: %@", self.playersName.text);
-  NSLog(@"Score: %@", self.playersScore);
+  [ClumsyScore savePlayer:self.playersName.text withTheScore:self.playersScore];
   [self removeFromSuperview];
 }
 
