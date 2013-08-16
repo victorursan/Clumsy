@@ -10,22 +10,21 @@
 
 @implementation ClumsyScore
 
-- (id)initWithName:(NSString *)playersName andScore:(NSNumber *)playersScore {
+- (id)initWithScore:(NSNumber *)playersScore {
   self = [super init];
   if (self) {
-    self.playersName = playersName;
     self.playersScore = playersScore;
   }
   return self;
 }
 
-+ (void)savePlayer:(NSString *)playersName withTheScore:(NSNumber *)playersScore {
-  ClumsyScore *newScore = [[ClumsyScore alloc] initWithName:playersName andScore:playersScore];
++ (void)saveScore:(NSNumber *)playersScore {
+  ClumsyScore *newScore = [[ClumsyScore alloc] initWithScore:playersScore];
   [newScore saveScore];
 }
 
 - (void)saveScore {
-  NSLog(@"Player:%@ made the score:%@", self.playersName, self.playersScore);
+  NSLog(@"score:%@", self.playersScore);
 }
 
 @end

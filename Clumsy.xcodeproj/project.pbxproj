@@ -33,11 +33,11 @@
 		5709810D17B5367800192234 /* ClumsyEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5709810C17B5367800192234 /* ClumsyEngine.m */; };
 		5709811117B6A9A900192234 /* ClumsyActionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5709811017B6A9A900192234 /* ClumsyActionObject.m */; };
 		57572D1717BAA88000B8D7F9 /* ClumsyScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */; };
-		57572D1A17BAB20D00B8D7F9 /* ClumsyScoreButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1917BAB20D00B8D7F9 /* ClumsyScoreButton.m */; };
 		57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */; };
 		57572D2117BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2017BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m */; };
 		57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */; };
 		57572D2B17BB976600B8D7F9 /* ClumsyScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2A17BB976500B8D7F9 /* ClumsyScore.m */; };
+		57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +91,6 @@
 		5709811017B6A9A900192234 /* ClumsyActionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyActionObject.m; sourceTree = "<group>"; };
 		57572D1517BAA88000B8D7F9 /* ClumsyScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreView.h; sourceTree = "<group>"; };
 		57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreView.m; sourceTree = "<group>"; };
-		57572D1817BAB20C00B8D7F9 /* ClumsyScoreButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreButton.h; sourceTree = "<group>"; };
-		57572D1917BAB20D00B8D7F9 /* ClumsyScoreButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreButton.m; sourceTree = "<group>"; };
 		57572D1B17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreInnerBoxView.h; sourceTree = "<group>"; };
 		57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreInnerBoxView.m; sourceTree = "<group>"; };
 		57572D1F17BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyTitleScoreLabel.h; sourceTree = "<group>"; };
@@ -101,6 +99,9 @@
 		57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreLable.m; sourceTree = "<group>"; };
 		57572D2917BB976500B8D7F9 /* ClumsyScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScore.h; sourceTree = "<group>"; };
 		57572D2A17BB976500B8D7F9 /* ClumsyScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScore.m; sourceTree = "<group>"; };
+		57572D2C17BEE14100B8D7F9 /* ClumsyScoreOkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreOkButton.h; sourceTree = "<group>"; };
+		57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreOkButton.m; sourceTree = "<group>"; };
+		57572D2F17BEE16100B8D7F9 /* ClumsyScoreOkButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreOkButtonDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,8 +221,9 @@
 				57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */,
 				57572D1B17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.h */,
 				57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */,
-				57572D1817BAB20C00B8D7F9 /* ClumsyScoreButton.h */,
-				57572D1917BAB20D00B8D7F9 /* ClumsyScoreButton.m */,
+				57572D2C17BEE14100B8D7F9 /* ClumsyScoreOkButton.h */,
+				57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */,
+				57572D2F17BEE16100B8D7F9 /* ClumsyScoreOkButtonDelegate.h */,
 				57572D1F17BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.h */,
 				57572D2017BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m */,
 				57572D2317BAD21F00B8D7F9 /* ClumsyScoreLable.h */,
@@ -369,11 +371,11 @@
 				5709810D17B5367800192234 /* ClumsyEngine.m in Sources */,
 				5709811117B6A9A900192234 /* ClumsyActionObject.m in Sources */,
 				57572D1717BAA88000B8D7F9 /* ClumsyScoreView.m in Sources */,
-				57572D1A17BAB20D00B8D7F9 /* ClumsyScoreButton.m in Sources */,
 				57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */,
 				57572D2117BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m in Sources */,
 				57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */,
 				57572D2B17BB976600B8D7F9 /* ClumsyScore.m in Sources */,
+				57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

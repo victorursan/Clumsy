@@ -10,10 +10,9 @@
 
 @interface ClumsyScore : NSObject
 
-@property(strong, nonatomic) NSString *playersName;
 @property(strong, nonatomic) NSNumber *playersScore;
 
-- (id)initWithName:(NSString *)playersName andScore:(NSNumber *)playersScore;
-+ (void)savePlayer:(NSString *)playersName withTheScore:(NSNumber *)playersScore;
+- (id)initWithScore:(NSNumber *)playersScore;
++ (void)saveScore:(NSNumber *)playersScore;
 
 @end

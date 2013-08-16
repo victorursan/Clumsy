@@ -26,12 +26,6 @@
   return scoreLable;
 }
 
-+ (id)lableForNameWithFrame:(CGRect)frame {
-  ClumsyScoreLable *nameLable = [[ClumsyScoreLable alloc] initWithFrame:frame];
-  nameLable.text = @"Your name:";
-  return nameLable;
-}
-
 /*
  // Only override drawRect: if you perform custom drawing.
  // An empty implementation adversely affects performance during animation.
