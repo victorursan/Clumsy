@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
 #import "ClumsyScoreOkButtonDelegate.h"
+#import "ClumsyScoreViewDelegate.h"
 
 @interface ClumsyScoreView : UIView <UITextFieldDelegate>
 
-- (id)initWithFrame:(CGRect)frame andScore:(NSNumber *)score;
-+ (id)viewWithFrame:(CGRect)frame andScore:(NSNumber *)score;
+@property(strong, nonatomic) id<ClumsyScoreViewDelegate>delegate;
+
+- (id)initWithFrame:(CGRect)frame delegate:(id)delegate andScore:(NSNumber *)score;
++ (id)viewWithFrame:(CGRect)frame delegate:(id)delegate andScore:(NSNumber *)score;
 
 @end

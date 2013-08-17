@@ -80,9 +80,12 @@
 - (void)failedClumsyActionWithScore:(NSNumber *)score {
   self.engine = nil;
   self.clumsyMainLabel.text = @"Start";
-  [self.view addSubview:[ClumsyScoreView viewWithFrame:self.view.bounds
-                                              andScore:score]];
+  [self.view addSubview:[ClumsyScoreView viewWithFrame:self.view.bounds delegate:self andScore:score ]];
   [self.mainView nextBackgroundColor];
+}
+
+- (void)presentSocialViewController:(SLComposeViewController *)socialViewController{
+  [self presentViewController:socialViewController animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

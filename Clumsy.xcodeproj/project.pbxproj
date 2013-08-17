@@ -39,6 +39,7 @@
 		57572D2B17BB976600B8D7F9 /* ClumsyScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2A17BB976500B8D7F9 /* ClumsyScore.m */; };
 		57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */; };
 		57572D3217BEE90A00B8D7F9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57572D3017BEE8F900B8D7F9 /* GameKit.framework */; };
+		57572D3417BF83F800B8D7F9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57572D3317BF83F800B8D7F9 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,8 @@
 		57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreOkButton.m; sourceTree = "<group>"; };
 		57572D2F17BEE16100B8D7F9 /* ClumsyScoreOkButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreOkButtonDelegate.h; sourceTree = "<group>"; };
 		57572D3017BEE8F900B8D7F9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		57572D3317BF83F800B8D7F9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		57572D3517BF864500B8D7F9 /* ClumsyScoreViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreViewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57572D3417BF83F800B8D7F9 /* Social.framework in Frameworks */,
 				57572D3217BEE90A00B8D7F9 /* GameKit.framework in Frameworks */,
 				570980B517B4EF6800192234 /* UIKit.framework in Frameworks */,
 				570980B717B4EF6800192234 /* Foundation.framework in Frameworks */,
@@ -155,6 +159,7 @@
 		570980B317B4EF6800192234 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57572D3317BF83F800B8D7F9 /* Social.framework */,
 				57572D3017BEE8F900B8D7F9 /* GameKit.framework */,
 				570980B417B4EF6800192234 /* UIKit.framework */,
 				570980B617B4EF6800192234 /* Foundation.framework */,
@@ -223,6 +228,7 @@
 			children = (
 				57572D1517BAA88000B8D7F9 /* ClumsyScoreView.h */,
 				57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */,
+				57572D3517BF864500B8D7F9 /* ClumsyScoreViewDelegate.h */,
 				57572D1B17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.h */,
 				57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */,
 				57572D2C17BEE14100B8D7F9 /* ClumsyScoreOkButton.h */,
