@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <Social/Social.h>
+#import <QuartzCore/QuartzCore.h>
+#import <Accounts/Accounts.h>
 #import "ClumsyScoreOkButtonDelegate.h"
 #import "ClumsyScoreViewDelegate.h"
+#import "ClumsySocialButtonDelegate.h"
 
-@interface ClumsyScoreView : UIView <UITextFieldDelegate>
+@interface ClumsyScoreView : UIView <ClumsyScoreOkButtonDelegate, ClumsySocialButtonDelegate>
 
 @property(strong, nonatomic) id<ClumsyScoreViewDelegate>delegate;
 

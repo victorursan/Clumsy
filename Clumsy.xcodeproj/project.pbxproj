@@ -40,6 +40,9 @@
 		57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */; };
 		57572D3217BEE90A00B8D7F9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57572D3017BEE8F900B8D7F9 /* GameKit.framework */; };
 		57572D3417BF83F800B8D7F9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57572D3317BF83F800B8D7F9 /* Social.framework */; };
+		576F1B9E17C0B1CC00A2A919 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */; };
+		576F1BA417C17DEF00A2A919 /* ClumsySocialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */; };
+		57B207EA17C03849003E8281 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B207E917C03849003E8281 /* CoreImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +110,11 @@
 		57572D3017BEE8F900B8D7F9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		57572D3317BF83F800B8D7F9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		57572D3517BF864500B8D7F9 /* ClumsyScoreViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreViewDelegate.h; sourceTree = "<group>"; };
+		576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		576F1BA217C17DEE00A2A919 /* ClumsySocialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsySocialButton.h; sourceTree = "<group>"; };
+		576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsySocialButton.m; sourceTree = "<group>"; };
+		576F1BA517C1800C00A2A919 /* ClumsySocialButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsySocialButtonDelegate.h; sourceTree = "<group>"; };
+		57B207E917C03849003E8281 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +122,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				576F1B9E17C0B1CC00A2A919 /* QuartzCore.framework in Frameworks */,
+				57B207EA17C03849003E8281 /* CoreImage.framework in Frameworks */,
 				57572D3417BF83F800B8D7F9 /* Social.framework in Frameworks */,
 				57572D3217BEE90A00B8D7F9 /* GameKit.framework in Frameworks */,
 				570980B517B4EF6800192234 /* UIKit.framework in Frameworks */,
@@ -159,6 +169,8 @@
 		570980B317B4EF6800192234 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */,
+				57B207E917C03849003E8281 /* CoreImage.framework */,
 				57572D3317BF83F800B8D7F9 /* Social.framework */,
 				57572D3017BEE8F900B8D7F9 /* GameKit.framework */,
 				570980B417B4EF6800192234 /* UIKit.framework */,
@@ -177,6 +189,9 @@
 				570980C617B4EF6800192234 /* AppDelegate.m */,
 				57572D2217BAD1C900B8D7F9 /* MainClumsyViewController */,
 				57572D1E17BAC90400B8D7F9 /* ClumsyScoreView */,
+				576F1BA217C17DEE00A2A919 /* ClumsySocialButton.h */,
+				576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */,
+				576F1BA517C1800C00A2A919 /* ClumsySocialButtonDelegate.h */,
 				5709810B17B5367700192234 /* ClumsyEngine.h */,
 				5709810C17B5367800192234 /* ClumsyEngine.m */,
 				5709810E17B694D100192234 /* ClumsyEngineDelegate.h */,
@@ -386,6 +401,7 @@
 				57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */,
 				57572D2B17BB976600B8D7F9 /* ClumsyScore.m in Sources */,
 				57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */,
+				576F1BA417C17DEF00A2A919 /* ClumsySocialButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

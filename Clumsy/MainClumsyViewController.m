@@ -80,6 +80,24 @@
 - (void)failedClumsyActionWithScore:(NSNumber *)score {
   self.engine = nil;
   self.clumsyMainLabel.text = @"Start";
+  
+//  UIGraphicsBeginImageContext(self.clumsyMainLabel.frame.size);
+//  [self.clumsyMainLabel.layer renderInContext:UIGraphicsGetCurrentContext()];
+//  UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
+//  UIGraphicsEndImageContext();
+//  
+//  CIImage *imageToBlur = [CIImage imageWithCGImage:viewImage.CGImage];
+//  CIFilter *gaussianBlurFilter = [CIFilter filterWithName: @"CIGaussianBlur"];
+//  [gaussianBlurFilter setValue:imageToBlur forKey: @"inputImage"];
+//  [gaussianBlurFilter setValue:[NSNumber numberWithFloat: 4] forKey: @"inputRadius"];
+//  CIImage *resultImage = [gaussianBlurFilter valueForKey: @"outputImage"];
+//  UIImage *endImage = [[UIImage alloc] initWithCIImage:resultImage];
+//  //Place the UIImage in a UIImageView
+//  UIImageView *newView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 200, 320, 60)];
+//  newView.image = endImage;
+//  
+//  [self.view addSubview:newView];
+  
   [self.view addSubview:[ClumsyScoreView viewWithFrame:self.view.bounds delegate:self andScore:score ]];
   [self.mainView nextBackgroundColor];
 }

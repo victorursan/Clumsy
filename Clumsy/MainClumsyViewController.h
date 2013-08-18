@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import <Social/Social.h>
 #import "CustomMainUIButtonDelegate.h"
 #import "CustomUISwipeGestureDelegate.h"
