@@ -31,7 +31,7 @@
   self.view = self.mainView;
   
   self.clumsyMainLabel = [[CustomMainUILabel alloc] initWithFrame:CGRectMake(0, 200, 320, 60)];
-  self.clumsyMainLabel.text = @"Start";
+  self.clumsyMainLabel.actionObject = [ClumsyActionObject startClumsyObject];
   [self.view addSubview:self.clumsyMainLabel];
   
   [self.view addSubview:[[CustomMainUIButton alloc] initWithFrame:self.view.bounds andTarget:self]];
@@ -55,7 +55,7 @@
 }
 
 - (void)screenWasPressed:(UIButton *)sender {
-  if ([self.clumsyMainLabel.text isEqualToString:@"Start"]) {
+  if ([self.clumsyMainLabel.text isEqualToString:[[ClumsyActionObject startClumsyObject] text]]) {
     self.engine = [ClumsyEngine startEngineWithTarget:self];
   } else {
     [self.engine verifyClumsyActionTaken:[ClumsyActionObject screenWasPressed]];
@@ -73,31 +73,13 @@
 }
 
 - (void)setClumsyMainLabelTextTo:(ClumsyActionObject *)clumsyObject {
-  self.clumsyMainLabel.text = clumsyObject.text;
+  self.clumsyMainLabel.actionObject = clumsyObject;
   [self.mainView nextBackgroundColor];
 }
 
 - (void)failedClumsyActionWithScore:(NSNumber *)score {
   self.engine = nil;
-  self.clumsyMainLabel.text = @"Start";
-  
-//  UIGraphicsBeginImageContext(self.clumsyMainLabel.frame.size);
-//  [self.clumsyMainLabel.layer renderInContext:UIGraphicsGetCurrentContext()];
-//  UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
-//  UIGraphicsEndImageContext();
-//  
-//  CIImage *imageToBlur = [CIImage imageWithCGImage:viewImage.CGImage];
-//  CIFilter *gaussianBlurFilter = [CIFilter filterWithName: @"CIGaussianBlur"];
-//  [gaussianBlurFilter setValue:imageToBlur forKey: @"inputImage"];
-//  [gaussianBlurFilter setValue:[NSNumber numberWithFloat: 4] forKey: @"inputRadius"];
-//  CIImage *resultImage = [gaussianBlurFilter valueForKey: @"outputImage"];
-//  UIImage *endImage = [[UIImage alloc] initWithCIImage:resultImage];
-//  //Place the UIImage in a UIImageView
-//  UIImageView *newView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 200, 320, 60)];
-//  newView.image = endImage;
-//  
-//  [self.view addSubview:newView];
-  
+  self.clumsyMainLabel.actionObject = [ClumsyActionObject startClumsyObject];
   [self.view addSubview:[ClumsyScoreView viewWithFrame:self.view.bounds delegate:self andScore:score ]];
   [self.mainView nextBackgroundColor];
 }

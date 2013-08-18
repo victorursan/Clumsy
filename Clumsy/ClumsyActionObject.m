@@ -61,6 +61,10 @@
   return self.allClumsyObjects[arc4random()%count];
 }
 
++ (id)startClumsyObject {
+  return [[ClumsyActionObject alloc] initWithAction:@"Start"];
+}
+
 + (id)randomClumsyObject {
   return [[[ClumsyActionObject alloc] init] createRandomClumsyObject];
 }

@@ -17,6 +17,8 @@
 + (id)screenWasSwipedInDirection:(UISwipeGestureRecognizer *)swipe;
 + (id)screenWasPressed;
 + (id)iPhoneWasShaken;
+
++ (id)startClumsyObject;
 + (id)randomClumsyObject;
 
 @end

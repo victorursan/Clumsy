@@ -21,6 +21,10 @@
   return self;
 }
 
+- (void)setActionObject:(ClumsyActionObject *)actionObject {
+  [self setText:actionObject.text];
+}
+
 /*
  // Only override drawRect: if you perform custom drawing.
  // An empty implementation adversely affects performance during animation.

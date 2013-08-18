@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ClumsyActionObject.h"
 
 @interface CustomMainUILabel : UILabel
+
+@property(strong, nonatomic) ClumsyActionObject *actionObject;
 
 @end
