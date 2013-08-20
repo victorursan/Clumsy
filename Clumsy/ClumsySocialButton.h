@@ -13,7 +13,7 @@
 
 @property(strong, nonatomic) id<ClumsySocialButtonDelegate>delegate;
 
-+ (id)buttonWithTwitterFrame:(CGRect)frame andDelegate:(id)delegate;
-+ (id)buttonWithFacebookFrame:(CGRect)frame andDelegate:(id)delegate;
++ (id)buttonWithTwitterPoint:(CGPoint)point andDelegate:(id)delegate;
++ (id)buttonWithFacebookPoint:(CGPoint)point andDelegate:(id)delegate;
 
 @end

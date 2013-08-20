@@ -10,8 +10,8 @@
 
 @implementation ClumsyScoreOkButton
 
-- (id)initWithFrame:(CGRect)frame andDelegate:(id)delegate {
-  self = [super initWithFrame:frame];
+- (id)initWithPoint:(CGPoint)point andDelegate:(id)delegate {
+  self = [super initWithFrame:CGRectMake(point.x, point.y, 115, 30)];
   if (self) {
     self.delegate = delegate;
     self.backgroundColor = [UIColor darkGrayColor];
@@ -22,8 +22,8 @@
   return self;
 }
 
-+ (id)buttonWithFrame:(CGRect)frame andDelegate:(id)delegate {
-  return [[ClumsyScoreOkButton alloc] initWithFrame:frame andDelegate:delegate];
++ (id)buttonWithPoint:(CGPoint)point andDelegate:(id)delegate {
+  return [[ClumsyScoreOkButton alloc] initWithPoint:point andDelegate:delegate];
 }
 
 /*

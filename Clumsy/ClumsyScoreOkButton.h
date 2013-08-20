@@ -13,7 +13,7 @@
 
 @property(strong, nonatomic) id<ClumsyScoreOkButtonDelegate>delegate;
 
-- (id)initWithFrame:(CGRect)frame andDelegate:(id)delegate;
-+ (id)buttonWithFrame:(CGRect)frame andDelegate:(id)delegate;
+- (id)initWithPoint:(CGPoint)point andDelegate:(id)delegate;
++ (id)buttonWithPoint:(CGPoint)point andDelegate:(id)delegate;
 
 @end

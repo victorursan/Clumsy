@@ -13,7 +13,8 @@
 #import "CustomUISwipeGestureDelegate.h"
 #import "ClumsyEngineDelegate.h"
 #import "ClumsyScoreViewDelegate.h"
+#import "ClumsySocialButtonDelegate.h"
 
-@interface MainClumsyViewController : UIViewController <ClumsyScoreViewDelegate, ClumsyEngineDelegate, CustomMainUIButtonDelegate, CustomUISwipeGestureDelegate, UIGestureRecognizerDelegate>
+@interface MainClumsyViewController : UIViewController <ClumsySocialButtonDelegate, ClumsyScoreViewDelegate, ClumsyEngineDelegate, CustomMainUIButtonDelegate, CustomUISwipeGestureDelegate, UIGestureRecognizerDelegate>
 
 @end

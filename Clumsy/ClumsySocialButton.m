@@ -10,8 +10,8 @@
 
 @implementation ClumsySocialButton
 
-- (id)initWithFrame:(CGRect)frame delegate:(id)delegate title:(NSString *)title {
-  self = [super initWithFrame:frame];
+- (id)initWithPoint:(CGPoint)point delegate:(id)delegate title:(NSString *)title {
+  self = [super initWithFrame:CGRectMake(point.x, point.y, 30, 30)];
   if (self) {
     self.delegate = delegate;
     self.backgroundColor = [UIColor lightGrayColor];
@@ -26,13 +26,13 @@
   return self;
 }
 
-+ (id)buttonWithTwitterFrame:(CGRect)frame andDelegate:(id)delegate {  
-  ClumsySocialButton *twitterSheet = [[ClumsySocialButton alloc] initWithFrame:frame delegate:delegate title:@"t"];
++ (id)buttonWithTwitterPoint:(CGPoint)point andDelegate:(id)delegate {
+  ClumsySocialButton *twitterSheet = [[ClumsySocialButton alloc] initWithPoint:point delegate:delegate title:@"t"];
   return twitterSheet;
 }
 
-+ (id)buttonWithFacebookFrame:(CGRect)frame andDelegate:(id)delegate {
-  ClumsySocialButton *facebookSheet = [[ClumsySocialButton alloc] initWithFrame:frame delegate:delegate title:@"f"];
++ (id)buttonWithFacebookPoint:(CGPoint)point andDelegate:(id)delegate {
+  ClumsySocialButton *facebookSheet = [[ClumsySocialButton alloc] initWithPoint:point delegate:delegate title:@"f"];
   return facebookSheet;
 }
 

@@ -14,6 +14,7 @@
 #import "ClumsyEngine.h"
 #import "ClumsyActionObject.h"
 #import "ClumsyScoreView.h"
+#import "ClumsySocialButton.h"
 
 @interface MainClumsyViewController ()
 
@@ -35,6 +36,9 @@
   [self.view addSubview:self.clumsyMainLabel];
   
   [self.view addSubview:[[CustomMainUIButton alloc] initWithFrame:self.view.bounds andTarget:self]];
+  
+  [self.view addSubview:[ClumsySocialButton buttonWithFacebookPoint:CGPointMake(220, 0) andDelegate:self]];
+  [self.view addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(255, 0) andDelegate:self]];
   
   [self addSwipes];
 }
@@ -86,6 +90,10 @@
 
 - (void)presentSocialViewController:(SLComposeViewController *)socialViewController{
   [self presentViewController:socialViewController animated:YES completion:nil];
+}
+
+- (void)socialButtonPressed:(UIButton *)sender {
+  NSLog(@"sender tag: %ld", (long)sender.tag);
 }
 
 - (void)didReceiveMemoryWarning {
