@@ -13,6 +13,7 @@
 #import "ClumsyScoreLable.h"
 #import "ClumsyScore.h"
 #import "ClumsySocialButton.h"
+#import "ClumsySocialViewController.h"
 
 @interface ClumsyScoreView ()
 
@@ -39,19 +40,7 @@
 }
 
 - (void)socialButtonPressed:(UIButton *)sender {
-  if (sender.tag == 1) {
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
-      SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-      [tweetSheet setInitialText:@"Tweeting from my own app! :)"];
-      [self.delegate presentSocialViewController:tweetSheet];
-    }
-  } else if (sender.tag == 2) {
-    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
-      SLComposeViewController *faceSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-      [faceSheet setInitialText:@"facebook"];
-      [self.delegate presentSocialViewController:faceSheet];
-    }
-  }
+  [self.delegate presentSocialViewController:[ClumsySocialViewController viewForButtonPressed:sender andScore:self.playersScore]];
 }
 
 + (id)viewWithFrame:(CGRect)frame delegate:(id)delegate andScore:(NSNumber *)score {
@@ -64,8 +53,11 @@
 }
 
 /*
- - (void)drawRect:(CGRect)rect {
- 
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect
+ {
+ // Drawing code
  }
  */
 
