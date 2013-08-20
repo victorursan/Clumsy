@@ -10,8 +10,6 @@
 
 @interface CustomClumsyMainView ()
 
-@property(strong, nonatomic) NSArray *allUIColors;
-
 @end
 
 @implementation CustomClumsyMainView {
@@ -21,29 +19,121 @@
 - (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
-    self.backgroundColor = [UIColor orangeColor];
-    count = 1;
+    count = 0;
+    self.backgroundColor = [self backgroundColorAtIndex:count];
+    count ++;
   }
   return self;
 }
 
-- (void)implementAllUIColors {
-  self.allUIColors = @[[UIColor orangeColor],[UIColor redColor],[UIColor blueColor],[UIColor purpleColor],[UIColor darkGrayColor]];
-}
-
 - (void)nextBackgroundColor {
-  [self implementAllUIColors];
   if (count >= 5) count = 0;
-  self.backgroundColor = self.allUIColors[count];
+  self.backgroundColor = [self backgroundColorAtIndex:count];
   count ++;
 }
 
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect {
- // Drawing code
- }
- */
+- (UIImage *)backgroundImageAtIndex:(int)index {
+  UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0f);
+  [self drawRect:self.bounds atNumber:index];
+  UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext();
+  return result;
+}
+
+- (UIColor *)backgroundColorAtIndex:(int)index {
+  return [UIColor colorWithPatternImage:[self backgroundImageAtIndex:index]];
+}
+
+
+- (void)drawRect:(CGRect)rect atNumber:(int)number {
+  
+  
+  //// General Declarations
+  CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+  CGContextRef context = UIGraphicsGetCurrentContext();
+  
+  NSArray *gradientColors;
+  
+  if (number == 0) {
+    //// Color Declarations
+    UIColor *gradient1Color1 = [UIColor colorWithRed: 1 green: 0.114 blue: 0.114 alpha: 1];
+    UIColor *gradient1Color2 = [UIColor colorWithRed: 1 green: 0.43 blue: 0 alpha: 1];
+    
+    //// Gradient Declarations
+    gradientColors = [NSArray arrayWithObjects:
+                      (id)gradient1Color2.CGColor,
+                      (id)[UIColor colorWithRed: 1 green: 0.272 blue: 0.057 alpha: 1].CGColor,
+                      (id)gradient1Color1.CGColor,
+                      (id)[UIColor colorWithRed: 1 green: 0.272 blue: 0.057 alpha: 1].CGColor,
+                      (id)gradient1Color2.CGColor, nil];
+  } else if (number == 1) {
+    //// Color Declarations
+    UIColor *gradient2Color1 = [UIColor colorWithRed: 0.062 green: 0.529 blue: 0 alpha: 1];
+    UIColor *gradient2Color2 = [UIColor colorWithRed: 0.011 green: 0.908 blue: 0.011 alpha: 1];
+    
+    //// Gradient Declarations
+    gradientColors = [NSArray arrayWithObjects:
+                      (id)gradient2Color1.CGColor,
+                      (id)[UIColor colorWithRed: 0.037 green: 0.719 blue: 0.005 alpha: 1].CGColor,
+                      (id)gradient2Color2.CGColor,
+                      (id)[UIColor colorWithRed: 0.037 green: 0.719 blue: 0.005 alpha: 1].CGColor,
+                      (id)gradient2Color1.CGColor, nil];
+  } else if (number == 2) {
+    UIColor* gradient3Color1 = [UIColor colorWithRed: 0.99 green: 1 blue: 0 alpha: 1];
+    UIColor* gradient3Color2 = [UIColor colorWithRed: 0.999 green: 0.734 blue: 0.155 alpha: 1];
+    
+    //// Gradient Declarations
+    gradientColors = [NSArray arrayWithObjects:
+                      (id)gradient3Color1.CGColor,
+                      (id)[UIColor colorWithRed: 0.995 green: 0.867 blue: 0.078 alpha: 1].CGColor,
+                      (id)gradient3Color2.CGColor,
+                      (id)[UIColor colorWithRed: 0.995 green: 0.867 blue: 0.078 alpha: 1].CGColor,
+                      (id)gradient3Color1.CGColor, nil];
+  } else if (number == 3) {
+    //// Color Declarations
+    UIColor* gradient4Color1 = [UIColor colorWithRed: 0 green: 1 blue: 1 alpha: 1];
+    UIColor* gradient4Color2 = [UIColor colorWithRed: 0 green: 0.097 blue: 1 alpha: 1];
+    
+    //// Gradient Declarations
+    gradientColors = [NSArray arrayWithObjects:
+                      (id)gradient4Color1.CGColor,
+                      (id)[UIColor colorWithRed: 0 green: 0.548 blue: 1 alpha: 1].CGColor,
+                      (id)gradient4Color2.CGColor,
+                      (id)[UIColor colorWithRed: 0 green: 0.548 blue: 1 alpha: 1].CGColor,
+                      (id)gradient4Color1.CGColor, nil];
+  } else {
+    //// Color Declarations
+    UIColor* gradient5Color1 = [UIColor colorWithRed: 1 green: 0 blue: 0.853 alpha: 1];
+    UIColor* gradient5Color2 = [UIColor colorWithRed: 1 green: 0 blue: 0.447 alpha: 1];
+    
+    //// Gradient Declarations
+    gradientColors = [NSArray arrayWithObjects:
+                      (id)gradient5Color2.CGColor,
+                      (id)[UIColor colorWithRed: 1 green: 0 blue: 0.65 alpha: 1].CGColor,
+                      (id)gradient5Color1.CGColor,
+                      (id)[UIColor colorWithRed: 1 green: 0 blue: 0.65 alpha: 1].CGColor,
+                      (id)gradient5Color2.CGColor, nil];
+  }
+  
+  CGFloat gradientLocations[] = {0, 0.2, 0.5, 0.8, 1};
+  CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)gradientColors, gradientLocations);
+  
+  //// Abstracted Attributes
+  CGRect mainScreenRect = CGRectMake(0, 0, 320, 480);
+  
+  
+  //// MainScreen Drawing
+  UIBezierPath* mainScreenPath = [UIBezierPath bezierPathWithRect: mainScreenRect];
+  CGContextSaveGState(context);
+  [mainScreenPath addClip];
+  CGContextDrawLinearGradient(context, gradient, CGPointMake(160, 0), CGPointMake(160, 480), 0);
+  CGContextRestoreGState(context);
+  
+  
+  //// Cleanup
+  CGGradientRelease(gradient);
+  CGColorSpaceRelease(colorSpace);
+  
+}
 
 @end
