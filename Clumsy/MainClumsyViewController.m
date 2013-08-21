@@ -8,21 +8,22 @@
 
 #import "MainClumsyViewController.h"
 #import "CustomClumsyMainView.h"
-#import "CustomMainUILabel.h"
 #import "CustomMainUIButton.h"
 #import "CustomUISwipeGesture.h"
 #import "ClumsyEngine.h"
 #import "ClumsyActionObject.h"
 #import "ClumsyScoreView.h"
 #import "ClumsySocialButton.h"
+#import "ClumsyActionView.h"
 
 @interface MainClumsyViewController ()
 
-@property(strong, nonatomic) CustomMainUILabel *clumsyMainLabel;
+
 @property(strong, nonatomic) CustomClumsyMainView *mainView;
 @property(strong, nonatomic) ClumsyEngine *engine;
 @property(strong, nonatomic) ClumsySocialButton *twitterButton;
 @property(strong, nonatomic) ClumsySocialButton *facebookButton;
+@property(strong, nonatomic) ClumsyActionView *actionView;
 
 @end
 
@@ -32,10 +33,12 @@
   [super viewDidLoad];
   self.mainView = [[CustomClumsyMainView alloc] initWithFrame:self.view.bounds];
   self.view = self.mainView;
-  self.clumsyMainLabel = [[CustomMainUILabel alloc] initWithFrame:CGRectMake(0, 200, 320, 60)];
-  self.clumsyMainLabel.actionObject = [ClumsyActionObject startClumsyObject];
-  [self.view addSubview:self.clumsyMainLabel];
+   
+  self.actionView = [[ClumsyActionView alloc] initWithPoint:CGPointMake(0, 180)];
+  [self.view addSubview:self.actionView];
+  
   [self.view addSubview:[[CustomMainUIButton alloc] initWithFrame:self.view.bounds andTarget:self]];
+  
   self.twitterButton = [ClumsySocialButton buttonWithTwitterPoint:CGPointMake(210, 0) andDelegate:self];
   [self.view addSubview:self.twitterButton];
   self.facebookButton = [ClumsySocialButton buttonWithFacebookPoint:CGPointMake(265, 0) andDelegate:self];
@@ -59,8 +62,9 @@
 }
 
 - (void)screenWasPressed:(UIButton *)sender {
-  if ([self.clumsyMainLabel.text isEqualToString:[[ClumsyActionObject startClumsyObject] text]]) {
+  if ([self.actionView.action isEqualToString:[[ClumsyActionObject startClumsyObject] text]]) {
     self.engine = [ClumsyEngine startEngineWithTarget:self];
+    [self hideSocialButtons];
   } else {
     [self.engine verifyClumsyActionTaken:[ClumsyActionObject screenWasPressed]];
   }
@@ -77,14 +81,13 @@
 }
 
 - (void)setClumsyMainLabelTextTo:(ClumsyActionObject *)clumsyObject {
-  self.clumsyMainLabel.actionObject = clumsyObject;
+  self.actionView.actionObject = clumsyObject;
   [self.mainView nextBackgroundColor];
 }
 
 - (void)failedClumsyActionWithScore:(NSNumber *)score {
   self.engine = nil;
-  self.clumsyMainLabel.actionObject = [ClumsyActionObject startClumsyObject];
-  [self hideSocialButtons];
+  self.actionView.actionObject = [ClumsyActionObject startClumsyObject];
   [self.view addSubview:[ClumsyScoreView viewWithFrame:self.view.bounds delegate:self andScore:score ]];
   [self.mainView nextBackgroundColor];
 }

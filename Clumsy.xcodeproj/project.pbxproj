@@ -28,7 +28,6 @@
 		570980F217B4F26500192234 /* MainClumsyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980F017B4F26500192234 /* MainClumsyViewController.m */; };
 		570980F617B4F5F000192234 /* CustomClumsyMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980F517B4F5F000192234 /* CustomClumsyMainView.m */; };
 		570980F917B4F81500192234 /* CustomMainUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980F817B4F81500192234 /* CustomMainUIButton.m */; };
-		570980FD17B4FA2E00192234 /* CustomMainUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980FC17B4FA2E00192234 /* CustomMainUILabel.m */; };
 		5709810617B4FFFF00192234 /* CustomUISwipeGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5709810517B4FFFF00192234 /* CustomUISwipeGesture.m */; };
 		5709810D17B5367800192234 /* ClumsyEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5709810C17B5367800192234 /* ClumsyEngine.m */; };
 		5709811117B6A9A900192234 /* ClumsyActionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5709811017B6A9A900192234 /* ClumsyActionObject.m */; };
@@ -43,6 +42,7 @@
 		576F1B9E17C0B1CC00A2A919 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */; };
 		576F1BA417C17DEF00A2A919 /* ClumsySocialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */; };
 		57B207EA17C03849003E8281 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B207E917C03849003E8281 /* CoreImage.framework */; };
+		57F775D017C4F25100D4788B /* ClumsyActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F775CF17C4F25100D4788B /* ClumsyActionView.m */; };
 		57F9ABEF17C36E7300AC3653 /* ClumsySocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F9ABEE17C36E7300AC3653 /* ClumsySocialViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -85,8 +85,6 @@
 		570980F717B4F81500192234 /* CustomMainUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMainUIButton.h; sourceTree = "<group>"; };
 		570980F817B4F81500192234 /* CustomMainUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMainUIButton.m; sourceTree = "<group>"; };
 		570980FA17B4F84600192234 /* CustomMainUIButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMainUIButtonDelegate.h; sourceTree = "<group>"; };
-		570980FB17B4FA2D00192234 /* CustomMainUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMainUILabel.h; sourceTree = "<group>"; };
-		570980FC17B4FA2E00192234 /* CustomMainUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMainUILabel.m; sourceTree = "<group>"; };
 		5709810417B4FFFF00192234 /* CustomUISwipeGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUISwipeGesture.h; sourceTree = "<group>"; };
 		5709810517B4FFFF00192234 /* CustomUISwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUISwipeGesture.m; sourceTree = "<group>"; };
 		5709810717B500BF00192234 /* CustomUISwipeGestureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUISwipeGestureDelegate.h; sourceTree = "<group>"; };
@@ -116,6 +114,8 @@
 		576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsySocialButton.m; sourceTree = "<group>"; };
 		576F1BA517C1800C00A2A919 /* ClumsySocialButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsySocialButtonDelegate.h; sourceTree = "<group>"; };
 		57B207E917C03849003E8281 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		57F775CE17C4F25100D4788B /* ClumsyActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyActionView.h; sourceTree = "<group>"; };
+		57F775CF17C4F25100D4788B /* ClumsyActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyActionView.m; sourceTree = "<group>"; };
 		57F9ABED17C36E7300AC3653 /* ClumsySocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsySocialViewController.h; sourceTree = "<group>"; };
 		57F9ABEE17C36E7300AC3653 /* ClumsySocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsySocialViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -269,8 +269,8 @@
 				570980F017B4F26500192234 /* MainClumsyViewController.m */,
 				570980F417B4F5F000192234 /* CustomClumsyMainView.h */,
 				570980F517B4F5F000192234 /* CustomClumsyMainView.m */,
-				570980FB17B4FA2D00192234 /* CustomMainUILabel.h */,
-				570980FC17B4FA2E00192234 /* CustomMainUILabel.m */,
+				57F775CE17C4F25100D4788B /* ClumsyActionView.h */,
+				57F775CF17C4F25100D4788B /* ClumsyActionView.m */,
 				570980F717B4F81500192234 /* CustomMainUIButton.h */,
 				570980F817B4F81500192234 /* CustomMainUIButton.m */,
 				570980FA17B4F84600192234 /* CustomMainUIButtonDelegate.h */,
@@ -396,7 +396,6 @@
 				570980F117B4F26500192234 /* MainClumsyViewController.m in Sources */,
 				570980F617B4F5F000192234 /* CustomClumsyMainView.m in Sources */,
 				570980F917B4F81500192234 /* CustomMainUIButton.m in Sources */,
-				570980FD17B4FA2E00192234 /* CustomMainUILabel.m in Sources */,
 				5709810617B4FFFF00192234 /* CustomUISwipeGesture.m in Sources */,
 				5709810D17B5367800192234 /* ClumsyEngine.m in Sources */,
 				5709811117B6A9A900192234 /* ClumsyActionObject.m in Sources */,
@@ -408,6 +407,7 @@
 				57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */,
 				576F1BA417C17DEF00A2A919 /* ClumsySocialButton.m in Sources */,
 				57F9ABEF17C36E7300AC3653 /* ClumsySocialViewController.m in Sources */,
+				57F775D017C4F25100D4788B /* ClumsyActionView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

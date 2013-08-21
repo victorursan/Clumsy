@@ -36,6 +36,7 @@
 }
 
 - (void)verifyClumsyActionTaken:(ClumsyActionObject *)clumsyObject {
+  NSLog(@"%@ -- %@",clumsyObject.text , self.clumsyObject.text);
   if ([clumsyObject.text isEqual:self.clumsyObject.text]) {
     [self resetTimer];
     [self setNewClumsyObject];
@@ -47,7 +48,6 @@
 
 - (void)setNewClumsyObject {
   self.clumsyObject = [ClumsyActionObject randomClumsyObject];
-  NSLog(@"%@",self.clumsyObject.text);
   [self.delegate setClumsyMainLabelTextTo:self.clumsyObject];
 }
 
