@@ -46,12 +46,9 @@
 
 
 - (void)drawRect:(CGRect)rect atNumber:(int)number {
-  
-  
   //// General Declarations
   CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
   CGContextRef context = UIGraphicsGetCurrentContext();
-  
   NSArray *gradientColors;
   
   if (number == 0) {
@@ -119,8 +116,7 @@
   CGGradientRef gradient = CGGradientCreateWithColors(colorSpace, (__bridge CFArrayRef)gradientColors, gradientLocations);
   
   //// Abstracted Attributes
-  CGRect mainScreenRect = CGRectMake(0, 0, 320, 480);
-  
+  CGRect mainScreenRect = self.bounds;
   
   //// MainScreen Drawing
   UIBezierPath* mainScreenPath = [UIBezierPath bezierPathWithRect: mainScreenRect];
@@ -128,7 +124,6 @@
   [mainScreenPath addClip];
   CGContextDrawLinearGradient(context, gradient, CGPointMake(160, 0), CGPointMake(160, 480), 0);
   CGContextRestoreGState(context);
-  
   
   //// Cleanup
   CGGradientRelease(gradient);

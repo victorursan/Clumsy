@@ -30,8 +30,8 @@
     [self addSubview:[ClumsyScoreInnerBoxView viewWithFrame:CGRectMake(25, 160, 270, 120)]];
     [self addSubview:[ClumsyTitleScoreLabel labelWithFrame:CGRectMake(25, 160, 270, 40)]];
     [self addSubview:[ClumsyScoreLable lableWithFrame:CGRectMake(25, 200, 270, 35) andScore:score]];
-    [self addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(30, 250) andDelegate:self]];
-    [self addSubview:[ClumsySocialButton buttonWithFacebookPoint:CGPointMake(65, 250) andDelegate:self]];
+    [self addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(25, 250) andDelegate:self]];
+    [self addSubview:[ClumsySocialButton buttonWithFacebookPoint:CGPointMake(75, 250) andDelegate:self]];
     [self addSubview:[ClumsyScoreOkButton buttonWithPoint:CGPointMake(180, 250) andDelegate:self]];
     self.playersScore = score;
     self.delegate = delegate;

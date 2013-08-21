@@ -30,16 +30,12 @@
   [super viewDidLoad];
   self.mainView = [[CustomClumsyMainView alloc] initWithFrame:self.view.bounds];
   self.view = self.mainView;
-  
   self.clumsyMainLabel = [[CustomMainUILabel alloc] initWithFrame:CGRectMake(0, 200, 320, 60)];
   self.clumsyMainLabel.actionObject = [ClumsyActionObject startClumsyObject];
   [self.view addSubview:self.clumsyMainLabel];
-  
   [self.view addSubview:[[CustomMainUIButton alloc] initWithFrame:self.view.bounds andTarget:self]];
-  
-  [self.view addSubview:[ClumsySocialButton buttonWithFacebookPoint:CGPointMake(220, 0) andDelegate:self]];
-  [self.view addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(255, 0) andDelegate:self]];
-  
+  [self.view addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(210, 0) andDelegate:self]];
+  [self.view addSubview:[ClumsySocialButton buttonWithFacebookPoint:CGPointMake(265, 0) andDelegate:self]];
   [self addSwipes];
 }
 
