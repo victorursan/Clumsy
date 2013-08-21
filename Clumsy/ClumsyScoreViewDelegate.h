@@ -11,5 +11,6 @@
 @protocol ClumsyScoreViewDelegate <NSObject>
 
 - (void)presentSocialViewController:(SLComposeViewController *)socialViewController;
+- (void)showSocialButtons;
 
 @end

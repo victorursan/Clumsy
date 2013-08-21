@@ -21,6 +21,8 @@
 @property(strong, nonatomic) CustomMainUILabel *clumsyMainLabel;
 @property(strong, nonatomic) CustomClumsyMainView *mainView;
 @property(strong, nonatomic) ClumsyEngine *engine;
+@property(strong, nonatomic) ClumsySocialButton *twitterButton;
+@property(strong, nonatomic) ClumsySocialButton *facebookButton;
 
 @end
 
@@ -34,8 +36,10 @@
   self.clumsyMainLabel.actionObject = [ClumsyActionObject startClumsyObject];
   [self.view addSubview:self.clumsyMainLabel];
   [self.view addSubview:[[CustomMainUIButton alloc] initWithFrame:self.view.bounds andTarget:self]];
-  [self.view addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(210, 0) andDelegate:self]];
-  [self.view addSubview:[ClumsySocialButton buttonWithFacebookPoint:CGPointMake(265, 0) andDelegate:self]];
+  self.twitterButton = [ClumsySocialButton buttonWithTwitterPoint:CGPointMake(210, 0) andDelegate:self];
+  [self.view addSubview:self.twitterButton];
+  self.facebookButton = [ClumsySocialButton buttonWithFacebookPoint:CGPointMake(265, 0) andDelegate:self];
+  [self.view addSubview:self.facebookButton];
   [self addSwipes];
 }
 
@@ -80,8 +84,20 @@
 - (void)failedClumsyActionWithScore:(NSNumber *)score {
   self.engine = nil;
   self.clumsyMainLabel.actionObject = [ClumsyActionObject startClumsyObject];
+  [self hideSocialButtons];
   [self.view addSubview:[ClumsyScoreView viewWithFrame:self.view.bounds delegate:self andScore:score ]];
   [self.mainView nextBackgroundColor];
+}
+
+- (void)hideSocialButtons {
+  self.facebookButton.hidden = YES;
+  self.twitterButton.hidden = YES;
+}
+
+- (void)showSocialButtons {
+  self.facebookButton.hidden = NO;
+  self.twitterButton.hidden = NO;
+
 }
 
 - (void)presentSocialViewController:(SLComposeViewController *)socialViewController{

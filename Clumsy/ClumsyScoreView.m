@@ -26,15 +26,15 @@
 - (id)initWithFrame:(CGRect)frame delegate:(id)delegate andScore:(NSNumber *)score {
   self = [super initWithFrame:frame];
   if (self) {
+    self.delegate = delegate;
+    self.playersScore = score;
     self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
     [self addSubview:[ClumsyScoreInnerBoxView viewWithFrame:CGRectMake(25, 160, 270, 120)]];
     [self addSubview:[ClumsyTitleScoreLabel labelWithFrame:CGRectMake(25, 160, 270, 40)]];
-    [self addSubview:[ClumsyScoreLable lableWithFrame:CGRectMake(25, 200, 270, 35) andScore:score]];
+    [self addSubview:[ClumsyScoreLable lableWithFrame:CGRectMake(25, 200, 270, 35) andScore:self.playersScore]];
     [self addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(25, 250) andDelegate:self]];
     [self addSubview:[ClumsySocialButton buttonWithFacebookPoint:CGPointMake(75, 250) andDelegate:self]];
     [self addSubview:[ClumsyScoreOkButton buttonWithPoint:CGPointMake(180, 250) andDelegate:self]];
-    self.playersScore = score;
-    self.delegate = delegate;
   }
   return self;
 }
@@ -48,6 +48,7 @@
 }
 
 - (void)okButtonPressed:(id)sender {
+  [self.delegate showSocialButtons];
   [ClumsyScore saveScore:self.playersScore];
   [self removeFromSuperview];
 }
