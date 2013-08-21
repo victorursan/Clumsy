@@ -37,7 +37,7 @@
 }
 
 - (UIImage *)imageForSelector:(SEL)selector {
-  UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0f);
+  UIGraphicsBeginImageContextWithOptions(self.frame.size, NO, 0.0f);
 	
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"

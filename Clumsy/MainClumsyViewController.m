@@ -32,16 +32,14 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   self.mainView = [[CustomClumsyMainView alloc] initWithFrame:self.view.bounds];
-  self.view = self.mainView;
-   
-  self.actionView = [[ClumsyActionView alloc] initWithPoint:CGPointMake(0, 180)];
-  [self.view addSubview:self.actionView];
-  
-  [self.view addSubview:[[CustomMainUIButton alloc] initWithFrame:self.view.bounds andTarget:self]];
-  
+  self.actionView = [[ClumsyActionView alloc] initWithPoint:CGPointMake(0, 0)];
   self.twitterButton = [ClumsySocialButton buttonWithTwitterPoint:CGPointMake(210, 0) andDelegate:self];
-  [self.view addSubview:self.twitterButton];
   self.facebookButton = [ClumsySocialButton buttonWithFacebookPoint:CGPointMake(265, 0) andDelegate:self];
+  self.view = self.mainView;
+  
+  [self.view addSubview:self.actionView];
+  [self.view addSubview:[[CustomMainUIButton alloc] initWithFrame:self.view.bounds andTarget:self]];
+  [self.view addSubview:self.twitterButton];
   [self.view addSubview:self.facebookButton];
   [self addSwipes];
 }
@@ -100,7 +98,7 @@
 - (void)showSocialButtons {
   self.facebookButton.hidden = NO;
   self.twitterButton.hidden = NO;
-
+  
 }
 
 - (void)presentSocialViewController:(SLComposeViewController *)socialViewController{
