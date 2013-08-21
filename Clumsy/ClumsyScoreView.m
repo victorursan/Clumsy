@@ -13,7 +13,7 @@
 #import "ClumsyScoreLable.h"
 #import "ClumsyScore.h"
 #import "ClumsySocialButton.h"
-#import "ClumsySocialViewController.h"
+#import "ClumsySocialHandler.h"
 
 @interface ClumsyScoreView ()
 
@@ -40,7 +40,7 @@
 }
 
 - (void)socialButtonPressed:(UIButton *)sender {
-  [self.delegate presentSocialViewController:[ClumsySocialViewController viewForButtonPressed:sender andScore:self.playersScore]];
+  [self.delegate presentSocialViewController:[ClumsySocialHandler viewControllerForButton:sender andScore:self.playersScore]];
 }
 
 + (id)viewWithFrame:(CGRect)frame delegate:(id)delegate andScore:(NSNumber *)score {

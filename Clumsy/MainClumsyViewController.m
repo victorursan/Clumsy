@@ -15,6 +15,7 @@
 #import "ClumsyScoreView.h"
 #import "ClumsySocialButton.h"
 #import "ClumsyActionView.h"
+#import "ClumsySocialHandler.h"
 
 @interface MainClumsyViewController ()
 
@@ -101,12 +102,12 @@
   
 }
 
-- (void)presentSocialViewController:(SLComposeViewController *)socialViewController{
+- (void)presentSocialViewController:(UIViewController *)socialViewController{
   [self presentViewController:socialViewController animated:YES completion:nil];
 }
 
 - (void)socialButtonPressed:(UIButton *)sender {
-  NSLog(@"sender tag: %ld", (long)sender.tag);
+  [self presentSocialViewController:[ClumsySocialHandler shareClumsyForButton:sender]];
 }
 
 - (void)didReceiveMemoryWarning {
