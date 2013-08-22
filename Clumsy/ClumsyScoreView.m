@@ -28,13 +28,12 @@
   if (self) {
     self.delegate = delegate;
     self.playersScore = score;
-    self.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
-    [self addSubview:[ClumsyScoreInnerBoxView viewWithFrame:CGRectMake(25, 160, 270, 120)]];
-    [self addSubview:[ClumsyTitleScoreLabel labelWithFrame:CGRectMake(25, 160, 270, 40)]];
-    [self addSubview:[ClumsyScoreLable lableWithFrame:CGRectMake(25, 200, 270, 35) andScore:self.playersScore]];
-    [self addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(25, 250) andDelegate:self]];
-    [self addSubview:[ClumsySocialButton buttonWithFacebookPoint:CGPointMake(75, 250) andDelegate:self]];
-    [self addSubview:[ClumsyScoreOkButton buttonWithPoint:CGPointMake(180, 250) andDelegate:self]];
+    [self addSubview:[ClumsyScoreInnerBoxView viewWithFrame:self.bounds]];
+    [self addSubview:[ClumsyTitleScoreLabel labelWithFrame:CGRectMake(25, 179, 270, 40)]];
+    [self addSubview:[ClumsyScoreLable lableWithFrame:CGRectMake(25, 230, 270, 35) andScore:self.playersScore]];
+    [self addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(25, 300) andDelegate:self]];
+    [self addSubview:[ClumsySocialButton buttonWithFacebookPoint:CGPointMake(75, 300) andDelegate:self]];
+    [self addSubview:[ClumsyScoreOkButton buttonWithPoint:CGPointMake(180, 275) andDelegate:self]];
   }
   return self;
 }

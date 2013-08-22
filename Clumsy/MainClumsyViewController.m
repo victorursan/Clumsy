@@ -32,8 +32,8 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.mainView = [[CustomClumsyMainView alloc] initWithFrame:self.view.bounds];
-  self.actionView = [[ClumsyActionView alloc] initWithPoint:CGPointMake(0, 0)];
+  self.mainView = [[CustomClumsyMainView alloc] initWithFrame:self.view.frame];
+  self.actionView = [[ClumsyActionView alloc] initWithFrame:self.view.frame];
   self.twitterButton = [ClumsySocialButton buttonWithTwitterPoint:CGPointMake(210, 0) andDelegate:self];
   self.facebookButton = [ClumsySocialButton buttonWithFacebookPoint:CGPointMake(265, 0) andDelegate:self];
   self.view = self.mainView;

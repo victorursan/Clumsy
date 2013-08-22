@@ -14,6 +14,6 @@
 @property(strong, nonatomic) ClumsyActionObject *actionObject;
 @property(strong, nonatomic) NSString *action;
 
-- (id)initWithPoint:(CGPoint)point;
+- (id)initWithFrame:(CGRect)frame;
 
 @end

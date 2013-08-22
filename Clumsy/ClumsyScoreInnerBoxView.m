@@ -13,7 +13,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-       self.backgroundColor = [UIColor grayColor];
+       self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -22,13 +22,37 @@
   return [[ClumsyScoreInnerBoxView alloc] initWithFrame:frame];
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+{//// General Declarations
+  CGContextRef context = UIGraphicsGetCurrentContext();
+  
+  //// Color Declarations
+  UIColor* shadowColor2 = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 1];
+  UIColor* color7 = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 0.497];
+  
+  //// Shadow Declarations
+  UIColor* buttonShadow = shadowColor2;
+  CGSize buttonShadowOffset = CGSizeMake(0.1, -0.1);
+  CGFloat buttonShadowBlurRadius = 7;
+  
+  //// Frames
+  CGRect frame7 = self.frame;
+  
+  
+  //// Group 2
+  {
+    //// Rectangle Drawing
+    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(CGRectGetMinX(frame7) + 27, CGRectGetMinY(frame7) + 172, 267, 136)];
+    CGContextSaveGState(context);
+    CGContextSetShadowWithColor(context, buttonShadowOffset, buttonShadowBlurRadius, buttonShadow.CGColor);
+    [color7 setFill];
+    [rectanglePath fill];
+    CGContextRestoreGState(context);
+    
+  }
+  
+    
+}  
+
 
 @end

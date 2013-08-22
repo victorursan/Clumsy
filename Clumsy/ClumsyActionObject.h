@@ -13,11 +13,9 @@
 @property(strong, nonatomic) NSString *text;
 
 - (id)initWithAction:(NSString *)action;
-
 + (id)screenWasSwipedInDirection:(UISwipeGestureRecognizer *)swipe;
 + (id)screenWasPressed;
 + (id)iPhoneWasShaken;
-
 + (id)startClumsyObject;
 + (id)randomClumsyObject;
 

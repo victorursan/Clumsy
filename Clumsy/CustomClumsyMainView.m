@@ -28,13 +28,13 @@
 
 - (void)nextBackgroundColor {
   if (count >= 5) count = 0;
-  self.backgroundColor = [self backgroundColorAtIndex:count];
+  [self setBackgroundColor:[self backgroundColorAtIndex:count]];
   count ++;
 }
 
 - (UIImage *)backgroundImageAtIndex:(int)index {
-  UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0.0f);
-  [self drawRect:self.bounds atNumber:index];
+  UIGraphicsBeginImageContextWithOptions(self.frame.size, NO, 0.0f);
+  [self drawRect:self.frame atNumber:index];
   UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
   UIGraphicsEndImageContext();
   return result;
@@ -122,7 +122,7 @@
   UIBezierPath* mainScreenPath = [UIBezierPath bezierPathWithRect: mainScreenRect];
   CGContextSaveGState(context);
   [mainScreenPath addClip];
-  CGContextDrawLinearGradient(context, gradient, CGPointMake(160, 0), CGPointMake(160, 480), 0);
+  CGContextDrawLinearGradient(context, gradient, CGPointMake(160, 0), CGPointMake(160, self.frame.size.height), 0);
   CGContextRestoreGState(context);
   
   //// Cleanup

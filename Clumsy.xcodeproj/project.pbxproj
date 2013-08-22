@@ -192,11 +192,7 @@
 				570980C617B4EF6800192234 /* AppDelegate.m */,
 				57572D2217BAD1C900B8D7F9 /* MainClumsyViewController */,
 				57572D1E17BAC90400B8D7F9 /* ClumsyScoreView */,
-				576F1BA217C17DEE00A2A919 /* ClumsySocialButton.h */,
-				576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */,
-				576F1BA517C1800C00A2A919 /* ClumsySocialButtonDelegate.h */,
-				57F775D117C57EC800D4788B /* ClumsySocialHandler.h */,
-				57F775D217C57EC800D4788B /* ClumsySocialHandler.m */,
+				57F775D417C585BA00D4788B /* ClumsySocial */,
 				5709810B17B5367700192234 /* ClumsyEngine.h */,
 				5709810C17B5367800192234 /* ClumsyEngine.m */,
 				5709810E17B694D100192234 /* ClumsyEngineDelegate.h */,
@@ -279,6 +275,18 @@
 				5709810717B500BF00192234 /* CustomUISwipeGestureDelegate.h */,
 			);
 			name = MainClumsyViewController;
+			sourceTree = "<group>";
+		};
+		57F775D417C585BA00D4788B /* ClumsySocial */ = {
+			isa = PBXGroup;
+			children = (
+				576F1BA217C17DEE00A2A919 /* ClumsySocialButton.h */,
+				576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */,
+				576F1BA517C1800C00A2A919 /* ClumsySocialButtonDelegate.h */,
+				57F775D117C57EC800D4788B /* ClumsySocialHandler.h */,
+				57F775D217C57EC800D4788B /* ClumsySocialHandler.m */,
+			);
+			name = ClumsySocial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

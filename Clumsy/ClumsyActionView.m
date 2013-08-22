@@ -10,16 +10,10 @@
 #import "CustomUISwipeGesture.h"
 #import "ClumsyActionObject.h"
 
-@interface ClumsyActionView ()
-
-//@property(strong, nonatomic) NSDictionary *allViewsForObjects;
-
-@end
-
 @implementation ClumsyActionView
 
-- (id)initWithPoint:(CGPoint)point {
-  self = [super initWithFrame:CGRectMake(point.x, point.y, 320, 480)];
+- (id)initWithFrame:(CGRect)frame {
+  self = [super initWithFrame:frame];
   if (self) {
     self.backgroundColor = [UIColor clearColor];
     self.actionObject = [ClumsyActionObject startClumsyObject];
@@ -54,7 +48,7 @@
   CGFloat textShadowBlurRadius = 5;
   
   //// Frames
-  CGRect frame3 = CGRectMake(0, 0, 319, 480);
+  CGRect frame3 = self.frame;
   
   
   //// Abstracted Attributes
