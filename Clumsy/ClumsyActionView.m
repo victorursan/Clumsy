@@ -48,7 +48,14 @@
   CGFloat textShadowBlurRadius = 5;
   
   //// Frames
-  CGRect frame3 = self.frame;
+  CGRect frame = self.frame;
+  
+  CGRect swipeBezierRect = CGRectMake(CGRectGetMinX(frame), CGRectGetMinY(frame) + ((self.frame.size.height/2) - 50), 320, 240);
+  
+  CGRect contentRect = CGRectMake(CGRectGetMinX(frame), CGRectGetMinY(frame) + ((self.frame.size.height/2) - 110), 320, 150);
+  CGRect swipeRect = CGRectMake(CGRectGetMinX(frame), self.frame.size.height/2 - 145, 320, 125);
+  
+  
   
   
   //// Abstracted Attributes
@@ -57,156 +64,156 @@
   NSString *pressContent = @"Press";
   NSString *swipeContent = @"Swipe";
   
-  //// Group
+  UIFont *textFont = [UIFont fontWithName: @"Helvetica" size: 90];
+  
   if ([action isEqualToString:@"Start"]) {
     
     //// Start Drawing
-    CGRect startRect = CGRectMake(CGRectGetMinX(frame3), CGRectGetMinY(frame3) + 165, 320, 150);
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [startContent drawInRect: startRect withFont: [UIFont fontWithName: @"Helvetica" size: 90] lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    [startContent drawInRect: contentRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
     CGContextRestoreGState(context);
     
   } else if ([action isEqualToString:@"Shake"]) {
     
     //// Shake Drawing
-    CGRect shakeRect = CGRectMake(CGRectGetMinX(frame3), CGRectGetMinY(frame3) + 165, 320, 150);
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [shakeContent drawInRect: shakeRect withFont: [UIFont fontWithName: @"Helvetica" size: 90] lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    [shakeContent drawInRect: contentRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
     CGContextRestoreGState(context);
     
   } else if ([action isEqualToString:@"Press"]) {
     
     //// Press Drawing
-    CGRect pressRect = CGRectMake(CGRectGetMinX(frame3), CGRectGetMinY(frame3) + 165, 320, 150);
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [pressContent drawInRect: pressRect withFont: [UIFont fontWithName: @"Helvetica" size: 90] lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    [pressContent drawInRect: contentRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
     CGContextRestoreGState(context);
     
   } else if ([action isEqualToString:@"Swipe Down"]) {
-    //// Rectangle D Drawing
-    UIBezierPath* rectangleDPath = [UIBezierPath bezierPath];
-    [rectangleDPath moveToPoint: CGPointMake(CGRectGetMinX(frame3) + 147.5, CGRectGetMinY(frame3) + 355.5)];
-    [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 147.5, CGRectGetMinY(frame3) + 255.5)];
-    [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 171.5, CGRectGetMinY(frame3) + 255.5)];
-    [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 171.5, CGRectGetMinY(frame3) + 355.5)];
-    [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 187.5, CGRectGetMinY(frame3) + 355.5)];
-    [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 159.5, CGRectGetMinY(frame3) + 380.5)];
-    [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 131.5, CGRectGetMinY(frame3) + 355.5)];
-    [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 147.5, CGRectGetMinY(frame3) + 355.5)];
-    [rectangleDPath closePath];
-    CGContextSaveGState(context);
-    CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
-    [fillColor setFill];
-    [rectangleDPath fill];
-    CGContextRestoreGState(context);
-    
-    [fillColor setStroke];
-    rectangleDPath.lineWidth = 1;
-    [rectangleDPath stroke];
+    {
+      //// Rectangle D Drawing
+      UIBezierPath* rectangleDPath = [UIBezierPath bezierPath];
+      [rectangleDPath moveToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 148.21, CGRectGetMinY(swipeBezierRect) + 104.5)];
+      [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 148.21, CGRectGetMinY(swipeBezierRect) + 4.5)];
+      [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 171.79, CGRectGetMinY(swipeBezierRect) + 4.5)];
+      [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 171.79, CGRectGetMinY(swipeBezierRect) + 104.5)];
+      [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 187.5, CGRectGetMinY(swipeBezierRect) + 104.5)];
+      [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 160, CGRectGetMinY(swipeBezierRect) + 129.5)];
+      [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 132.5, CGRectGetMinY(swipeBezierRect) + 104.5)];
+      [rectangleDPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 148.21, CGRectGetMinY(swipeBezierRect) + 104.5)];
+      [rectangleDPath closePath];
+      CGContextSaveGState(context);
+      CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
+      [fillColor setFill];
+      [rectangleDPath fill];
+      CGContextRestoreGState(context);
+      
+      [fillColor setStroke];
+      rectangleDPath.lineWidth = 1;
+      [rectangleDPath stroke];
+    }
     
     //// Swipe Down Drawing
-    CGRect swipeDownRect = CGRectMake(CGRectGetMinX(frame3), CGRectGetMinY(frame3) + 130, 320, 125);
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [swipeContent drawInRect: swipeDownRect withFont: [UIFont fontWithName: @"Helvetica" size: 90] lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    [swipeContent drawInRect: swipeRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
     CGContextRestoreGState(context);
     
   } else if ([action isEqualToString:@"Swipe Right"]) {
-    //// Rectangle R Drawing
-    UIBezierPath* rectangleRPath = [UIBezierPath bezierPath];
-    [rectangleRPath moveToPoint: CGPointMake(CGRectGetMinX(frame3) + 222.5, CGRectGetMinY(frame3) + 283)];
-    [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 196.5, CGRectGetMinY(frame3) + 310)];
-    [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 196.5, CGRectGetMinY(frame3) + 295)];
-    [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 97.5, CGRectGetMinY(frame3) + 295)];
-    [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 97.5, CGRectGetMinY(frame3) + 271)];
-    [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 196.5, CGRectGetMinY(frame3) + 271)];
-    [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 196.5, CGRectGetMinY(frame3) + 255)];
-    [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 222.5, CGRectGetMinY(frame3) + 283)];
-    [rectangleRPath closePath];
-    CGContextSaveGState(context);
-    CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
-    [fillColor setFill];
-    [rectangleRPath fill];
-    CGContextRestoreGState(context);
-    
-    [fillColor setStroke];
-    rectangleRPath.lineWidth = 1;
-    [rectangleRPath stroke];
+    {
+      //// Rectangle R Drawing
+      UIBezierPath* rectangleRPath = [UIBezierPath bezierPath];
+      [rectangleRPath moveToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 222.5, CGRectGetMinY(swipeBezierRect) + 35)];
+      [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 191.25, CGRectGetMinY(swipeBezierRect) + 62)];
+      [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 191.25, CGRectGetMinY(swipeBezierRect) + 47)];
+      [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 97.5, CGRectGetMinY(swipeBezierRect) + 46.5)];
+      [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 97.5, CGRectGetMinY(swipeBezierRect) + 22.5)];
+      [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 191.25, CGRectGetMinY(swipeBezierRect) + 23)];
+      [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 191.25, CGRectGetMinY(swipeBezierRect) + 7)];
+      [rectangleRPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 222.5, CGRectGetMinY(swipeBezierRect) + 35)];
+      [rectangleRPath closePath];
+      CGContextSaveGState(context);
+      CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
+      [fillColor setFill];
+      [rectangleRPath fill];
+      CGContextRestoreGState(context);
+      
+      [fillColor setStroke];
+      rectangleRPath.lineWidth = 1;
+      [rectangleRPath stroke];
+    }    
     
     
     //// Swipe Right Drawing
-    CGRect swipeRightRect = CGRectMake(CGRectGetMinX(frame3), CGRectGetMinY(frame3) + 130, 320, 125);
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [swipeContent drawInRect: swipeRightRect withFont: [UIFont fontWithName: @"Helvetica" size: 90] lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    [swipeContent drawInRect: swipeRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
     CGContextRestoreGState(context);
     
   } else if ([action isEqualToString:@"Swipe Left"]) {
-    //// Rectangle L Drawing
-    UIBezierPath* rectangleLPath = [UIBezierPath bezierPath];
-    [rectangleLPath moveToPoint: CGPointMake(CGRectGetMinX(frame3) + 97.5, CGRectGetMinY(frame3) + 283)];
-    [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 123.5, CGRectGetMinY(frame3) + 310)];
-    [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 123.5, CGRectGetMinY(frame3) + 295)];
-    [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 222.5, CGRectGetMinY(frame3) + 295)];
-    [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 222.5, CGRectGetMinY(frame3) + 271)];
-    [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 123.5, CGRectGetMinY(frame3) + 271)];
-    [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 123.5, CGRectGetMinY(frame3) + 255)];
-    [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 97.5, CGRectGetMinY(frame3) + 283)];
-    [rectangleLPath closePath];
-    CGContextSaveGState(context);
-    CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
-    [fillColor setFill];
-    [rectangleLPath fill];
-    CGContextRestoreGState(context);
-    
-    [fillColor setStroke];
-    rectangleLPath.lineWidth = 1;
-    [rectangleLPath stroke];
-    
-    
+    {
+      //// Rectangle L Drawing
+      UIBezierPath* rectangleLPath = [UIBezierPath bezierPath];
+      [rectangleLPath moveToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 97.5, CGRectGetMinY(swipeBezierRect) + 35)];
+      [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 123.5, CGRectGetMinY(swipeBezierRect) + 62)];
+      [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 123.5, CGRectGetMinY(swipeBezierRect) + 47)];
+      [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 222.5, CGRectGetMinY(swipeBezierRect) + 47)];
+      [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 222.5, CGRectGetMinY(swipeBezierRect) + 23)];
+      [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 123.5, CGRectGetMinY(swipeBezierRect) + 23)];
+      [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 123.5, CGRectGetMinY(swipeBezierRect) + 7)];
+      [rectangleLPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 97.5, CGRectGetMinY(swipeBezierRect) + 35)];
+      [rectangleLPath closePath];
+      CGContextSaveGState(context);
+      CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
+      [fillColor setFill];
+      [rectangleLPath fill];
+      CGContextRestoreGState(context);
+      
+      [fillColor setStroke];
+      rectangleLPath.lineWidth = 1;
+      [rectangleLPath stroke];
+    }
     //// Swipe Left Drawing
-    CGRect swipeLeftRect = CGRectMake(CGRectGetMinX(frame3), CGRectGetMinY(frame3) + 130, 320, 125);
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [swipeContent drawInRect: swipeLeftRect withFont: [UIFont fontWithName: @"Helvetica" size: 90] lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    [swipeContent drawInRect: swipeRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
     CGContextRestoreGState(context);
     
   } else if ([action isEqualToString:@"Swipe Up"]) {
-    //// Rectangle U Drawing
-    UIBezierPath* rectangleUPath = [UIBezierPath bezierPath];
-    [rectangleUPath moveToPoint: CGPointMake(CGRectGetMinX(frame3) + 147.5, CGRectGetMinY(frame3) + 280.5)];
-    [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 147.5, CGRectGetMinY(frame3) + 380.5)];
-    [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 171.5, CGRectGetMinY(frame3) + 380.5)];
-    [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 171.5, CGRectGetMinY(frame3) + 280.5)];
-    [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 187.5, CGRectGetMinY(frame3) + 280.5)];
-    [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 159.5, CGRectGetMinY(frame3) + 255.5)];
-    [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 131.5, CGRectGetMinY(frame3) + 280.5)];
-    [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(frame3) + 147.5, CGRectGetMinY(frame3) + 280.5)];
-    [rectangleUPath closePath];
+    {
+      //// Rectangle U Drawing
+      UIBezierPath* rectangleUPath = [UIBezierPath bezierPath];
+      [rectangleUPath moveToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 148.21, CGRectGetMinY(swipeBezierRect) + 30.11)];
+      [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 148.21, CGRectGetMinY(swipeBezierRect) + 129.5)];
+      [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 171.79, CGRectGetMinY(swipeBezierRect) + 129.5)];
+      [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 171.79, CGRectGetMinY(swipeBezierRect) + 30.11)];
+      [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 187.5, CGRectGetMinY(swipeBezierRect) + 30.11)];
+      [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 160, CGRectGetMinY(swipeBezierRect) + 4.5)];
+      [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 132.5, CGRectGetMinY(swipeBezierRect) + 30.11)];
+      [rectangleUPath addLineToPoint: CGPointMake(CGRectGetMinX(swipeBezierRect) + 148.21, CGRectGetMinY(swipeBezierRect) + 30.11)];
+      [rectangleUPath closePath];
+      CGContextSaveGState(context);
+      CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
+      [fillColor setFill];
+      [rectangleUPath fill];
+      CGContextRestoreGState(context);
+      
+      [fillColor setStroke];
+      rectangleUPath.lineWidth = 1;
+      [rectangleUPath stroke];
+    }
+    
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [rectangleUPath fill];
-    CGContextRestoreGState(context);
-    
-    [fillColor setStroke];
-    rectangleUPath.lineWidth = 1;
-    [rectangleUPath stroke];
-    
-    CGRect swipeUpRect = CGRectMake(CGRectGetMinX(frame3), CGRectGetMinY(frame3) + 130, 320, 125);
-    CGContextSaveGState(context);
-    CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
-    [fillColor setFill];
-    [swipeContent drawInRect: swipeUpRect withFont: [UIFont fontWithName: @"Helvetica" size: 90] lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    [swipeContent drawInRect: swipeRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
     CGContextRestoreGState(context);
     
   }
