@@ -31,6 +31,7 @@
 		5709810617B4FFFF00192234 /* CustomUISwipeGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5709810517B4FFFF00192234 /* CustomUISwipeGesture.m */; };
 		5709810D17B5367800192234 /* ClumsyEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5709810C17B5367800192234 /* ClumsyEngine.m */; };
 		5709811117B6A9A900192234 /* ClumsyActionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5709811017B6A9A900192234 /* ClumsyActionObject.m */; };
+		573BE2F91878BCF100F042A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 573BE2F81878BCF100F042A4 /* Images.xcassets */; };
 		57572D1717BAA88000B8D7F9 /* ClumsyScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */; };
 		57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */; };
 		57572D2117BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2017BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m */; };
@@ -93,6 +94,7 @@
 		5709810E17B694D100192234 /* ClumsyEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyEngineDelegate.h; sourceTree = "<group>"; };
 		5709810F17B6A9A900192234 /* ClumsyActionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyActionObject.h; sourceTree = "<group>"; };
 		5709811017B6A9A900192234 /* ClumsyActionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyActionObject.m; sourceTree = "<group>"; };
+		573BE2F81878BCF100F042A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		57572D1517BAA88000B8D7F9 /* ClumsyScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreView.h; sourceTree = "<group>"; };
 		57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreView.m; sourceTree = "<group>"; };
 		57572D1B17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreInnerBoxView.h; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				57572D2917BB976500B8D7F9 /* ClumsyScore.h */,
 				57572D2A17BB976500B8D7F9 /* ClumsyScore.m */,
 				570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */,
+				573BE2F81878BCF100F042A4 /* Images.xcassets */,
 				570980BD17B4EF6800192234 /* Supporting Files */,
 			);
 			path = Clumsy;
@@ -361,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				570980C117B4EF6800192234 /* InfoPlist.strings in Resources */,
+				573BE2F91878BCF100F042A4 /* Images.xcassets in Resources */,
 				570980C917B4EF6800192234 /* Default.png in Resources */,
 				570980CB17B4EF6800192234 /* Default@2x.png in Resources */,
 				570980CD17B4EF6800192234 /* Default-568h@2x.png in Resources */,
@@ -517,10 +521,15 @@
 		570980EA17B4EF6800192234 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
 				INFOPLIST_FILE = "Clumsy/Clumsy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -528,10 +537,15 @@
 		570980EB17B4EF6800192234 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
 				INFOPLIST_FILE = "Clumsy/Clumsy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

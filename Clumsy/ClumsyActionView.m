@@ -49,11 +49,9 @@
   
   //// Frames
   CGRect frame = self.frame;
-  
-  CGRect swipeBezierRect = CGRectMake(CGRectGetMinX(frame), CGRectGetMinY(frame) + ((self.frame.size.height/2) - 50), 320, 240);
-  
-  CGRect contentRect = CGRectMake(CGRectGetMinX(frame), CGRectGetMinY(frame) + ((self.frame.size.height/2) - 110), 320, 150);
-  CGRect swipeRect = CGRectMake(CGRectGetMinX(frame), self.frame.size.height/2 - 145, 320, 125);
+  CGRect swipeBezierRect = CGRectMake(CGRectGetMinX(frame), CGRectGetMinY(frame) + ((frame.size.height/2) - 50), 320, 240);
+  CGRect contentRect = CGRectMake(CGRectGetMinX(frame), CGRectGetMinY(frame) + ((frame.size.height/2) - 110), 320, 150);
+  CGRect swipeRect = CGRectMake(CGRectGetMinX(frame), frame.size.height/2 - 145, 320, 125);
   
   
   
