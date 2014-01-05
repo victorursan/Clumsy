@@ -52,7 +52,7 @@
 }
 
 - (void)startTimer {
-  self.actionTimer = [NSTimer scheduledTimerWithTimeInterval:1.5
+  self.actionTimer = [NSTimer scheduledTimerWithTimeInterval:1.25f
                                                       target:self
                                                     selector:@selector(failedAction)
                                                     userInfo:nil

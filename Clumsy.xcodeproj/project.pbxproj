@@ -184,9 +184,9 @@
 		570980BC17B4EF6800192234 /* Clumsy */ = {
 			isa = PBXGroup;
 			children = (
-				57AEB7301879B2DF00B057AE /* Models */,
 				570980C517B4EF6800192234 /* AppDelegate.h */,
 				570980C617B4EF6800192234 /* AppDelegate.m */,
+				57AEB7301879B2DF00B057AE /* Models */,
 				57572D2217BAD1C900B8D7F9 /* MainClumsyViewController */,
 				57572D1E17BAC90400B8D7F9 /* ClumsyScoreView */,
 				57F775D417C585BA00D4788B /* ClumsySocial */,
