@@ -14,9 +14,6 @@
 		570980C117B4EF6800192234 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 570980BF17B4EF6800192234 /* InfoPlist.strings */; };
 		570980C317B4EF6800192234 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980C217B4EF6800192234 /* main.m */; };
 		570980C717B4EF6800192234 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 570980C617B4EF6800192234 /* AppDelegate.m */; };
-		570980C917B4EF6800192234 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 570980C817B4EF6800192234 /* Default.png */; };
-		570980CB17B4EF6800192234 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 570980CA17B4EF6800192234 /* Default@2x.png */; };
-		570980CD17B4EF6800192234 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 570980CC17B4EF6800192234 /* Default-568h@2x.png */; };
 		570980D017B4EF6800192234 /* Clumsy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */; };
 		570980D817B4EF6800192234 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980D717B4EF6800192234 /* SenTestingKit.framework */; };
 		570980D917B4EF6800192234 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980B417B4EF6800192234 /* UIKit.framework */; };
@@ -69,9 +66,6 @@
 		570980C417B4EF6800192234 /* Clumsy-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Clumsy-Prefix.pch"; sourceTree = "<group>"; };
 		570980C517B4EF6800192234 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		570980C617B4EF6800192234 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		570980C817B4EF6800192234 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		570980CA17B4EF6800192234 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		570980CC17B4EF6800192234 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		570980CF17B4EF6800192234 /* Clumsy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Clumsy.xcdatamodel; sourceTree = "<group>"; };
 		570980D617B4EF6800192234 /* ClumsyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClumsyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		570980D717B4EF6800192234 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -216,9 +210,6 @@
 				570980BF17B4EF6800192234 /* InfoPlist.strings */,
 				570980C217B4EF6800192234 /* main.m */,
 				570980C417B4EF6800192234 /* Clumsy-Prefix.pch */,
-				570980C817B4EF6800192234 /* Default.png */,
-				570980CA17B4EF6800192234 /* Default@2x.png */,
-				570980CC17B4EF6800192234 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -365,9 +356,6 @@
 			files = (
 				570980C117B4EF6800192234 /* InfoPlist.strings in Resources */,
 				573BE2F91878BCF100F042A4 /* Images.xcassets in Resources */,
-				570980C917B4EF6800192234 /* Default.png in Resources */,
-				570980CB17B4EF6800192234 /* Default@2x.png in Resources */,
-				570980CD17B4EF6800192234 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
