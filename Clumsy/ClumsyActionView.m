@@ -64,13 +64,20 @@
   
   UIFont *textFont = [UIFont fontWithName: @"Helvetica" size: 90];
   
+  NSMutableParagraphStyle *paragraphStyle = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+  paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+  paragraphStyle.alignment = NSTextAlignmentCenter;
+  
   if ([action isEqualToString:@"Start"]) {
     
     //// Start Drawing
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [startContent drawInRect: contentRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    
+    [startContent drawInRect:contentRect withAttributes:@{NSFontAttributeName:textFont,
+                                                          NSParagraphStyleAttributeName:paragraphStyle,
+                                                          NSForegroundColorAttributeName:[UIColor whiteColor]}];
     CGContextRestoreGState(context);
     
   } else if ([action isEqualToString:@"Shake"]) {
@@ -79,7 +86,9 @@
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [shakeContent drawInRect: contentRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    [shakeContent drawInRect:contentRect withAttributes:@{NSFontAttributeName:textFont,
+                                                          NSParagraphStyleAttributeName:paragraphStyle,
+                                                          NSForegroundColorAttributeName:[UIColor whiteColor] }];
     CGContextRestoreGState(context);
     
   } else if ([action isEqualToString:@"Press"]) {
@@ -88,7 +97,9 @@
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [pressContent drawInRect: contentRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    [pressContent drawInRect:contentRect withAttributes:@{NSFontAttributeName:textFont,
+                                                          NSParagraphStyleAttributeName:paragraphStyle,
+                                                          NSForegroundColorAttributeName:[UIColor whiteColor] }];
     CGContextRestoreGState(context);
     
   } else if ([action isEqualToString:@"Swipe Down"]) {
@@ -119,7 +130,9 @@
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [swipeContent drawInRect: swipeRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    [swipeContent drawInRect:swipeRect withAttributes:@{NSFontAttributeName:textFont,
+                                                        NSParagraphStyleAttributeName:paragraphStyle,
+                                                        NSForegroundColorAttributeName:[UIColor whiteColor] }];
     CGContextRestoreGState(context);
     
   } else if ([action isEqualToString:@"Swipe Right"]) {
@@ -151,7 +164,9 @@
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [swipeContent drawInRect: swipeRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    [swipeContent drawInRect:swipeRect withAttributes:@{NSFontAttributeName:textFont,
+                                                        NSParagraphStyleAttributeName:paragraphStyle,
+                                                        NSForegroundColorAttributeName:[UIColor whiteColor] }];
     CGContextRestoreGState(context);
     
   } else if ([action isEqualToString:@"Swipe Left"]) {
@@ -181,7 +196,9 @@
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [swipeContent drawInRect: swipeRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    [swipeContent drawInRect:swipeRect withAttributes:@{NSFontAttributeName:textFont,
+                                                        NSParagraphStyleAttributeName:paragraphStyle,
+                                                        NSForegroundColorAttributeName:[UIColor whiteColor] }];
     CGContextRestoreGState(context);
     
   } else if ([action isEqualToString:@"Swipe Up"]) {
@@ -211,7 +228,9 @@
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [swipeContent drawInRect: swipeRect withFont:textFont lineBreakMode: NSLineBreakByWordWrapping alignment: NSTextAlignmentCenter];
+    [swipeContent drawInRect:swipeRect withAttributes:@{NSFontAttributeName:textFont,
+                                                        NSParagraphStyleAttributeName:paragraphStyle,
+                                                        NSForegroundColorAttributeName:[UIColor whiteColor] }];
     CGContextRestoreGState(context);
     
   }

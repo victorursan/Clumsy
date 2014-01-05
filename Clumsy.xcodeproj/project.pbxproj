@@ -184,18 +184,12 @@
 		570980BC17B4EF6800192234 /* Clumsy */ = {
 			isa = PBXGroup;
 			children = (
+				57AEB7301879B2DF00B057AE /* Models */,
 				570980C517B4EF6800192234 /* AppDelegate.h */,
 				570980C617B4EF6800192234 /* AppDelegate.m */,
 				57572D2217BAD1C900B8D7F9 /* MainClumsyViewController */,
 				57572D1E17BAC90400B8D7F9 /* ClumsyScoreView */,
 				57F775D417C585BA00D4788B /* ClumsySocial */,
-				5709810B17B5367700192234 /* ClumsyEngine.h */,
-				5709810C17B5367800192234 /* ClumsyEngine.m */,
-				5709810E17B694D100192234 /* ClumsyEngineDelegate.h */,
-				5709810F17B6A9A900192234 /* ClumsyActionObject.h */,
-				5709811017B6A9A900192234 /* ClumsyActionObject.m */,
-				57572D2917BB976500B8D7F9 /* ClumsyScore.h */,
-				57572D2A17BB976500B8D7F9 /* ClumsyScore.m */,
 				570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */,
 				573BE2F81878BCF100F042A4 /* Images.xcassets */,
 				570980BD17B4EF6800192234 /* Supporting Files */,
@@ -269,6 +263,20 @@
 				5709810717B500BF00192234 /* CustomUISwipeGestureDelegate.h */,
 			);
 			name = MainClumsyViewController;
+			sourceTree = "<group>";
+		};
+		57AEB7301879B2DF00B057AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5709810B17B5367700192234 /* ClumsyEngine.h */,
+				5709810C17B5367800192234 /* ClumsyEngine.m */,
+				5709810E17B694D100192234 /* ClumsyEngineDelegate.h */,
+				5709810F17B6A9A900192234 /* ClumsyActionObject.h */,
+				5709811017B6A9A900192234 /* ClumsyActionObject.m */,
+				57572D2917BB976500B8D7F9 /* ClumsyScore.h */,
+				57572D2A17BB976500B8D7F9 /* ClumsyScore.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		57F775D417C585BA00D4788B /* ClumsySocial */ = {
