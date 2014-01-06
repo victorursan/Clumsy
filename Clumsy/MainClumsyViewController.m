@@ -73,7 +73,7 @@
   [self.engine verifyClumsyActionTaken:[ClumsyActionObject screenWasSwipedInDirection:swipeGesture]];
 }
 
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
   if (event.subtype == UIEventSubtypeMotionShake) {
     [self.engine verifyClumsyActionTaken:[ClumsyActionObject iPhoneWasShaken]];
   }
