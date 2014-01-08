@@ -45,6 +45,10 @@
 		578FAB8C187DB9D600A0D90E /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 578FAB84187DB9D600A0D90E /* release_notes.md */; };
 		578FAB8D187DB9D600A0D90E /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 578FAB84187DB9D600A0D90E /* release_notes.md */; };
 		578FAB8F187DBA7D00A0D90E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 578FAB8E187DBA7D00A0D90E /* libz.dylib */; };
+		578FAB92187DC1E800A0D90E /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB91187DC1E800A0D90E /* Score.m */; };
+		578FAB93187DC1E800A0D90E /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB91187DC1E800A0D90E /* Score.m */; };
+		578FAB96187DC33E00A0D90E /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB95187DC33E00A0D90E /* HighScore.m */; };
+		578FAB97187DC33E00A0D90E /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB95187DC33E00A0D90E /* HighScore.m */; };
 		57B207EA17C03849003E8281 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B207E917C03849003E8281 /* CoreImage.framework */; };
 		57F775D017C4F25100D4788B /* ClumsyActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F775CF17C4F25100D4788B /* ClumsyActionView.m */; };
 		57F775D317C57EC800D4788B /* ClumsySocialHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F775D217C57EC800D4788B /* ClumsySocialHandler.m */; };
@@ -121,6 +125,10 @@
 		578FAB86187DB9D600A0D90E /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
 		578FAB87187DB9D600A0D90E /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		578FAB8E187DBA7D00A0D90E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		578FAB90187DC1E800A0D90E /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		578FAB91187DC1E800A0D90E /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		578FAB94187DC33E00A0D90E /* HighScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScore.h; sourceTree = "<group>"; };
+		578FAB95187DC33E00A0D90E /* HighScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScore.m; sourceTree = "<group>"; };
 		57B207E917C03849003E8281 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		57F775CE17C4F25100D4788B /* ClumsyActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyActionView.h; sourceTree = "<group>"; };
 		57F775CF17C4F25100D4788B /* ClumsyActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyActionView.m; sourceTree = "<group>"; };
@@ -206,8 +214,8 @@
 				57F775D417C585BA00D4788B /* ClumsySocial */,
 				570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */,
 				573BE2F81878BCF100F042A4 /* Images.xcassets */,
-				578FAB81187DB9D600A0D90E /* TestFlightSDK2.1.3 */,
 				570980BD17B4EF6800192234 /* Supporting Files */,
+				578FAB81187DB9D600A0D90E /* TestFlightSDK2.1.3 */,
 			);
 			path = Clumsy;
 			sourceTree = "<group>";
@@ -296,6 +304,10 @@
 		57AEB7301879B2DF00B057AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				578FAB90187DC1E800A0D90E /* Score.h */,
+				578FAB91187DC1E800A0D90E /* Score.m */,
+				578FAB94187DC33E00A0D90E /* HighScore.h */,
+				578FAB95187DC33E00A0D90E /* HighScore.m */,
 				5709810B17B5367700192234 /* ClumsyEngine.h */,
 				5709810C17B5367800192234 /* ClumsyEngine.m */,
 				5709810E17B694D100192234 /* ClumsyEngineDelegate.h */,
@@ -442,6 +454,7 @@
 			files = (
 				570980C317B4EF6800192234 /* main.m in Sources */,
 				570980C717B4EF6800192234 /* AppDelegate.m in Sources */,
+				578FAB96187DC33E00A0D90E /* HighScore.m in Sources */,
 				570980D017B4EF6800192234 /* Clumsy.xcdatamodeld in Sources */,
 				570980F117B4F26500192234 /* MainClumsyViewController.m in Sources */,
 				570980F617B4F5F000192234 /* CustomClumsyMainView.m in Sources */,
@@ -458,6 +471,7 @@
 				576F1BA417C17DEF00A2A919 /* ClumsySocialButton.m in Sources */,
 				57F775D017C4F25100D4788B /* ClumsyActionView.m in Sources */,
 				57F775D317C57EC800D4788B /* ClumsySocialHandler.m in Sources */,
+				578FAB92187DC1E800A0D90E /* Score.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +479,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578FAB93187DC1E800A0D90E /* Score.m in Sources */,
 				570980E617B4EF6800192234 /* ClumsyTests.m in Sources */,
+				578FAB97187DC33E00A0D90E /* HighScore.m in Sources */,
 				570980F217B4F26500192234 /* MainClumsyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

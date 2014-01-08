@@ -19,7 +19,6 @@
 
 @interface MainClumsyViewController ()
 
-
 @property(strong, nonatomic) CustomClumsyMainView *mainView;
 @property(strong, nonatomic) ClumsyEngine *engine;
 @property(strong, nonatomic) ClumsySocialButton *twitterButton;

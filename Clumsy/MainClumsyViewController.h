@@ -14,7 +14,10 @@
 #import "ClumsyEngineDelegate.h"
 #import "ClumsyScoreViewDelegate.h"
 #import "ClumsySocialButtonDelegate.h"
+#import "HighScore.h"
 
 @interface MainClumsyViewController : UIViewController <ClumsySocialButtonDelegate, ClumsyScoreViewDelegate, ClumsyEngineDelegate, CustomMainUIButtonDelegate, CustomUISwipeGestureDelegate, UIGestureRecognizerDelegate>
+
+@property(strong, nonatomic) HighScore *score;
 
 @end
