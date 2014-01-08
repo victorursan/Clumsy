@@ -35,10 +35,16 @@
 		57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */; };
 		57572D2B17BB976600B8D7F9 /* ClumsyScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2A17BB976500B8D7F9 /* ClumsyScore.m */; };
 		57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */; };
-		57572D3217BEE90A00B8D7F9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57572D3017BEE8F900B8D7F9 /* GameKit.framework */; };
 		57572D3417BF83F800B8D7F9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57572D3317BF83F800B8D7F9 /* Social.framework */; };
 		576F1B9E17C0B1CC00A2A919 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */; };
 		576F1BA417C17DEF00A2A919 /* ClumsySocialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */; };
+		578FAB88187DB9D600A0D90E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 578FAB82187DB9D600A0D90E /* libTestFlight.a */; };
+		578FAB89187DB9D600A0D90E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 578FAB82187DB9D600A0D90E /* libTestFlight.a */; };
+		578FAB8A187DB9D600A0D90E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 578FAB83187DB9D600A0D90E /* README.md */; };
+		578FAB8B187DB9D600A0D90E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 578FAB83187DB9D600A0D90E /* README.md */; };
+		578FAB8C187DB9D600A0D90E /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 578FAB84187DB9D600A0D90E /* release_notes.md */; };
+		578FAB8D187DB9D600A0D90E /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 578FAB84187DB9D600A0D90E /* release_notes.md */; };
+		578FAB8F187DBA7D00A0D90E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 578FAB8E187DBA7D00A0D90E /* libz.dylib */; };
 		57B207EA17C03849003E8281 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B207E917C03849003E8281 /* CoreImage.framework */; };
 		57F775D017C4F25100D4788B /* ClumsyActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F775CF17C4F25100D4788B /* ClumsyActionView.m */; };
 		57F775D317C57EC800D4788B /* ClumsySocialHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F775D217C57EC800D4788B /* ClumsySocialHandler.m */; };
@@ -102,13 +108,19 @@
 		57572D2C17BEE14100B8D7F9 /* ClumsyScoreOkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreOkButton.h; sourceTree = "<group>"; };
 		57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreOkButton.m; sourceTree = "<group>"; };
 		57572D2F17BEE16100B8D7F9 /* ClumsyScoreOkButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreOkButtonDelegate.h; sourceTree = "<group>"; };
-		57572D3017BEE8F900B8D7F9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		57572D3317BF83F800B8D7F9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		57572D3517BF864500B8D7F9 /* ClumsyScoreViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreViewDelegate.h; sourceTree = "<group>"; };
 		576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		576F1BA217C17DEE00A2A919 /* ClumsySocialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsySocialButton.h; sourceTree = "<group>"; };
 		576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsySocialButton.m; sourceTree = "<group>"; };
 		576F1BA517C1800C00A2A919 /* ClumsySocialButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsySocialButtonDelegate.h; sourceTree = "<group>"; };
+		578FAB82187DB9D600A0D90E /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		578FAB83187DB9D600A0D90E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		578FAB84187DB9D600A0D90E /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		578FAB85187DB9D600A0D90E /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		578FAB86187DB9D600A0D90E /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		578FAB87187DB9D600A0D90E /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		578FAB8E187DBA7D00A0D90E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		57B207E917C03849003E8281 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		57F775CE17C4F25100D4788B /* ClumsyActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyActionView.h; sourceTree = "<group>"; };
 		57F775CF17C4F25100D4788B /* ClumsyActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyActionView.m; sourceTree = "<group>"; };
@@ -121,10 +133,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578FAB8F187DBA7D00A0D90E /* libz.dylib in Frameworks */,
 				576F1B9E17C0B1CC00A2A919 /* QuartzCore.framework in Frameworks */,
 				57B207EA17C03849003E8281 /* CoreImage.framework in Frameworks */,
 				57572D3417BF83F800B8D7F9 /* Social.framework in Frameworks */,
-				57572D3217BEE90A00B8D7F9 /* GameKit.framework in Frameworks */,
+				578FAB88187DB9D600A0D90E /* libTestFlight.a in Frameworks */,
 				570980B517B4EF6800192234 /* UIKit.framework in Frameworks */,
 				570980B717B4EF6800192234 /* Foundation.framework in Frameworks */,
 				570980B917B4EF6800192234 /* CoreGraphics.framework in Frameworks */,
@@ -136,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578FAB89187DB9D600A0D90E /* libTestFlight.a in Frameworks */,
 				570980D817B4EF6800192234 /* SenTestingKit.framework in Frameworks */,
 				570980D917B4EF6800192234 /* UIKit.framework in Frameworks */,
 				570980DA17B4EF6800192234 /* Foundation.framework in Frameworks */,
@@ -168,10 +182,10 @@
 		570980B317B4EF6800192234 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				578FAB8E187DBA7D00A0D90E /* libz.dylib */,
 				576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */,
 				57B207E917C03849003E8281 /* CoreImage.framework */,
 				57572D3317BF83F800B8D7F9 /* Social.framework */,
-				57572D3017BEE8F900B8D7F9 /* GameKit.framework */,
 				570980B417B4EF6800192234 /* UIKit.framework */,
 				570980B617B4EF6800192234 /* Foundation.framework */,
 				570980B817B4EF6800192234 /* CoreGraphics.framework */,
@@ -192,6 +206,7 @@
 				57F775D417C585BA00D4788B /* ClumsySocial */,
 				570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */,
 				573BE2F81878BCF100F042A4 /* Images.xcassets */,
+				578FAB81187DB9D600A0D90E /* TestFlightSDK2.1.3 */,
 				570980BD17B4EF6800192234 /* Supporting Files */,
 			);
 			path = Clumsy;
@@ -263,6 +278,19 @@
 				5709810717B500BF00192234 /* CustomUISwipeGestureDelegate.h */,
 			);
 			name = MainClumsyViewController;
+			sourceTree = "<group>";
+		};
+		578FAB81187DB9D600A0D90E /* TestFlightSDK2.1.3 */ = {
+			isa = PBXGroup;
+			children = (
+				578FAB82187DB9D600A0D90E /* libTestFlight.a */,
+				578FAB83187DB9D600A0D90E /* README.md */,
+				578FAB84187DB9D600A0D90E /* release_notes.md */,
+				578FAB85187DB9D600A0D90E /* TestFlight+AsyncLogging.h */,
+				578FAB86187DB9D600A0D90E /* TestFlight+ManualSessions.h */,
+				578FAB87187DB9D600A0D90E /* TestFlight.h */,
+			);
+			path = TestFlightSDK2.1.3;
 			sourceTree = "<group>";
 		};
 		57AEB7301879B2DF00B057AE /* Models */ = {
@@ -341,6 +369,11 @@
 				TargetAttributes = {
 					570980B017B4EF6800192234 = {
 						DevelopmentTeam = 94TWQJ7GSF;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -367,6 +400,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578FAB8C187DB9D600A0D90E /* release_notes.md in Resources */,
+				578FAB8A187DB9D600A0D90E /* README.md in Resources */,
 				570980C117B4EF6800192234 /* InfoPlist.strings in Resources */,
 				573BE2F91878BCF100F042A4 /* Images.xcassets in Resources */,
 			);
@@ -376,6 +411,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				578FAB8D187DB9D600A0D90E /* release_notes.md in Resources */,
+				578FAB8B187DB9D600A0D90E /* README.md in Resources */,
 				570980E317B4EF6800192234 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +567,10 @@
 				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
 				INFOPLIST_FILE = "Clumsy/Clumsy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.1.3,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -548,6 +589,10 @@
 				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
 				INFOPLIST_FILE = "Clumsy/Clumsy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.1.3,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -566,6 +611,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
 				INFOPLIST_FILE = "ClumsyTests/ClumsyTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.1.3,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -583,6 +632,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
 				INFOPLIST_FILE = "ClumsyTests/ClumsyTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.1.3,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

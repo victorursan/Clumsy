@@ -45,7 +45,7 @@
   [self addSwipes];
 }
 
--(BOOL)canBecomeFirstResponder {
+- (BOOL)canBecomeFirstResponder {
   return YES;
 }
 

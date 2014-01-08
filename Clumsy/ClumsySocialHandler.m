@@ -14,13 +14,13 @@
 - (id)shareClumsyWitgService:(NSString *)service {
   SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:service];
   [socialSheet setInitialText:[NSString stringWithFormat:@"Try this cool game"]];
-  [socialSheet addURL:[NSURL URLWithString:@"http://google.com/"]];
+  //[socialSheet addURL:[NSURL URLWithString:@"http://google.com/"]];
   return socialSheet;}
 
 - (id)viewControllerService:(NSString *)service andScore:(NSNumber *)score {
   SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:service];
   [socialSheet setInitialText:[NSString stringWithFormat:@"Your Clumsy score is: %@",score]];
-  [socialSheet addURL:[NSURL URLWithString:@"http://google.com/"]];
+ // [socialSheet addURL:[NSURL URLWithString:@"http://google.com/"]];
   return socialSheet;
 }
 

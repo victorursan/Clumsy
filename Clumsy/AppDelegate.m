@@ -20,6 +20,7 @@
   [self.window setRootViewController:[[MainClumsyViewController alloc] init]];
   self.window.backgroundColor = [UIColor whiteColor];
   [self.window makeKeyAndVisible];
+  [TestFlight takeOff:@"bc7d795d-2b0e-4643-9bd6-2b8475a08024"];
   return YES;
 }
 
