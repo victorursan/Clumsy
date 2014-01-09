@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5701CDFC187F35EA00A635EB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5701CDF6187F35EA00A635EB /* README.md */; };
+		5701CDFD187F35EA00A635EB /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 5701CDF7187F35EA00A635EB /* release_notes.md */; };
+		5701CDFE187F373500A635EB /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5701CDF5187F35EA00A635EB /* libTestFlight.a */; };
+		5701CDFF187F378F00A635EB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 578FAB8E187DBA7D00A0D90E /* libz.dylib */; };
 		570980B517B4EF6800192234 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980B417B4EF6800192234 /* UIKit.framework */; };
 		570980B717B4EF6800192234 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980B617B4EF6800192234 /* Foundation.framework */; };
 		570980B917B4EF6800192234 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980B817B4EF6800192234 /* CoreGraphics.framework */; };
@@ -38,13 +42,6 @@
 		57572D3417BF83F800B8D7F9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57572D3317BF83F800B8D7F9 /* Social.framework */; };
 		576F1B9E17C0B1CC00A2A919 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */; };
 		576F1BA417C17DEF00A2A919 /* ClumsySocialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */; };
-		578FAB88187DB9D600A0D90E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 578FAB82187DB9D600A0D90E /* libTestFlight.a */; };
-		578FAB89187DB9D600A0D90E /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 578FAB82187DB9D600A0D90E /* libTestFlight.a */; };
-		578FAB8A187DB9D600A0D90E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 578FAB83187DB9D600A0D90E /* README.md */; };
-		578FAB8B187DB9D600A0D90E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 578FAB83187DB9D600A0D90E /* README.md */; };
-		578FAB8C187DB9D600A0D90E /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 578FAB84187DB9D600A0D90E /* release_notes.md */; };
-		578FAB8D187DB9D600A0D90E /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 578FAB84187DB9D600A0D90E /* release_notes.md */; };
-		578FAB8F187DBA7D00A0D90E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 578FAB8E187DBA7D00A0D90E /* libz.dylib */; };
 		578FAB92187DC1E800A0D90E /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB91187DC1E800A0D90E /* Score.m */; };
 		578FAB93187DC1E800A0D90E /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB91187DC1E800A0D90E /* Score.m */; };
 		578FAB96187DC33E00A0D90E /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB95187DC33E00A0D90E /* HighScore.m */; };
@@ -66,6 +63,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5701CDF5187F35EA00A635EB /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		5701CDF6187F35EA00A635EB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		5701CDF7187F35EA00A635EB /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		5701CDF8187F35EA00A635EB /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		5701CDF9187F35EA00A635EB /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		5701CDFA187F35EA00A635EB /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		570980B117B4EF6800192234 /* Clumsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clumsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		570980B417B4EF6800192234 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		570980B617B4EF6800192234 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -119,12 +122,6 @@
 		576F1BA217C17DEE00A2A919 /* ClumsySocialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsySocialButton.h; sourceTree = "<group>"; };
 		576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsySocialButton.m; sourceTree = "<group>"; };
 		576F1BA517C1800C00A2A919 /* ClumsySocialButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsySocialButtonDelegate.h; sourceTree = "<group>"; };
-		578FAB82187DB9D600A0D90E /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		578FAB83187DB9D600A0D90E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		578FAB84187DB9D600A0D90E /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
-		578FAB85187DB9D600A0D90E /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
-		578FAB86187DB9D600A0D90E /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
-		578FAB87187DB9D600A0D90E /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		578FAB8E187DBA7D00A0D90E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		578FAB90187DC1E800A0D90E /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		578FAB91187DC1E800A0D90E /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
@@ -144,11 +141,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				578FAB8F187DBA7D00A0D90E /* libz.dylib in Frameworks */,
+				5701CDFF187F378F00A635EB /* libz.dylib in Frameworks */,
+				5701CDFE187F373500A635EB /* libTestFlight.a in Frameworks */,
 				576F1B9E17C0B1CC00A2A919 /* QuartzCore.framework in Frameworks */,
 				57B207EA17C03849003E8281 /* CoreImage.framework in Frameworks */,
 				57572D3417BF83F800B8D7F9 /* Social.framework in Frameworks */,
-				578FAB88187DB9D600A0D90E /* libTestFlight.a in Frameworks */,
 				570980B517B4EF6800192234 /* UIKit.framework in Frameworks */,
 				570980B717B4EF6800192234 /* Foundation.framework in Frameworks */,
 				570980B917B4EF6800192234 /* CoreGraphics.framework in Frameworks */,
@@ -160,7 +157,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				578FAB89187DB9D600A0D90E /* libTestFlight.a in Frameworks */,
 				570980D817B4EF6800192234 /* SenTestingKit.framework in Frameworks */,
 				570980D917B4EF6800192234 /* UIKit.framework in Frameworks */,
 				570980DA17B4EF6800192234 /* Foundation.framework in Frameworks */,
@@ -171,6 +167,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5701CDF4187F35EA00A635EB /* TestFlightSDK2.2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				5701CDF5187F35EA00A635EB /* libTestFlight.a */,
+				5701CDF6187F35EA00A635EB /* README.md */,
+				5701CDF7187F35EA00A635EB /* release_notes.md */,
+				5701CDF8187F35EA00A635EB /* TestFlight+AsyncLogging.h */,
+				5701CDF9187F35EA00A635EB /* TestFlight+ManualSessions.h */,
+				5701CDFA187F35EA00A635EB /* TestFlight.h */,
+			);
+			path = TestFlightSDK2.2.0;
+			sourceTree = "<group>";
+		};
 		570980A817B4EF6800192234 = {
 			isa = PBXGroup;
 			children = (
@@ -218,7 +227,7 @@
 				570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */,
 				573BE2F81878BCF100F042A4 /* Images.xcassets */,
 				570980BD17B4EF6800192234 /* Supporting Files */,
-				578FAB81187DB9D600A0D90E /* TestFlightSDK2.1.3 */,
+				5701CDF4187F35EA00A635EB /* TestFlightSDK2.2.0 */,
 			);
 			path = Clumsy;
 			sourceTree = "<group>";
@@ -291,19 +300,6 @@
 				578FAB99187F23D400A0D90E /* ClumsyHighScoreLabel.m */,
 			);
 			name = MainClumsyViewController;
-			sourceTree = "<group>";
-		};
-		578FAB81187DB9D600A0D90E /* TestFlightSDK2.1.3 */ = {
-			isa = PBXGroup;
-			children = (
-				578FAB82187DB9D600A0D90E /* libTestFlight.a */,
-				578FAB83187DB9D600A0D90E /* README.md */,
-				578FAB84187DB9D600A0D90E /* release_notes.md */,
-				578FAB85187DB9D600A0D90E /* TestFlight+AsyncLogging.h */,
-				578FAB86187DB9D600A0D90E /* TestFlight+ManualSessions.h */,
-				578FAB87187DB9D600A0D90E /* TestFlight.h */,
-			);
-			path = TestFlightSDK2.1.3;
 			sourceTree = "<group>";
 		};
 		57AEB7301879B2DF00B057AE /* Models */ = {
@@ -417,8 +413,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				578FAB8C187DB9D600A0D90E /* release_notes.md in Resources */,
-				578FAB8A187DB9D600A0D90E /* README.md in Resources */,
+				5701CDFD187F35EA00A635EB /* release_notes.md in Resources */,
+				5701CDFC187F35EA00A635EB /* README.md in Resources */,
 				570980C117B4EF6800192234 /* InfoPlist.strings in Resources */,
 				573BE2F91878BCF100F042A4 /* Images.xcassets in Resources */,
 			);
@@ -428,8 +424,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				578FAB8D187DB9D600A0D90E /* release_notes.md in Resources */,
-				578FAB8B187DB9D600A0D90E /* README.md in Resources */,
 				570980E317B4EF6800192234 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,10 +585,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.1.3,
+					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.2.0,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "2FB63E41-371C-4DE0-B4B0-BA4C1488CE0B";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -613,7 +607,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.1.3,
+					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.2.0,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
