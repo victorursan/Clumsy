@@ -19,6 +19,9 @@
   return self;
 }
 
++ (id)buttonWithFrame:(CGRect)frame andTarget:(id)delegate {
+  return [[CustomMainUIButton alloc] initWithFrame:frame andTarget:delegate];
+}
 /*
  // Only override drawRect: if you perform custom drawing.
  // An empty implementation adversely affects performance during animation.

@@ -57,8 +57,8 @@
   return score;
 }
 
-- (NSInteger)highScore {
-  return [self.score.highScore integerValue];
+- (Score *)highScore {
+  return self.score;
 }
 
 - (void)deleteScore:(Score *)score {

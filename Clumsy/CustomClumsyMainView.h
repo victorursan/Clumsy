@@ -11,5 +11,6 @@
 @interface CustomClumsyMainView : UIView
 
 - (void)nextBackgroundColor;
++ (id)viewWithFrame:(CGRect)frame;
 
 @end

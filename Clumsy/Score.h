@@ -12,6 +12,6 @@
 
 @interface Score : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * highScore;
+@property(nonatomic, retain) NSNumber *highScore;
 
 @end

@@ -49,6 +49,7 @@
 		578FAB93187DC1E800A0D90E /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB91187DC1E800A0D90E /* Score.m */; };
 		578FAB96187DC33E00A0D90E /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB95187DC33E00A0D90E /* HighScore.m */; };
 		578FAB97187DC33E00A0D90E /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB95187DC33E00A0D90E /* HighScore.m */; };
+		578FAB9A187F23D400A0D90E /* ClumsyHighScoreLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB99187F23D400A0D90E /* ClumsyHighScoreLabel.m */; };
 		57B207EA17C03849003E8281 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B207E917C03849003E8281 /* CoreImage.framework */; };
 		57F775D017C4F25100D4788B /* ClumsyActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F775CF17C4F25100D4788B /* ClumsyActionView.m */; };
 		57F775D317C57EC800D4788B /* ClumsySocialHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F775D217C57EC800D4788B /* ClumsySocialHandler.m */; };
@@ -129,6 +130,8 @@
 		578FAB91187DC1E800A0D90E /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		578FAB94187DC33E00A0D90E /* HighScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScore.h; sourceTree = "<group>"; };
 		578FAB95187DC33E00A0D90E /* HighScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScore.m; sourceTree = "<group>"; };
+		578FAB98187F23D400A0D90E /* ClumsyHighScoreLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyHighScoreLabel.h; sourceTree = "<group>"; };
+		578FAB99187F23D400A0D90E /* ClumsyHighScoreLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyHighScoreLabel.m; sourceTree = "<group>"; };
 		57B207E917C03849003E8281 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		57F775CE17C4F25100D4788B /* ClumsyActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyActionView.h; sourceTree = "<group>"; };
 		57F775CF17C4F25100D4788B /* ClumsyActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyActionView.m; sourceTree = "<group>"; };
@@ -284,6 +287,8 @@
 				5709810417B4FFFF00192234 /* CustomUISwipeGesture.h */,
 				5709810517B4FFFF00192234 /* CustomUISwipeGesture.m */,
 				5709810717B500BF00192234 /* CustomUISwipeGestureDelegate.h */,
+				578FAB98187F23D400A0D90E /* ClumsyHighScoreLabel.h */,
+				578FAB99187F23D400A0D90E /* ClumsyHighScoreLabel.m */,
 			);
 			name = MainClumsyViewController;
 			sourceTree = "<group>";
@@ -470,6 +475,7 @@
 				57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */,
 				576F1BA417C17DEF00A2A919 /* ClumsySocialButton.m in Sources */,
 				57F775D017C4F25100D4788B /* ClumsyActionView.m in Sources */,
+				578FAB9A187F23D400A0D90E /* ClumsyHighScoreLabel.m in Sources */,
 				57F775D317C57EC800D4788B /* ClumsySocialHandler.m in Sources */,
 				578FAB92187DC1E800A0D90E /* Score.m in Sources */,
 			);

@@ -13,7 +13,6 @@
 
 @property(strong, nonatomic) id<CustomUISwipeGestureDelegate>delegate;
 
-- (id)initWithTarget:(id)delegate andDirection:(UISwipeGestureRecognizerDirection)direction;
 + (id)swipeWithTarget:(id)delegate andDirection:(UISwipeGestureRecognizerDirection)direction;
 
 @end

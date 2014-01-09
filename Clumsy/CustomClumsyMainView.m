@@ -26,6 +26,10 @@
   return self;
 }
 
++ (id)viewWithFrame:(CGRect)frame {
+  return [[CustomClumsyMainView alloc] initWithFrame:frame];
+}
+
 - (void)nextBackgroundColor {
   if (count >= 5) count = 0;
   [self setBackgroundColor:[self backgroundColorAtIndex:count]];

@@ -16,6 +16,7 @@
 #import "ClumsySocialButton.h"
 #import "ClumsyActionView.h"
 #import "ClumsySocialHandler.h"
+#import "ClumsyHighScoreLabel.h"
 
 @interface MainClumsyViewController ()
 
@@ -24,6 +25,7 @@
 @property(strong, nonatomic) ClumsySocialButton *twitterButton;
 @property(strong, nonatomic) ClumsySocialButton *facebookButton;
 @property(strong, nonatomic) ClumsyActionView *actionView;
+@property(strong, nonatomic) ClumsyHighScoreLabel *highScoreLabel;
 
 @end
 
@@ -31,16 +33,18 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  self.mainView = [[CustomClumsyMainView alloc] initWithFrame:self.view.frame];
-  self.actionView = [[ClumsyActionView alloc] initWithFrame:self.view.frame];
+  self.mainView = [CustomClumsyMainView viewWithFrame:self.view.frame];
+  self.actionView = [ClumsyActionView viewWithFrame:self.view.frame];
   self.twitterButton = [ClumsySocialButton buttonWithTwitterPoint:CGPointMake(210, 0) andDelegate:self];
   self.facebookButton = [ClumsySocialButton buttonWithFacebookPoint:CGPointMake(265, 0) andDelegate:self];
+  self.highScoreLabel = [ClumsyHighScoreLabel labelWithPoint:CGPointMake(10, self.view.bounds.size.height-30) andScore:[self.score highScore]];
   self.view = self.mainView;
   
   [self.view addSubview:self.actionView];
-  [self.view addSubview:[[CustomMainUIButton alloc] initWithFrame:self.view.bounds andTarget:self]];
+  [self.view addSubview:[CustomMainUIButton buttonWithFrame:self.view.bounds andTarget:self]];
   [self.view addSubview:self.twitterButton];
   [self.view addSubview:self.facebookButton];
+  [self.view addSubview:self.highScoreLabel];
   [self addSwipes];
 }
 
@@ -85,20 +89,26 @@
 
 - (void)failedClumsyActionWithScore:(NSNumber *)score {
   self.engine = nil;
+  
+  [self.score setHighScore:[score integerValue]];
+  [self.highScoreLabel setScore:[[[self.score highScore] highScore] integerValue]];
+  NSLog(@"HighSCore:%d",[[[self.score highScore] highScore ] integerValue]);
+  
   self.actionView.actionObject = [ClumsyActionObject startClumsyObject];
-  [self.view addSubview:[ClumsyScoreView viewWithFrame:self.view.bounds delegate:self andScore:score ]];
+  [self.view addSubview:[ClumsyScoreView viewWithFrame:self.view.bounds delegate:self andScore:score]];
   [self.mainView nextBackgroundColor];
 }
 
 - (void)hideSocialButtons {
   self.facebookButton.hidden = YES;
   self.twitterButton.hidden = YES;
+  self.highScoreLabel.hidden = YES;
 }
 
 - (void)showSocialButtons {
   self.facebookButton.hidden = NO;
   self.twitterButton.hidden = NO;
-  
+  self.highScoreLabel.hidden = NO;
 }
 
 - (void)presentSocialViewController:(UIViewController *)socialViewController{

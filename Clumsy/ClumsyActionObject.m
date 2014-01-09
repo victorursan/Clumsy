@@ -35,7 +35,7 @@
 }
 
 + (id)screenWasPressed {
-  return [[ClumsyActionObject alloc] initWithAction:@"Press"];
+  return [[ClumsyActionObject alloc] initWithAction:@"Tap"];
 }
 
 + (id)iPhoneWasShaken {

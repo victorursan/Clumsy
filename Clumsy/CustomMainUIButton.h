@@ -13,6 +13,6 @@
 
 @property(strong, nonatomic) id<CustomMainUIButtonDelegate>delegate;
 
-- (id)initWithFrame:(CGRect)frame andTarget:(id)delegate;
++ (id)buttonWithFrame:(CGRect)frame andTarget:(id)delegate;
 
 @end

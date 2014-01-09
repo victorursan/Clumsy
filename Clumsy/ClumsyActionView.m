@@ -21,6 +21,10 @@
   return self;
 }
 
++ (id)viewWithFrame:(CGRect)frame {
+  return [[ClumsyActionView alloc] initWithFrame:frame];
+}
+
 - (void)setActionObject:(ClumsyActionObject *)actionObject {
   self.action = actionObject.text;
   self.backgroundColor = [UIColor colorWithPatternImage:[self imageForAction:self.action]];
@@ -33,7 +37,6 @@
   UIGraphicsEndImageContext();
   return result;
 }
-
 
 - (void)drawRectForAction:(NSString *)action {
   //// General Declarations
@@ -53,13 +56,10 @@
   CGRect contentRect = CGRectMake(CGRectGetMinX(frame), CGRectGetMinY(frame) + ((frame.size.height/2) - 55), 320, 150);
   CGRect swipeRect = CGRectMake(CGRectGetMinX(frame), frame.size.height/2 - 100, 320, 125);
   
-  
-  
-  
   //// Abstracted Attributes
   NSString *startContent = @"Start";
   NSString *shakeContent = @"Shake";
-  NSString *pressContent = @"Press";
+  NSString *tapContent   = @"Tap";
   NSString *swipeContent = @"Swipe";
   
   UIFont *textFont = [UIFont fontWithName: @"Helvetica" size: 90];
@@ -91,13 +91,13 @@
                                                           NSForegroundColorAttributeName:[UIColor whiteColor] }];
     CGContextRestoreGState(context);
     
-  } else if ([action isEqualToString:@"Press"]) {
+  } else if ([action isEqualToString:@"Tap"]) {
     
-    //// Press Drawing
+    //// Tap Drawing
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [pressContent drawInRect:contentRect withAttributes:@{NSFontAttributeName:textFont,
+    [tapContent drawInRect:contentRect withAttributes:@{NSFontAttributeName:textFont,
                                                           NSParagraphStyleAttributeName:paragraphStyle,
                                                           NSForegroundColorAttributeName:[UIColor whiteColor] }];
     CGContextRestoreGState(context);

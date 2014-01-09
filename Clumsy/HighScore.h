@@ -13,10 +13,10 @@
 
 - (id)initWithContext:(NSManagedObjectContext *)context;
 - (void)setHighScore:(NSInteger)score;
-- (NSInteger)highScore;
+- (Score *)highScore;
 
-@property (nonatomic, retain) NSManagedObjectContext *context;
-@property (nonatomic, retain) NSFetchRequest *fetcher;
-@property (nonatomic ) Score *score;
+@property(nonatomic, retain) NSManagedObjectContext *context;
+@property(nonatomic, retain) NSFetchRequest *fetcher;
+@property(nonatomic ) Score *score;
 
 @end
