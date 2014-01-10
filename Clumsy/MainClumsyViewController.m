@@ -37,7 +37,7 @@
   self.actionView = [ClumsyActionView viewWithFrame:self.view.frame];
   self.twitterButton = [ClumsySocialButton buttonWithTwitterPoint:CGPointMake(210, 0) andDelegate:self];
   self.facebookButton = [ClumsySocialButton buttonWithFacebookPoint:CGPointMake(265, 0) andDelegate:self];
-  self.highScoreLabel = [ClumsyHighScoreLabel labelWithPoint:CGPointMake(10, self.view.bounds.size.height-30) andScore:[self.score highScore]];
+  self.highScoreLabel = [ClumsyHighScoreLabel labelForMainViewWithFrame:CGRectMake(10, self.view.bounds.size.height-30, 320, 22) andScore:[self.score highScore]];
   self.view = self.mainView;
   
   [self.view addSubview:self.actionView];
@@ -92,10 +92,12 @@
   
   [self.score setHighScore:[score integerValue]];
   [self.highScoreLabel setScore:[[[self.score highScore] highScore] integerValue]];
-  NSLog(@"HighSCore:%d",[[[self.score highScore] highScore ] integerValue]);
   
   self.actionView.actionObject = [ClumsyActionObject startClumsyObject];
-  [self.view addSubview:[ClumsyScoreView viewWithFrame:self.view.bounds delegate:self andScore:score]];
+  ClumsyScoreView *scoreView = [ClumsyScoreView viewWithFrame:self.view.bounds delegate:self andScore:score];
+  NSLog(@"HighSCore:%d",[[[self.score highScore] highScore ] integerValue]);
+  scoreView.score = self.score;
+  [self.view addSubview:scoreView];
   [self.mainView nextBackgroundColor];
 }
 

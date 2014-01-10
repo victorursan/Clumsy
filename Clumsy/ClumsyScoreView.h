@@ -11,12 +11,13 @@
 #import "ClumsyScoreOkButtonDelegate.h"
 #import "ClumsyScoreViewDelegate.h"
 #import "ClumsySocialButtonDelegate.h"
+#import "HighScore.h"
 
 @interface ClumsyScoreView : UIView <ClumsyScoreOkButtonDelegate, ClumsySocialButtonDelegate>
 
 @property(strong, nonatomic) id<ClumsyScoreViewDelegate>delegate;
+@property(strong, nonatomic) HighScore *score;
 
-- (id)initWithFrame:(CGRect)frame delegate:(id)delegate andScore:(NSNumber *)score;
 + (id)viewWithFrame:(CGRect)frame delegate:(id)delegate andScore:(NSNumber *)score;
 
 @end

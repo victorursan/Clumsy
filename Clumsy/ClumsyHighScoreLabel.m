@@ -11,31 +11,40 @@
 
 @implementation ClumsyHighScoreLabel
 
-- (id)initWithPoint:(CGPoint)point andScore:(Score *)score {
-    self = [super initWithFrame:CGRectMake(point.x, point.y, 150, 22)];
-    if (self) {
-      self.score = [score.highScore integerValue];
-      self.textColor = [UIColor whiteColor];
-    }
-    return self;
+- (id)initWithFrame:(CGRect)frame andScore:(Score *)score {
+  self = [super initWithFrame:frame];
+  if (self) {
+    self.score = [score.highScore integerValue];
+  }
+  return self;
 }
 
-+ (id)labelWithPoint:(CGPoint)point andScore:(Score *)score {
-  return [[ClumsyHighScoreLabel alloc] initWithPoint:point andScore:score];
++ (id)labelForMainViewWithFrame:(CGRect)frame andScore:(Score *)score {
+  ClumsyHighScoreLabel *scoreLabel = [[ClumsyHighScoreLabel alloc] initWithFrame:frame andScore:score];
+  scoreLabel.text = [NSString stringWithFormat:@"High score: %d",scoreLabel.score];
+  scoreLabel.textColor = [UIColor whiteColor];
+  scoreLabel.textAlignment = NSTextAlignmentLeft;
+  [scoreLabel sizeToFit];
+  return scoreLabel;
 }
 
-- (void)setScore:(NSInteger)score {
-  self.text = [NSString stringWithFormat:@"High score:%d",score];
-  [self sizeToFit];
++ (id)labelForScoreViewWithFrame:(CGRect)frame andScore:(Score *)score {
+  ClumsyHighScoreLabel *scoreLabel = [[ClumsyHighScoreLabel alloc] initWithFrame:frame andScore:score];
+  scoreLabel.font = [UIFont fontWithName:@"arial" size:16];
+  scoreLabel.text = [NSString stringWithFormat:@"High score: %d",scoreLabel.score];
+  scoreLabel.textColor = [UIColor lightTextColor];
+  scoreLabel.textAlignment = NSTextAlignmentCenter;
+  [scoreLabel sizeToFit];
+  return scoreLabel;
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect
+ {
+ // Drawing code
+ }
+ */
 
 @end

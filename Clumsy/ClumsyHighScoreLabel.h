@@ -14,6 +14,6 @@
 
 @property(nonatomic) NSInteger score;
 
-+ (id)labelWithPoint:(CGPoint)point andScore:(Score *)score;
-
++ (id)labelForMainViewWithFrame:(CGRect)frame andScore:(Score *)score;
++ (id)labelForScoreViewWithFrame:(CGRect)frame andScore:(Score *)score;
 @end

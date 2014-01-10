@@ -13,6 +13,7 @@
 
 @property(strong, nonatomic) NSTimer *actionTimer;
 @property(strong, nonatomic) ClumsyActionObject *clumsyObject;
+@property(nonatomic) double gameTime;
 
 @end
 
@@ -23,6 +24,7 @@
 - (id)initWithTarget:(id)delegate {
   self = [super init];
   if (self) {
+    self.gameTime = 1.25f;
     self.delegate = delegate;
     [self setNewClumsyObject];
     [self startTimer];
@@ -52,7 +54,9 @@
 }
 
 - (void)startTimer {
-  self.actionTimer = [NSTimer scheduledTimerWithTimeInterval:1.25f
+  self.gameTime = self.gameTime - 0.005f;
+  NSLog(@"Timeinterval: %f",self.gameTime);
+  self.actionTimer = [NSTimer scheduledTimerWithTimeInterval:self.gameTime
                                                       target:self
                                                     selector:@selector(failedAction)
                                                     userInfo:nil

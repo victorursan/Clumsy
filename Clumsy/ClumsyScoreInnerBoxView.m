@@ -42,7 +42,7 @@
   //// Group 2
   {
     //// Rectangle Drawing
-    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(CGRectGetMinX(frame7) + 27, CGRectGetMinY(frame7) + 172, 267, 136)];
+    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(CGRectGetMinX(frame7) + 20, CGRectGetMinY(frame7) + self.frame.size.height/2-135/2, 280, 135)];
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, buttonShadowOffset, buttonShadowBlurRadius, buttonShadow.CGColor);
     [color7 setFill];
