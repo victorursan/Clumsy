@@ -27,6 +27,9 @@
 @property(strong, nonatomic) ClumsyActionView *actionView;
 @property(strong, nonatomic) ClumsyHighScoreLabel *highScoreLabel;
 
+@property(strong, nonatomic) CMMotionManager *motionManager;
+@property(strong, nonatomic) NSTimer *timer;
+
 @end
 
 @implementation MainClumsyViewController
@@ -48,8 +51,26 @@
   [self addSwipes];
 }
 
-- (BOOL)canBecomeFirstResponder {
-  return YES;
+- (void)startDeviceMotion {
+  self.motionManager = [CMMotionManager new];
+  self.motionManager.accelerometerUpdateInterval = 1.0 / 4.0f;
+  [self.motionManager startAccelerometerUpdates];
+  self.timer = [NSTimer scheduledTimerWithTimeInterval:self.motionManager.accelerometerUpdateInterval target:self selector:@selector(pollAccel) userInfo:nil repeats:YES];
+}
+
+- (void)stopDeviceMotion {
+  [self.motionManager stopAccelerometerUpdates];
+  self.motionManager = nil;
+}
+
+- (void)pollAccel {
+  CMAccelerometerData *data = self.motionManager.accelerometerData;
+  CMAcceleration acc = data.acceleration;
+  if (fabsf(acc.x) > 0.9f || fabsf(acc.y) > 0.9f){
+    NSLog(@"x:%f y:%f",acc.x,acc.y);
+    [self stopDeviceMotion];
+    [self.engine verifyClumsyActionTaken:[ClumsyActionObject iPhoneWasShaken]];
+  }
 }
 
 - (void)addSwipes {
@@ -76,26 +97,25 @@
   [self.engine verifyClumsyActionTaken:[ClumsyActionObject screenWasSwipedInDirection:swipeGesture]];
 }
 
-- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-  if (event.subtype == UIEventSubtypeMotionShake) {
-    [self.engine verifyClumsyActionTaken:[ClumsyActionObject iPhoneWasShaken]];
-  }
-}
-
 - (void)setClumsyMainLabelTextTo:(ClumsyActionObject *)clumsyObject {
   self.actionView.actionObject = clumsyObject;
+  if ([clumsyObject.text isEqual:@"Shake"])
+    [self startDeviceMotion];
+  else
+    [self stopDeviceMotion];
   [self.mainView nextBackgroundColor];
 }
 
 - (void)failedClumsyActionWithScore:(NSNumber *)score {
   self.engine = nil;
-  
+  [self stopDeviceMotion];
   [self.score setHighScore:[score integerValue]];
   [self.highScoreLabel setScore:[[[self.score highScore] highScore] integerValue]];
-  
   self.actionView.actionObject = [ClumsyActionObject startClumsyObject];
   ClumsyScoreView *scoreView = [ClumsyScoreView viewWithFrame:self.view.bounds delegate:self andScore:score];
+  
   NSLog(@"HighSCore:%d",[[[self.score highScore] highScore ] integerValue]);
+  
   scoreView.score = self.score;
   [self.view addSubview:scoreView];
   [self.mainView nextBackgroundColor];

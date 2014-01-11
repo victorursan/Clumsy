@@ -47,6 +47,7 @@
 		578FAB96187DC33E00A0D90E /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB95187DC33E00A0D90E /* HighScore.m */; };
 		578FAB97187DC33E00A0D90E /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB95187DC33E00A0D90E /* HighScore.m */; };
 		578FAB9A187F23D400A0D90E /* ClumsyHighScoreLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB99187F23D400A0D90E /* ClumsyHighScoreLabel.m */; };
+		57A672731881686400EBCD9A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A672721881686400EBCD9A /* CoreMotion.framework */; };
 		57B207EA17C03849003E8281 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B207E917C03849003E8281 /* CoreImage.framework */; };
 		57F775D017C4F25100D4788B /* ClumsyActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F775CF17C4F25100D4788B /* ClumsyActionView.m */; };
 		57F775D317C57EC800D4788B /* ClumsySocialHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F775D217C57EC800D4788B /* ClumsySocialHandler.m */; };
@@ -129,6 +130,7 @@
 		578FAB95187DC33E00A0D90E /* HighScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScore.m; sourceTree = "<group>"; };
 		578FAB98187F23D400A0D90E /* ClumsyHighScoreLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyHighScoreLabel.h; sourceTree = "<group>"; };
 		578FAB99187F23D400A0D90E /* ClumsyHighScoreLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyHighScoreLabel.m; sourceTree = "<group>"; };
+		57A672721881686400EBCD9A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		57B207E917C03849003E8281 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		57F775CE17C4F25100D4788B /* ClumsyActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyActionView.h; sourceTree = "<group>"; };
 		57F775CF17C4F25100D4788B /* ClumsyActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyActionView.m; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A672731881686400EBCD9A /* CoreMotion.framework in Frameworks */,
 				5701CDFF187F378F00A635EB /* libz.dylib in Frameworks */,
 				5701CDFE187F373500A635EB /* libTestFlight.a in Frameworks */,
 				576F1B9E17C0B1CC00A2A919 /* QuartzCore.framework in Frameworks */,
@@ -202,6 +205,7 @@
 		570980B317B4EF6800192234 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57A672721881686400EBCD9A /* CoreMotion.framework */,
 				578FAB8E187DBA7D00A0D90E /* libz.dylib */,
 				576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */,
 				57B207E917C03849003E8281 /* CoreImage.framework */,
@@ -377,7 +381,7 @@
 		570980A917B4EF6800192234 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Victor Ursan";
 				TargetAttributes = {
 					570980B017B4EF6800192234 = {
@@ -541,8 +545,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "A4A11441-D2DE-482C-9A72-AF7D3E5C8F0F";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -565,8 +570,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "48712605-1D28-497D-9110-4AF8FD0B99FB";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -587,9 +593,12 @@
 					"$(inherited)",
 					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.2.0,
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2FB63E41-371C-4DE0-B4B0-BA4C1488CE0B";
+				PROVISIONING_PROFILE = "A4A11441-D2DE-482C-9A72-AF7D3E5C8F0F";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7 armv7s armv6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -609,9 +618,12 @@
 					"$(inherited)",
 					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.2.0,
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "48712605-1D28-497D-9110-4AF8FD0B99FB";
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "arm64 armv7 armv7s armv6";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

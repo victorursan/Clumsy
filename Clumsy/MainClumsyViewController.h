@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import <Social/Social.h>
+#import <CoreMotion/CoreMotion.h>
 #import "CustomMainUIButtonDelegate.h"
 #import "CustomUISwipeGestureDelegate.h"
 #import "ClumsyEngineDelegate.h"

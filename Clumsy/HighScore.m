@@ -28,6 +28,8 @@
   NSError *error;
   if (self.score.highScore.integerValue < score) {
     [self deleteScore:self.score];
+    if (![self.context save:&error])
+      NSLog(@"Problem saving: %@", [error localizedDescription]);
     Score *highScore = [NSEntityDescription insertNewObjectForEntityForName:@"Score" inManagedObjectContext:self.context];
     highScore.highScore = [NSNumber numberWithInteger:score];
     if (![self.context save:&error])
