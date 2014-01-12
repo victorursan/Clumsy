@@ -24,14 +24,16 @@
 
 @implementation ClumsyScoreView
 
-- (id)initWithFrame:(CGRect)frame delegate:(id)delegate andScore:(NSNumber *)score {
+- (id)initWithFrame:(CGRect)frame delegate:(id)delegate score:(NSNumber *)score andAction:(NSString *)action {
   self = [super initWithFrame:frame];
   if (self) {
     self.delegate = delegate;
     self.playersScore = score;
     [self addSubview:[ClumsyScoreInnerBoxView viewWithFrame:self.bounds]];
-    [self addSubview:[ClumsyTitleScoreLabel labelWithFrame:CGRectMake(25, self.bounds.size.height/2 + 135/2 - 130 , 270, 40)]];
-    [self addSubview:[ClumsyScoreLable lableWithFrame:CGRectMake(25, self.bounds.size.height/2 + 135/2 - 90, 270, 35) andScore:self.playersScore]];
+    [self addSubview:[ClumsyTitleScoreLabel labelWithFrame:CGRectMake(25, self.bounds.size.height/2 + 135/2 - 140 , 270, 40)]];
+    [self addSubview:[ClumsyScoreLable lableWithFrame:CGRectMake(25, self.bounds.size.height/2 + 135/2 - 105, 270, 60)
+                                             andScore:self.playersScore
+                                            andAction:[self transformeAction:action]]];
     [self addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(20, self.bounds.size.height/2 + 60) andDelegate:self]];
     [self addSubview:[ClumsySocialButton buttonWithFacebookPoint:CGPointMake(70, self.bounds.size.height/2 + 60) andDelegate:self]];
     [self addSubview:[ClumsyScoreOkButton buttonWithPoint:CGPointMake(175, self.bounds.size.height/2 + 135/2 - 45) andDelegate:self]];
@@ -39,12 +41,22 @@
   return self;
 }
 
+- (NSString *)transformeAction:(NSString *)action {
+  NSDictionary *transformer = @{@"Swipe Right":@"swiping",
+                                @"Swipe Left":@"swiping",
+                                @"Swipe Up":@"swiping",
+                                @"Swipe Down":@"swiping",
+                                @"Tap":@"taping",
+                                @"Shake":@"shaking"};
+  return transformer[action];
+}
+
 - (void)socialButtonPressed:(UIButton *)sender {
   [self.delegate presentSocialViewController:[ClumsySocialHandler viewControllerForButton:sender andScore:self.playersScore]];
 }
 
-+ (id)viewWithFrame:(CGRect)frame delegate:(id)delegate andScore:(NSNumber *)score {
-  return [[ClumsyScoreView alloc] initWithFrame:frame delegate:delegate andScore:score];
++ (id)viewWithFrame:(CGRect)frame delegate:(id)delegate score:(NSNumber *)score andAction:(NSString *)action {
+  return [[ClumsyScoreView alloc] initWithFrame:frame delegate:delegate score:score andAction:action];
 }
 
 - (void)okButtonPressed:(id)sender {

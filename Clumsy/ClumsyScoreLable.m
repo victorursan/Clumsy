@@ -13,6 +13,7 @@
 - (id)initWithFrame:(CGRect)frame {
   self = [super initWithFrame:frame];
   if (self) {
+    self.numberOfLines = 2;
     self.textAlignment = NSTextAlignmentCenter;
     self.textColor = [UIColor whiteColor];
     self.backgroundColor = [UIColor clearColor];
@@ -20,9 +21,9 @@
   return self;
 }
 
-+ (id)lableWithFrame:(CGRect)frame andScore:(NSNumber *)score {
++ (id)lableWithFrame:(CGRect)frame andScore:(NSNumber *)score andAction:(NSString *)action {
   ClumsyScoreLable *scoreLable = [[ClumsyScoreLable alloc] initWithFrame:frame];
-  scoreLable.text = [NSString stringWithFormat:@"Your Clumsy score is: %@",score];
+  scoreLable.text = [NSString stringWithFormat:@"After %d successful actions you were Clumsy at %@",[score integerValue], action];
   return scoreLable;
 }
 

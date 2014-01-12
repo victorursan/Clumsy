@@ -72,7 +72,7 @@
 - (void)failedAction {
   [self.actionTimer invalidate];
   self.actionTimer = nil;
-  [self.delegate failedClumsyActionWithScore:[NSNumber numberWithInt:score]];
+  [self.delegate failedClumsyActionWithScore:[NSNumber numberWithInt:score] atAction:[self.clumsyObject text]];
 }
 
 @end

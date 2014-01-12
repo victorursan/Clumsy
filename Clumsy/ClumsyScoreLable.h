@@ -10,6 +10,6 @@
 
 @interface ClumsyScoreLable : UILabel
 
-+ (id)lableWithFrame:(CGRect)frame andScore:(NSNumber *)score;
++ (id)lableWithFrame:(CGRect)frame andScore:(NSNumber *)score andAction:(NSString *)action;
 
 @end
