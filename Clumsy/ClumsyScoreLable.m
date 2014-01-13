@@ -23,7 +23,7 @@
 
 + (id)lableWithFrame:(CGRect)frame andScore:(NSNumber *)score andAction:(NSString *)action {
   ClumsyScoreLable *scoreLable = [[ClumsyScoreLable alloc] initWithFrame:frame];
-  scoreLable.text = [NSString stringWithFormat:@"After %d successful actions you were Clumsy at %@",[score integerValue], action];
+  scoreLable.text = [NSString stringWithFormat:@"After:%d successful actions you were Clumsy at: %@",[score integerValue], action];
   return scoreLable;
 }
 

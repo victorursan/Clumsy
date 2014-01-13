@@ -53,7 +53,7 @@
 
 - (void)startDeviceMotion {
   self.motionManager = [CMMotionManager new];
-  self.motionManager.accelerometerUpdateInterval = 1.0 / 4.0f;
+  self.motionManager.accelerometerUpdateInterval = 1.0 / 5.0f;
   [self.motionManager startAccelerometerUpdates];
   self.timer = [NSTimer scheduledTimerWithTimeInterval:self.motionManager.accelerometerUpdateInterval target:self selector:@selector(pollAccel) userInfo:nil repeats:YES];
 }
@@ -61,6 +61,8 @@
 - (void)stopDeviceMotion {
   [self.motionManager stopAccelerometerUpdates];
   self.motionManager = nil;
+  [self.timer invalidate];
+  self.timer = nil;
 }
 
 - (void)pollAccel {
