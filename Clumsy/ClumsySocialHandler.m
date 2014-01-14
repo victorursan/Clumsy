@@ -13,20 +13,24 @@
 
 - (id)shareClumsyWitgService:(NSString *)service {
   SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:service];
-  [socialSheet setInitialText:[NSString stringWithFormat:@"Try this cool app."]];
+  if ([service isEqual:SLServiceTypeFacebook]) {
+    [socialSheet setInitialText:[NSString stringWithFormat:@"Try this cool app."]];
+  } else {
+    [socialSheet setInitialText:[NSString stringWithFormat:@"RT @clumsyapp: Try this cool app."]];
+  }
   [socialSheet addURL:[NSURL URLWithString:@"http://goo.gl/XhbWeO"]];
-  [socialSheet addImage:[UIImage imageNamed:@"Clumsy4x.png"]];
+  [socialSheet addImage:[UIImage imageNamed:@"SocialIcon.png"]];
   return socialSheet;}
 
 - (id)viewControllerService:(NSString *)service andScore:(NSNumber *)score {
   SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:service];
   if ([service isEqual:SLServiceTypeFacebook]) {
-    [socialSheet setInitialText:[NSString stringWithFormat:@"I made %d points before I became *clumsy*. How soon untill you become Clumsy?",[score integerValue]]];
+    [socialSheet setInitialText:[NSString stringWithFormat:@"I made %d points before I became *clumsy*. How soon until you become Clumsy?",[score integerValue]]];
   } else {
-    [socialSheet setInitialText:[NSString stringWithFormat:@"RT @clumsyapp: I made %d points before I became *clumsy*. How soon until you become Clumsy?",[score integerValue]]];
+    [socialSheet setInitialText:[NSString stringWithFormat:@"RT @clumsyapp:I made %d points before I became *clumsy*. How soon until you become Clumsy?",[score integerValue]]];
   }
   [socialSheet addURL:[NSURL URLWithString:@"http://goo.gl/XhbWeO"]];
-  //[socialSheet addImage:[UIImage imageNamed:@"Clumsy4x.png"]];
+  [socialSheet addImage:[UIImage imageNamed:@"SocialIcon.png"]];
   return socialSheet;
 }
 

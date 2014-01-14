@@ -47,7 +47,7 @@
 		578FAB97187DC33E00A0D90E /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB95187DC33E00A0D90E /* HighScore.m */; };
 		578FAB9A187F23D400A0D90E /* ClumsyHighScoreLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB99187F23D400A0D90E /* ClumsyHighScoreLabel.m */; };
 		57A672731881686400EBCD9A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A672721881686400EBCD9A /* CoreMotion.framework */; };
-		57A91E9C18857D31007EC56F /* Clumsy4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57A91E9B18857D31007EC56F /* Clumsy4x.png */; };
+		57A91E9E1885C2F6007EC56F /* SocialIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 57A91E9D1885C2F6007EC56F /* SocialIcon.png */; };
 		57B207EA17C03849003E8281 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B207E917C03849003E8281 /* CoreImage.framework */; };
 		57F775D017C4F25100D4788B /* ClumsyActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F775CF17C4F25100D4788B /* ClumsyActionView.m */; };
 		57F775D317C57EC800D4788B /* ClumsySocialHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F775D217C57EC800D4788B /* ClumsySocialHandler.m */; };
@@ -129,7 +129,7 @@
 		578FAB98187F23D400A0D90E /* ClumsyHighScoreLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyHighScoreLabel.h; sourceTree = "<group>"; };
 		578FAB99187F23D400A0D90E /* ClumsyHighScoreLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyHighScoreLabel.m; sourceTree = "<group>"; };
 		57A672721881686400EBCD9A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		57A91E9B18857D31007EC56F /* Clumsy4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clumsy4x.png; sourceTree = "<group>"; };
+		57A91E9D1885C2F6007EC56F /* SocialIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SocialIcon.png; sourceTree = "<group>"; };
 		57B207E917C03849003E8281 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		57F775CE17C4F25100D4788B /* ClumsyActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyActionView.h; sourceTree = "<group>"; };
 		57F775CF17C4F25100D4788B /* ClumsyActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyActionView.m; sourceTree = "<group>"; };
@@ -223,7 +223,7 @@
 			children = (
 				570980C517B4EF6800192234 /* AppDelegate.h */,
 				570980C617B4EF6800192234 /* AppDelegate.m */,
-				57A91E9B18857D31007EC56F /* Clumsy4x.png */,
+				57A91E9D1885C2F6007EC56F /* SocialIcon.png */,
 				57AEB7301879B2DF00B057AE /* Models */,
 				57572D2217BAD1C900B8D7F9 /* MainClumsyViewController */,
 				57572D1E17BAC90400B8D7F9 /* ClumsyScoreView */,
@@ -415,8 +415,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57A91E9E1885C2F6007EC56F /* SocialIcon.png in Resources */,
 				5701CDFD187F35EA00A635EB /* release_notes.md in Resources */,
-				57A91E9C18857D31007EC56F /* Clumsy4x.png in Resources */,
 				5701CDFC187F35EA00A635EB /* README.md in Resources */,
 				570980C117B4EF6800192234 /* InfoPlist.strings in Resources */,
 				573BE2F91878BCF100F042A4 /* Images.xcassets in Resources */,
