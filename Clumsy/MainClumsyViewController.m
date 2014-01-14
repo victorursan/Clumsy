@@ -26,6 +26,7 @@
 @property(strong, nonatomic) ClumsySocialButton *facebookButton;
 @property(strong, nonatomic) ClumsyActionView *actionView;
 @property(strong, nonatomic) ClumsyHighScoreLabel *highScoreLabel;
+@property(strong, nonatomic) CustomMainUIButton *mainButton;
 
 @property(strong, nonatomic) CMMotionManager *motionManager;
 @property(strong, nonatomic) NSTimer *timer;
@@ -43,8 +44,11 @@
   self.highScoreLabel = [ClumsyHighScoreLabel labelForMainViewWithFrame:CGRectMake(10, self.view.bounds.size.height-30, 320, 22) andScore:[self.score highScore]];
   self.view = self.mainView;
   
+  
+  self.mainButton = [CustomMainUIButton buttonWithFrame:self.view.bounds andTarget:self];
+  
   [self.view addSubview:self.actionView];
-  [self.view addSubview:[CustomMainUIButton buttonWithFrame:self.view.bounds andTarget:self]];
+  [self.view addSubview:self.mainButton];
   [self.view addSubview:self.twitterButton];
   [self.view addSubview:self.facebookButton];
   [self.view addSubview:self.highScoreLabel];
@@ -53,7 +57,7 @@
 
 - (void)startDeviceMotion {
   self.motionManager = [CMMotionManager new];
-  self.motionManager.accelerometerUpdateInterval = 1.0 / 5.0f;
+  self.motionManager.accelerometerUpdateInterval = 1.0 / 10.0f;
   [self.motionManager startAccelerometerUpdates];
   self.timer = [NSTimer scheduledTimerWithTimeInterval:self.motionManager.accelerometerUpdateInterval target:self selector:@selector(pollAccel) userInfo:nil repeats:YES];
 }
@@ -109,18 +113,25 @@
 }
 
 - (void)failedClumsyActionWithScore:(NSNumber *)score atAction:(NSString *)action {
+  NSLog(@"failedClumsyActionWithScore");
+  self.mainButton.enabled = NO;
   self.engine = nil;
   [self stopDeviceMotion];
   [self.score setHighScore:[score integerValue]];
   [self.highScoreLabel setScore:[[[self.score highScore] highScore] integerValue]];
-  self.actionView.actionObject = [ClumsyActionObject startClumsyObject];
+
   ClumsyScoreView *scoreView = [ClumsyScoreView viewWithFrame:self.view.bounds delegate:self score:score andAction:action];
   
   NSLog(@"HighSCore:%d",[[[self.score highScore] highScore ] integerValue]);
   
   scoreView.score = self.score;
   [self.view addSubview:scoreView];
+}
+
+- (void)startScreen {
+  self.actionView.actionObject = [ClumsyActionObject startClumsyObject];
   [self.mainView nextBackgroundColor];
+  self.mainButton.enabled = YES;
 }
 
 - (void)hideSocialButtons {
@@ -136,6 +147,7 @@
 }
 
 - (void)presentSocialViewController:(UIViewController *)socialViewController{
+  
   [self presentViewController:socialViewController animated:YES completion:nil];
 }
 

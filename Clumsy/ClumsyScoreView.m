@@ -9,7 +9,6 @@
 #import "ClumsyScoreView.h"
 #import "ClumsyScoreOkButton.h"
 #import "ClumsyScoreInnerBoxView.h"
-#import "ClumsyTitleScoreLabel.h"
 #import "ClumsyScoreLable.h"
 #import "ClumsyScore.h"
 #import "ClumsySocialButton.h"
@@ -30,8 +29,7 @@
     self.delegate = delegate;
     self.playersScore = score;
     [self addSubview:[ClumsyScoreInnerBoxView viewWithFrame:self.bounds]];
-    [self addSubview:[ClumsyTitleScoreLabel labelWithFrame:CGRectMake(25, self.bounds.size.height/2 + 135/2 - 140 , 270, 40)]];
-    [self addSubview:[ClumsyScoreLable lableWithFrame:CGRectMake(25, self.bounds.size.height/2 + 135/2 - 105, 270, 60)
+    [self addSubview:[ClumsyScoreLable lableWithFrame:CGRectMake(20, self.frame.size.height/2-135/2, 280, 90)
                                              andScore:self.playersScore
                                             andAction:[self transformeAction:action]]];
     [self addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(20, self.bounds.size.height/2 + 60) andDelegate:self]];
@@ -42,12 +40,12 @@
 }
 
 - (NSString *)transformeAction:(NSString *)action {
-  NSDictionary *transformer = @{@"Swipe Right":@"swiping",
-                                @"Swipe Left":@"swiping",
-                                @"Swipe Up":@"swiping",
-                                @"Swipe Down":@"swiping",
-                                @"Tap":@"taping",
-                                @"Shake":@"shaking"};
+  NSDictionary *transformer = @{@"Swipe Right":@"swipe",
+                                @"Swipe Left":@"swipe",
+                                @"Swipe Up":@"swipe",
+                                @"Swipe Down":@"swipe",
+                                @"Tap":@"tap",
+                                @"Shake":@"shake"};
   return transformer[action];
 }
 
@@ -61,6 +59,7 @@
 
 - (void)okButtonPressed:(id)sender {
   [self.delegate showSocialButtons];
+  [self.delegate startScreen];
   [ClumsyScore saveScore:self.playersScore];
   [self removeFromSuperview];
 }

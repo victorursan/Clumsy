@@ -35,7 +35,6 @@
 		573BE2F91878BCF100F042A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 573BE2F81878BCF100F042A4 /* Images.xcassets */; };
 		57572D1717BAA88000B8D7F9 /* ClumsyScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */; };
 		57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */; };
-		57572D2117BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2017BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m */; };
 		57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */; };
 		57572D2B17BB976600B8D7F9 /* ClumsyScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2A17BB976500B8D7F9 /* ClumsyScore.m */; };
 		57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */; };
@@ -48,6 +47,7 @@
 		578FAB97187DC33E00A0D90E /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB95187DC33E00A0D90E /* HighScore.m */; };
 		578FAB9A187F23D400A0D90E /* ClumsyHighScoreLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB99187F23D400A0D90E /* ClumsyHighScoreLabel.m */; };
 		57A672731881686400EBCD9A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57A672721881686400EBCD9A /* CoreMotion.framework */; };
+		57A91E9C18857D31007EC56F /* Clumsy4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57A91E9B18857D31007EC56F /* Clumsy4x.png */; };
 		57B207EA17C03849003E8281 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B207E917C03849003E8281 /* CoreImage.framework */; };
 		57F775D017C4F25100D4788B /* ClumsyActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F775CF17C4F25100D4788B /* ClumsyActionView.m */; };
 		57F775D317C57EC800D4788B /* ClumsySocialHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F775D217C57EC800D4788B /* ClumsySocialHandler.m */; };
@@ -108,8 +108,6 @@
 		57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreView.m; sourceTree = "<group>"; };
 		57572D1B17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreInnerBoxView.h; sourceTree = "<group>"; };
 		57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreInnerBoxView.m; sourceTree = "<group>"; };
-		57572D1F17BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyTitleScoreLabel.h; sourceTree = "<group>"; };
-		57572D2017BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyTitleScoreLabel.m; sourceTree = "<group>"; };
 		57572D2317BAD21F00B8D7F9 /* ClumsyScoreLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreLable.h; sourceTree = "<group>"; };
 		57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreLable.m; sourceTree = "<group>"; };
 		57572D2917BB976500B8D7F9 /* ClumsyScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScore.h; sourceTree = "<group>"; };
@@ -131,6 +129,7 @@
 		578FAB98187F23D400A0D90E /* ClumsyHighScoreLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyHighScoreLabel.h; sourceTree = "<group>"; };
 		578FAB99187F23D400A0D90E /* ClumsyHighScoreLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyHighScoreLabel.m; sourceTree = "<group>"; };
 		57A672721881686400EBCD9A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		57A91E9B18857D31007EC56F /* Clumsy4x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Clumsy4x.png; sourceTree = "<group>"; };
 		57B207E917C03849003E8281 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		57F775CE17C4F25100D4788B /* ClumsyActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyActionView.h; sourceTree = "<group>"; };
 		57F775CF17C4F25100D4788B /* ClumsyActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyActionView.m; sourceTree = "<group>"; };
@@ -224,6 +223,7 @@
 			children = (
 				570980C517B4EF6800192234 /* AppDelegate.h */,
 				570980C617B4EF6800192234 /* AppDelegate.m */,
+				57A91E9B18857D31007EC56F /* Clumsy4x.png */,
 				57AEB7301879B2DF00B057AE /* Models */,
 				57572D2217BAD1C900B8D7F9 /* MainClumsyViewController */,
 				57572D1E17BAC90400B8D7F9 /* ClumsyScoreView */,
@@ -277,8 +277,6 @@
 				57572D2C17BEE14100B8D7F9 /* ClumsyScoreOkButton.h */,
 				57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */,
 				57572D2F17BEE16100B8D7F9 /* ClumsyScoreOkButtonDelegate.h */,
-				57572D1F17BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.h */,
-				57572D2017BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m */,
 				57572D2317BAD21F00B8D7F9 /* ClumsyScoreLable.h */,
 				57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */,
 			);
@@ -418,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5701CDFD187F35EA00A635EB /* release_notes.md in Resources */,
+				57A91E9C18857D31007EC56F /* Clumsy4x.png in Resources */,
 				5701CDFC187F35EA00A635EB /* README.md in Resources */,
 				570980C117B4EF6800192234 /* InfoPlist.strings in Resources */,
 				573BE2F91878BCF100F042A4 /* Images.xcassets in Resources */,
@@ -467,7 +466,6 @@
 				5709811117B6A9A900192234 /* ClumsyActionObject.m in Sources */,
 				57572D1717BAA88000B8D7F9 /* ClumsyScoreView.m in Sources */,
 				57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */,
-				57572D2117BACA2F00B8D7F9 /* ClumsyTitleScoreLabel.m in Sources */,
 				57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */,
 				57572D2B17BB976600B8D7F9 /* ClumsyScore.m in Sources */,
 				57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */,
@@ -620,7 +618,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A4A11441-D2DE-482C-9A72-AF7D3E5C8F0F";
+				PROVISIONING_PROFILE = "48712605-1D28-497D-9110-4AF8FD0B99FB";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s armv6";

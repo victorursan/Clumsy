@@ -40,8 +40,8 @@
 - (void)verifyClumsyActionTaken:(ClumsyActionObject *)clumsyObject {
   NSLog(@"%@ -- %@",clumsyObject.text , self.clumsyObject.text);
   if ([clumsyObject.text isEqual:self.clumsyObject.text]) {
-    [self setNewClumsyObject];
     [self resetTimer];
+    [self setNewClumsyObject];
     score ++;
   } else {
     [self failedAction];
@@ -55,7 +55,9 @@
 
 - (void)startTimer {
   double time = self.gameTime;
-  if ([self.clumsyObject.text isEqualToString:@"Shake"]) time = 1.20f;
+  if ([self.clumsyObject.text isEqualToString:@"Shake"]) {
+    time = 1.20f;
+  }
   self.gameTime = self.gameTime - 0.005f;
   NSLog(@"Timeinterval: %f for action: %@",time ,self.clumsyObject.text);
   self.actionTimer = [NSTimer scheduledTimerWithTimeInterval:time
@@ -65,15 +67,18 @@
                                                      repeats:NO];
 }
 
-- (void)resetTimer {
+- (void)stopTimer {
   [self.actionTimer invalidate];
   self.actionTimer = nil;
+}
+- (void)resetTimer {
+  [self stopTimer];
+  [NSThread sleepForTimeInterval:0.15f];
   [self startTimer];
 }
 
 - (void)failedAction {
-  [self.actionTimer invalidate];
-  self.actionTimer = nil;
+  [self stopTimer];
   [self.delegate failedClumsyActionWithScore:[NSNumber numberWithInt:score] atAction:[self.clumsyObject text]];
 }
 

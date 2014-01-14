@@ -12,5 +12,6 @@
 
 - (void)presentSocialViewController:(UIViewController *)socialViewController;
 - (void)showSocialButtons;
+- (void)startScreen;
 
 @end
