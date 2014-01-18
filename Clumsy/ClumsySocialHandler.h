@@ -10,6 +10,7 @@
 
 @interface ClumsySocialHandler : NSObject
 
+- (id)shareClumsyWithService:(NSString *)service;
 + (id)viewControllerForButton:(UIButton *)sender andScore:(NSNumber *)score;
 + (id)shareClumsyForButton:(UIButton *)sender;
 

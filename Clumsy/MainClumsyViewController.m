@@ -44,7 +44,6 @@
   self.highScoreLabel = [ClumsyHighScoreLabel labelForMainViewWithFrame:CGRectMake(10, self.view.bounds.size.height-30, 320, 22) andScore:[self.score highScore]];
   self.view = self.mainView;
   
-  
   self.mainButton = [CustomMainUIButton buttonWithFrame:self.view.bounds andTarget:self];
   
   [self.view addSubview:self.actionView];
@@ -119,7 +118,7 @@
   [self stopDeviceMotion];
   [self.score setHighScore:[score integerValue]];
   [self.highScoreLabel setScore:[[[self.score highScore] highScore] integerValue]];
-
+  
   ClumsyScoreView *scoreView = [ClumsyScoreView viewWithFrame:self.view.bounds delegate:self score:score andAction:action];
   
   NSLog(@"HighSCore:%d",[[[self.score highScore] highScore ] integerValue]);
@@ -147,8 +146,8 @@
 }
 
 - (void)presentSocialViewController:(UIViewController *)socialViewController{
-  
-  [self presentViewController:socialViewController animated:YES completion:nil];
+  if (socialViewController)
+    [self presentViewController:socialViewController animated:YES completion:nil];
 }
 
 - (void)socialButtonPressed:(UIButton *)sender {

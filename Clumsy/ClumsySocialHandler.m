@@ -11,26 +11,25 @@
 
 @implementation ClumsySocialHandler
 
-- (id)shareClumsyWitgService:(NSString *)service {
+- (id)shareClumsyWithService:(NSString *)service {
   SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:service];
   if ([service isEqual:SLServiceTypeFacebook]) {
-    [socialSheet setInitialText:[NSString stringWithFormat:@"Try this cool app."]];
+    [socialSheet setInitialText:[NSString stringWithFormat:@"Nobody told you how *clumsy* you are with your mobile device? Check out Clumsy App!"]];
   } else {
-    [socialSheet setInitialText:[NSString stringWithFormat:@"RT @clumsyapp: Try this cool app."]];
+    [socialSheet setInitialText:[NSString stringWithFormat:@"RT @clumsyapp: Nobody told you how *clumsy* you are with your mobile device? Check out Clumsy App!"]];
   }
-  [socialSheet addURL:[NSURL URLWithString:@"http://goo.gl/XhbWeO"]];
-  [socialSheet addImage:[UIImage imageNamed:@"SocialIcon.png"]];
-  return socialSheet;}
+  [socialSheet addURL:[NSURL URLWithString:@"http://victorursan.com/Clumsy"]];
+  return socialSheet;
+}
 
 - (id)viewControllerService:(NSString *)service andScore:(NSNumber *)score {
   SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:service];
   if ([service isEqual:SLServiceTypeFacebook]) {
     [socialSheet setInitialText:[NSString stringWithFormat:@"I made %d points before I became *clumsy*. How soon until you become Clumsy?",[score integerValue]]];
   } else {
-    [socialSheet setInitialText:[NSString stringWithFormat:@"RT @clumsyapp:I made %d points before I became *clumsy*. How soon until you become Clumsy?",[score integerValue]]];
+    [socialSheet setInitialText:[NSString stringWithFormat:@"RT @clumsyapp: I made %d points before I became *clumsy*. How soon until you become Clumsy?",[score integerValue]]];
   }
-  [socialSheet addURL:[NSURL URLWithString:@"http://goo.gl/XhbWeO"]];
-  [socialSheet addImage:[UIImage imageNamed:@"SocialIcon.png"]];
+  [socialSheet addURL:[NSURL URLWithString:@"http://victorursan.com/Clumsy"]];
   return socialSheet;
 }
 
@@ -44,9 +43,9 @@
 
 + (id)shareClumsyForButton:(UIButton *)sender {
   if (sender.tag == 1) {
-    return [[ClumsySocialHandler alloc] shareClumsyWitgService:SLServiceTypeTwitter];
+    return [[ClumsySocialHandler alloc] shareClumsyWithService:SLServiceTypeTwitter];
   } else {
-    return [[ClumsySocialHandler alloc] shareClumsyWitgService:SLServiceTypeFacebook];
+    return [[ClumsySocialHandler alloc] shareClumsyWithService:SLServiceTypeFacebook];
   }
 }
 
