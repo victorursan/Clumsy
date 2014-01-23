@@ -23,6 +23,7 @@
 - (void)setScore:(NSInteger)score {
   _score = score;
   self.text = [NSString stringWithFormat:@"High score: %d",self.score];
+  [self sizeToFit];
 }
 
 + (id)labelForMainViewWithFrame:(CGRect)frame andScore:(Score *)score {
