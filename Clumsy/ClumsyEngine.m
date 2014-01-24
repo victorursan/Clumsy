@@ -38,7 +38,6 @@
 }
 
 - (void)verifyClumsyActionTaken:(ClumsyActionObject *)clumsyObject {
-  NSLog(@"%@ -- %@",clumsyObject.text , self.clumsyObject.text);
   if ([clumsyObject.text isEqual:self.clumsyObject.text]) {
     [self resetTimer];
     [self setNewClumsyObject];
@@ -59,7 +58,6 @@
     time = 1.20f;
   }
   self.gameTime = self.gameTime - 0.005f;
-  NSLog(@"Timeinterval: %f for action: %@",time ,self.clumsyObject.text);
   self.actionTimer = [NSTimer scheduledTimerWithTimeInterval:time
                                                       target:self
                                                     selector:@selector(failedAction)

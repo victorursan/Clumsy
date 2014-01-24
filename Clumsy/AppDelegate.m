@@ -17,9 +17,6 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  
-  [TestFlight takeOff:@"bc7d795d-2b0e-4643-9bd6-2b8475a08024"];
-  
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   MainClumsyViewController *main = [[MainClumsyViewController alloc] init];
   main.score = [[HighScore alloc] initWithContext:self.managedObjectContext];

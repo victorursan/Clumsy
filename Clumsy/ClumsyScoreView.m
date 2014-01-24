@@ -10,7 +10,6 @@
 #import "ClumsyScoreOkButton.h"
 #import "ClumsyScoreInnerBoxView.h"
 #import "ClumsyScoreLable.h"
-#import "ClumsyScore.h"
 #import "ClumsySocialButton.h"
 #import "ClumsySocialHandler.h"
 #import "ClumsyHighScoreLabel.h"
@@ -60,7 +59,6 @@
 - (void)okButtonPressed:(id)sender {
   [self.delegate showSocialButtons];
   [self.delegate startScreen];
-  [ClumsyScore saveScore:self.playersScore];
   [self removeFromSuperview];
 }
 

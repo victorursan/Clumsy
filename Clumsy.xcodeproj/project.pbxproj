@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5701CDFC187F35EA00A635EB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 5701CDF6187F35EA00A635EB /* README.md */; };
-		5701CDFD187F35EA00A635EB /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 5701CDF7187F35EA00A635EB /* release_notes.md */; };
-		5701CDFE187F373500A635EB /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5701CDF5187F35EA00A635EB /* libTestFlight.a */; };
-		5701CDFF187F378F00A635EB /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 578FAB8E187DBA7D00A0D90E /* libz.dylib */; };
 		570980B517B4EF6800192234 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980B417B4EF6800192234 /* UIKit.framework */; };
 		570980B717B4EF6800192234 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980B617B4EF6800192234 /* Foundation.framework */; };
 		570980B917B4EF6800192234 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 570980B817B4EF6800192234 /* CoreGraphics.framework */; };
@@ -36,7 +32,6 @@
 		57572D1717BAA88000B8D7F9 /* ClumsyScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */; };
 		57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */; };
 		57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */; };
-		57572D2B17BB976600B8D7F9 /* ClumsyScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2A17BB976500B8D7F9 /* ClumsyScore.m */; };
 		57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */; };
 		57572D3417BF83F800B8D7F9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57572D3317BF83F800B8D7F9 /* Social.framework */; };
 		576F1B9E17C0B1CC00A2A919 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */; };
@@ -63,12 +58,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5701CDF5187F35EA00A635EB /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		5701CDF6187F35EA00A635EB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		5701CDF7187F35EA00A635EB /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
-		5701CDF8187F35EA00A635EB /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
-		5701CDF9187F35EA00A635EB /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
-		5701CDFA187F35EA00A635EB /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		570980B117B4EF6800192234 /* Clumsy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clumsy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		570980B417B4EF6800192234 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		570980B617B4EF6800192234 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -109,8 +98,6 @@
 		57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreInnerBoxView.m; sourceTree = "<group>"; };
 		57572D2317BAD21F00B8D7F9 /* ClumsyScoreLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreLable.h; sourceTree = "<group>"; };
 		57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreLable.m; sourceTree = "<group>"; };
-		57572D2917BB976500B8D7F9 /* ClumsyScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScore.h; sourceTree = "<group>"; };
-		57572D2A17BB976500B8D7F9 /* ClumsyScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScore.m; sourceTree = "<group>"; };
 		57572D2C17BEE14100B8D7F9 /* ClumsyScoreOkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreOkButton.h; sourceTree = "<group>"; };
 		57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreOkButton.m; sourceTree = "<group>"; };
 		57572D2F17BEE16100B8D7F9 /* ClumsyScoreOkButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreOkButtonDelegate.h; sourceTree = "<group>"; };
@@ -141,8 +128,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				57A672731881686400EBCD9A /* CoreMotion.framework in Frameworks */,
-				5701CDFF187F378F00A635EB /* libz.dylib in Frameworks */,
-				5701CDFE187F373500A635EB /* libTestFlight.a in Frameworks */,
 				576F1B9E17C0B1CC00A2A919 /* QuartzCore.framework in Frameworks */,
 				57B207EA17C03849003E8281 /* CoreImage.framework in Frameworks */,
 				57572D3417BF83F800B8D7F9 /* Social.framework in Frameworks */,
@@ -167,19 +152,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5701CDF4187F35EA00A635EB /* TestFlightSDK2.2.0 */ = {
-			isa = PBXGroup;
-			children = (
-				5701CDF5187F35EA00A635EB /* libTestFlight.a */,
-				5701CDF6187F35EA00A635EB /* README.md */,
-				5701CDF7187F35EA00A635EB /* release_notes.md */,
-				5701CDF8187F35EA00A635EB /* TestFlight+AsyncLogging.h */,
-				5701CDF9187F35EA00A635EB /* TestFlight+ManualSessions.h */,
-				5701CDFA187F35EA00A635EB /* TestFlight.h */,
-			);
-			path = TestFlightSDK2.2.0;
-			sourceTree = "<group>";
-		};
 		570980A817B4EF6800192234 = {
 			isa = PBXGroup;
 			children = (
@@ -228,7 +200,6 @@
 				570980CE17B4EF6800192234 /* Clumsy.xcdatamodeld */,
 				573BE2F81878BCF100F042A4 /* Images.xcassets */,
 				570980BD17B4EF6800192234 /* Supporting Files */,
-				5701CDF4187F35EA00A635EB /* TestFlightSDK2.2.0 */,
 			);
 			path = Clumsy;
 			sourceTree = "<group>";
@@ -313,8 +284,6 @@
 				5709810E17B694D100192234 /* ClumsyEngineDelegate.h */,
 				5709810F17B6A9A900192234 /* ClumsyActionObject.h */,
 				5709811017B6A9A900192234 /* ClumsyActionObject.m */,
-				57572D2917BB976500B8D7F9 /* ClumsyScore.h */,
-				57572D2A17BB976500B8D7F9 /* ClumsyScore.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -412,8 +381,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5701CDFD187F35EA00A635EB /* release_notes.md in Resources */,
-				5701CDFC187F35EA00A635EB /* README.md in Resources */,
 				570980C117B4EF6800192234 /* InfoPlist.strings in Resources */,
 				573BE2F91878BCF100F042A4 /* Images.xcassets in Resources */,
 			);
@@ -463,7 +430,6 @@
 				57572D1717BAA88000B8D7F9 /* ClumsyScoreView.m in Sources */,
 				57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */,
 				57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */,
-				57572D2B17BB976600B8D7F9 /* ClumsyScore.m in Sources */,
 				57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */,
 				576F1BA417C17DEF00A2A919 /* ClumsySocialButton.m in Sources */,
 				57F775D017C4F25100D4788B /* ClumsyActionView.m in Sources */,
@@ -583,13 +549,9 @@
 				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
 				INFOPLIST_FILE = "Clumsy/Clumsy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.2.0,
-				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0DC4FCFC-77A4-4F72-B0DC-F076067427AA";
+				PROVISIONING_PROFILE = "765CADDC-C1A3-4A47-9A71-3DFB9F07403F";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s armv6";
@@ -608,13 +570,9 @@
 				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
 				INFOPLIST_FILE = "Clumsy/Clumsy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.2.0,
-				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0DC4FCFC-77A4-4F72-B0DC-F076067427AA";
+				PROVISIONING_PROFILE = "765CADDC-C1A3-4A47-9A71-3DFB9F07403F";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s armv6";
@@ -633,10 +591,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
 				INFOPLIST_FILE = "ClumsyTests/ClumsyTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.1.3,
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -654,10 +608,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
 				INFOPLIST_FILE = "ClumsyTests/ClumsyTests-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/victor/Github/Clumsy/Clumsy/TestFlightSDK2.1.3,
-				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;

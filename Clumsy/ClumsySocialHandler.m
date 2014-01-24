@@ -18,7 +18,7 @@
   } else {
     [socialSheet setInitialText:[NSString stringWithFormat:@"RT @clumsyapp: Nobody told you how *clumsy* you are with your mobile device? Check out Clumsy App!"]];
   }
-  [socialSheet addURL:[NSURL URLWithString:@"http://victorursan.com/Clumsy"]];
+  [socialSheet addURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/clumsy/id800927642?mt=8"]];
   return socialSheet;
 }
 
@@ -29,7 +29,7 @@
   } else {
     [socialSheet setInitialText:[NSString stringWithFormat:@"RT @clumsyapp: I made %d points before I became *clumsy*. How soon until you become Clumsy?",[score integerValue]]];
   }
-  [socialSheet addURL:[NSURL URLWithString:@"http://victorursan.com/Clumsy"]];
+  [socialSheet addURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/clumsy/id800927642?mt=8"]];
   return socialSheet;
 }
 

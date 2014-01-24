@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <AdSupport/AdSupport.h>
-#import "TestFlight.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -72,7 +72,6 @@
   CMAccelerometerData *data = self.motionManager.accelerometerData;
   CMAcceleration acc = data.acceleration;
   if (fabsf(acc.x) > 0.9f || fabsf(acc.y) > 0.9f){
-    NSLog(@"x:%f y:%f",acc.x,acc.y);
     [self stopDeviceMotion];
     [self.engine verifyClumsyActionTaken:[ClumsyActionObject iPhoneWasShaken]];
   }
@@ -112,17 +111,12 @@
 }
 
 - (void)failedClumsyActionWithScore:(NSNumber *)score atAction:(NSString *)action {
-  NSLog(@"failedClumsyActionWithScore");
   self.mainButton.enabled = NO;
   self.engine = nil;
   [self stopDeviceMotion];
   [self.score setHighScore:[score integerValue]];
   [self.highScoreLabel setScore:[[[self.score highScore] highScore] integerValue]];
-  
   ClumsyScoreView *scoreView = [ClumsyScoreView viewWithFrame:self.view.bounds delegate:self score:score andAction:action];
-  
-  NSLog(@"HighSCore:%d",[[[self.score highScore] highScore ] integerValue]);
-  
   scoreView.score = self.score;
   [self.view addSubview:scoreView];
 }
