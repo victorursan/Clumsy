@@ -10,6 +10,7 @@
 
 @protocol CustomMainUIButtonDelegate <NSObject>
 
-- (void)screenWasPressed:(UIButton *)sender;
+- (void)screenWasTapped:(UIButton *)sender;
+- (void)screenWasDoubleTapped:(UITapGestureRecognizer *)gesture;
 
 @end

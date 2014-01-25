@@ -14,7 +14,8 @@
 
 - (id)initWithAction:(NSString *)action;
 + (id)screenWasSwipedInDirection:(UISwipeGestureRecognizer *)swipe;
-+ (id)screenWasPressed;
++ (id)screenWasTapped;
++ (id)screenWasDoubleTapped;
 + (id)iPhoneWasShaken;
 + (id)startClumsyObject;
 + (id)randomClumsyObject;

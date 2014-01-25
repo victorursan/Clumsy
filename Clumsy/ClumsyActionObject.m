@@ -34,8 +34,12 @@
   return [[ClumsyActionObject alloc] initWithAction:swipeDirection[swipeToString]];
 }
 
-+ (id)screenWasPressed {
++ (id)screenWasTapped {
   return [[ClumsyActionObject alloc] initWithAction:@"Tap"];
+}
+
++ (id)screenWasDoubleTapped {
+  return [[ClumsyActionObject alloc] initWithAction:@"Double Tap"];
 }
 
 + (id)iPhoneWasShaken {
@@ -43,7 +47,8 @@
 }
 
 - (void)createAllClumsyObjects {
-  self.allClumsyObjects = @[[ClumsyActionObject screenWasPressed],
+  self.allClumsyObjects = @[[ClumsyActionObject screenWasTapped],
+                            [ClumsyActionObject screenWasDoubleTapped],
                             [ClumsyActionObject iPhoneWasShaken],
                             [ClumsyActionObject screenWasSwipedInDirection:[CustomUISwipeGesture swipeWithTarget:nil
                                                                                                     andDirection:UISwipeGestureRecognizerDirectionUp]],

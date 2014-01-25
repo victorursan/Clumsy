@@ -61,6 +61,7 @@
   NSString *shakeContent = @"Shake";
   NSString *tapContent   = @"Tap";
   NSString *swipeContent = @"Swipe";
+  NSString *doubleTap    = @"Double Tap";
   
   UIFont *textFont = [UIFont fontWithName: @"Helvetica" size: 90];
   
@@ -68,38 +69,30 @@
   paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
   paragraphStyle.alignment = NSTextAlignmentCenter;
   
-  if ([action isEqualToString:@"Start"]) {
+  if ([action isEqualToString:startContent] || [action isEqualToString:shakeContent] || [action isEqualToString:tapContent]) {
     
     //// Start Drawing
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
     
-    [startContent drawInRect:contentRect withAttributes:@{NSFontAttributeName:textFont,
-                                                          NSParagraphStyleAttributeName:paragraphStyle,
-                                                          NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [action drawInRect:contentRect withAttributes:@{NSFontAttributeName:textFont,
+                                          NSParagraphStyleAttributeName:paragraphStyle,
+                                         NSForegroundColorAttributeName:[UIColor whiteColor]}];
     CGContextRestoreGState(context);
+  
+  } else if ([action isEqualToString:doubleTap]) {
     
-  } else if ([action isEqualToString:@"Shake"]) {
-    
-    //// Shake Drawing
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
     [fillColor setFill];
-    [shakeContent drawInRect:contentRect withAttributes:@{NSFontAttributeName:textFont,
-                                                          NSParagraphStyleAttributeName:paragraphStyle,
-                                                          NSForegroundColorAttributeName:[UIColor whiteColor] }];
-    CGContextRestoreGState(context);
-    
-  } else if ([action isEqualToString:@"Tap"]) {
-    
-    //// Tap Drawing
-    CGContextSaveGState(context);
-    CGContextSetShadowWithColor(context, textShadowOffset, textShadowBlurRadius, textShadow.CGColor);
-    [fillColor setFill];
-    [tapContent drawInRect:contentRect withAttributes:@{NSFontAttributeName:textFont,
-                                                          NSParagraphStyleAttributeName:paragraphStyle,
-                                                          NSForegroundColorAttributeName:[UIColor whiteColor] }];
+
+    [@"Double" drawInRect:swipeRect withAttributes:@{NSFontAttributeName:textFont,
+                                           NSParagraphStyleAttributeName:paragraphStyle,
+                                          NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    [@"Tap" drawInRect:swipeBezierRect withAttributes:@{NSFontAttributeName:textFont,
+                                              NSParagraphStyleAttributeName:paragraphStyle,
+                                             NSForegroundColorAttributeName:[UIColor whiteColor]}];
     CGContextRestoreGState(context);
     
   } else if ([action isEqualToString:@"Swipe Down"]) {

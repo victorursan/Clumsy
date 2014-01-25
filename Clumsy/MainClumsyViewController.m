@@ -88,13 +88,17 @@
   return [CustomUISwipeGesture swipeWithTarget:self andDirection:direction];
 }
 
-- (void)screenWasPressed:(UIButton *)sender {
+- (void)screenWasTapped:(UIButton *)sender {
   if ([self.actionView.action isEqualToString:[[ClumsyActionObject startClumsyObject] text]]) {
     self.engine = [ClumsyEngine startEngineWithTarget:self];
     [self hideSocialButtons];
   } else {
-    [self.engine verifyClumsyActionTaken:[ClumsyActionObject screenWasPressed]];
+    [self.engine verifyClumsyActionTaken:[ClumsyActionObject screenWasTapped]];
   }
+}
+
+- (void)screenWasDoubleTapped:(UITapGestureRecognizer *)gesture {
+  [self.engine verifyClumsyActionTaken:[ClumsyActionObject screenWasDoubleTapped]];
 }
 
 - (void)screenWasSwiped:(UISwipeGestureRecognizer *)swipeGesture {
@@ -102,7 +106,16 @@
 }
 
 - (void)setClumsyMainLabelTextTo:(ClumsyActionObject *)clumsyObject {
+  
+  if ([clumsyObject.text isEqual:@"Double Tap"]) {
+    [self.mainButton addDoubleTap];
+    [self.mainButton removeSingleTap];
+  } else {
+    [self.mainButton addSingleTap];
+    [self.mainButton removeDoubleTap];
+  }
   self.actionView.actionObject = clumsyObject;
+  
   if ([clumsyObject.text isEqual:@"Shake"])
     [self startDeviceMotion];
   else
@@ -122,6 +135,8 @@
 }
 
 - (void)startScreen {
+  [self.mainButton removeDoubleTap];
+  [self.mainButton addSingleTap];
   self.actionView.actionObject = [ClumsyActionObject startClumsyObject];
   [self.mainView nextBackgroundColor];
   self.mainButton.enabled = YES;

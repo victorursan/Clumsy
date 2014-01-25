@@ -44,6 +44,7 @@
                                 @"Swipe Up":@"swipe",
                                 @"Swipe Down":@"swipe",
                                 @"Tap":@"tap",
+                                @"Double Tap":@"tap",
                                 @"Shake":@"shake"};
   return transformer[action];
 }

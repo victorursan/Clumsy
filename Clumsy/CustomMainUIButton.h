@@ -14,5 +14,9 @@
 @property(strong, nonatomic) id<CustomMainUIButtonDelegate>delegate;
 
 + (id)buttonWithFrame:(CGRect)frame andTarget:(id)delegate;
+- (void)removeDoubleTap;
+- (void)addDoubleTap;
+- (void)removeSingleTap;
+- (void)addSingleTap;
 
 @end
