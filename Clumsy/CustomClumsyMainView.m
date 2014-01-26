@@ -31,7 +31,7 @@
 }
 
 - (void)nextBackgroundColor {
-  if (count >= 5) count = 0;
+  if (count >= 6) count = 0;
   [self setBackgroundColor:[self backgroundColorAtIndex:count]];
   count ++;
 }
@@ -69,16 +69,19 @@
                       (id)gradient1Color2.CGColor, nil];
   } else if (number == 1) {
     //// Color Declarations
-    UIColor *gradient2Color1 = [UIColor colorWithRed: 0.062 green: 0.529 blue: 0 alpha: 1];
-    UIColor *gradient2Color2 = [UIColor colorWithRed: 0.011 green: 0.908 blue: 0.011 alpha: 1];
+    UIColor* gradient6Color1 = [UIColor colorWithRed: 0.794 green: 0.382 blue: 1 alpha: 1];
+    UIColor* gradient6Color2 = [UIColor colorWithRed: 0.479 green: 0 blue: 0.718 alpha: 1];
+
     
     //// Gradient Declarations
     gradientColors = [NSArray arrayWithObjects:
-                      (id)gradient2Color1.CGColor,
-                      (id)[UIColor colorWithRed: 0.037 green: 0.719 blue: 0.005 alpha: 1].CGColor,
-                      (id)gradient2Color2.CGColor,
-                      (id)[UIColor colorWithRed: 0.037 green: 0.719 blue: 0.005 alpha: 1].CGColor,
-                      (id)gradient2Color1.CGColor, nil];
+                      (id)gradient6Color1.CGColor,
+                      (id)[UIColor colorWithRed: 0.686 green: 0.171 blue: 0.943 alpha: 1].CGColor,
+                      (id)gradient6Color2.CGColor,
+                      (id)[UIColor colorWithRed: 0.686 green: 0.171 blue: 0.943 alpha: 1].CGColor,
+                      (id)gradient6Color1.CGColor, nil];
+    
+    
   } else if (number == 2) {
     UIColor* gradient3Color1 = [UIColor colorWithRed: 0.99 green: 1 blue: 0 alpha: 1];
     UIColor* gradient3Color2 = [UIColor colorWithRed: 0.999 green: 0.734 blue: 0.155 alpha: 1];
@@ -102,7 +105,7 @@
                       (id)gradient4Color2.CGColor,
                       (id)[UIColor colorWithRed: 0 green: 0.548 blue: 1 alpha: 1].CGColor,
                       (id)gradient4Color1.CGColor, nil];
-  } else {
+  } else if (number == 4) {
     //// Color Declarations
     UIColor* gradient5Color1 = [UIColor colorWithRed: 1 green: 0 blue: 0.853 alpha: 1];
     UIColor* gradient5Color2 = [UIColor colorWithRed: 1 green: 0 blue: 0.447 alpha: 1];
@@ -114,6 +117,19 @@
                       (id)gradient5Color1.CGColor,
                       (id)[UIColor colorWithRed: 1 green: 0 blue: 0.65 alpha: 1].CGColor,
                       (id)gradient5Color2.CGColor, nil];
+  } else if (number == 5) {
+    //// Color Declarations
+    UIColor *gradient2Color1 = [UIColor colorWithRed: 0.062 green: 0.529 blue: 0 alpha: 1];
+    UIColor *gradient2Color2 = [UIColor colorWithRed: 0.011 green: 0.908 blue: 0.011 alpha: 1];
+    
+    //// Gradient Declarations
+    gradientColors = [NSArray arrayWithObjects:
+                      (id)gradient2Color1.CGColor,
+                      (id)[UIColor colorWithRed: 0.037 green: 0.719 blue: 0.005 alpha: 1].CGColor,
+                      (id)gradient2Color2.CGColor,
+                      (id)[UIColor colorWithRed: 0.037 green: 0.719 blue: 0.005 alpha: 1].CGColor,
+                      (id)gradient2Color1.CGColor, nil];
+    
   }
   
   CGFloat gradientLocations[] = {0, 0.2, 0.5, 0.8, 1};
