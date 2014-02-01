@@ -13,6 +13,7 @@
 
 @property(strong, nonatomic) NSTimer *actionTimer;
 @property(strong, nonatomic) ClumsyActionObject *clumsyObject;
+@property(strong, nonatomic) NSTimer *progressTimer;
 @property(nonatomic) double gameTime;
 
 @end
@@ -63,11 +64,23 @@
                                                     selector:@selector(failedAction)
                                                     userInfo:nil
                                                      repeats:NO];
+  self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:time/100.0f
+                                                        target:self
+                                                      selector:@selector(increment)
+                                                      userInfo:nil
+                                                       repeats:YES];
+}
+
+- (void)increment {
+  [self.delegate incrementProgressViewReset:NO];
 }
 
 - (void)stopTimer {
   [self.actionTimer invalidate];
   self.actionTimer = nil;
+  [self.progressTimer invalidate];
+  self.progressTimer = nil;
+  [self.delegate incrementProgressViewReset:YES];
 }
 - (void)resetTimer {
   [self stopTimer];

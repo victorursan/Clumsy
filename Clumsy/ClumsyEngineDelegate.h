@@ -13,5 +13,6 @@
 
 - (void)setClumsyMainLabelTextTo:(ClumsyActionObject *)clumsyObject;
 - (void)failedClumsyActionWithScore:(NSNumber *)score atAction:(NSString *)action;
+- (void)incrementProgressViewReset:(BOOL)reset;
 
 @end
