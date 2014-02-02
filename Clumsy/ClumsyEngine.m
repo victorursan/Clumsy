@@ -64,7 +64,7 @@
                                                     selector:@selector(failedAction)
                                                     userInfo:nil
                                                      repeats:NO];
-  self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:time/100.0f
+  self.progressTimer = [NSTimer scheduledTimerWithTimeInterval:time/60.0f
                                                         target:self
                                                       selector:@selector(increment)
                                                       userInfo:nil

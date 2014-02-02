@@ -10,6 +10,7 @@
 #import "CustomClumsyMainView.h"
 #import "CustomMainUIButton.h"
 #import "CustomUISwipeGesture.h"
+#import "CustomUISlider.h"
 #import "ClumsyEngine.h"
 #import "ClumsyActionObject.h"
 #import "ClumsyScoreView.h"
@@ -27,8 +28,7 @@
 @property(strong, nonatomic) ClumsyActionView *actionView;
 @property(strong, nonatomic) ClumsyHighScoreLabel *highScoreLabel;
 @property(strong, nonatomic) CustomMainUIButton *mainButton;
-
-@property (nonatomic, strong) UIProgressView *progressView;
+@property(strong, nonatomic) CustomUISlider *progressSlider;
 
 @property(strong, nonatomic) CMMotionManager *motionManager;
 @property(strong, nonatomic) NSTimer *timer;
@@ -45,19 +45,10 @@
   self.facebookButton = [ClumsySocialButton buttonWithFacebookPoint:CGPointMake(265, 0) andDelegate:self];
   self.highScoreLabel = [ClumsyHighScoreLabel labelForMainViewWithFrame:CGRectMake(10, self.view.bounds.size.height-30, 320, 22) andScore:[self.score highScore]];
   self.view = self.mainView;
-  
   self.mainButton = [CustomMainUIButton buttonWithFrame:self.view.bounds andTarget:self];
+  self.progressSlider = [CustomUISlider sliderWithFrame:CGRectMake(0, 0, 320, 20)];
   
-  self.progressView = [[UIProgressView alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
-  [self.progressView setProgressViewStyle:UIProgressViewStyleDefault];
-  CGAffineTransform transform = CGAffineTransformMakeScale(1.01f, 20.0f);
-  self.progressView.transform = transform;
-  self.progressView.progressTintColor = [UIColor greenColor];
-  self.progressView.trackTintColor = [UIColor colorWithWhite:0.4f alpha:0.5f];
-  self.progressView.hidden = YES;
-  [self.view addSubview:self.progressView];
-  
-  
+  [self.view addSubview:self.progressSlider];
   [self.view addSubview:self.actionView];
   [self.view addSubview:self.mainButton];
   [self.view addSubview:self.twitterButton];
@@ -67,14 +58,7 @@
 }
 
 - (void)incrementProgressViewReset:(BOOL)reset {
-  static int count = 0;
-  count++;
-  if (!reset) {
-    [self.progressView setProgress:(float)count/90.0f animated:NO];
-  } else {
-    count = 0;
-    //[self.progressView setProgress:0 animated:NO];
-  }
+  [self.progressSlider incrementSliderReset:reset];
 }
 
 
@@ -118,7 +102,7 @@
 
 - (void)screenWasTapped:(UIButton *)sender {
   if ([self.actionView.action isEqualToString:[[ClumsyActionObject startClumsyObject] text]]) {
-    self.progressView.hidden = NO;
+    self.progressSlider.hidden = NO;
     self.engine = [ClumsyEngine startEngineWithTarget:self];
     [self hideSocialButtons];
   } else {
@@ -172,14 +156,14 @@
 }
 
 - (void)hideSocialButtons {
-  self.progressView.hidden = NO;
+  self.progressSlider.hidden = NO;
   self.facebookButton.hidden = YES;
   self.twitterButton.hidden = YES;
   self.highScoreLabel.hidden = YES;
 }
 
 - (void)showSocialButtons {
-  self.progressView.hidden = YES;
+  self.progressSlider.hidden = YES;
   self.facebookButton.hidden = NO;
   self.twitterButton.hidden = NO;
   self.highScoreLabel.hidden = NO;

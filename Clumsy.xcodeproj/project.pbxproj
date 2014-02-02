@@ -29,6 +29,7 @@
 		5709810D17B5367800192234 /* ClumsyEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5709810C17B5367800192234 /* ClumsyEngine.m */; };
 		5709811117B6A9A900192234 /* ClumsyActionObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 5709811017B6A9A900192234 /* ClumsyActionObject.m */; };
 		573BE2F91878BCF100F042A4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 573BE2F81878BCF100F042A4 /* Images.xcassets */; };
+		57539D0B189E53F9009B6CF1 /* CustomUISlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 57539D0A189E53F9009B6CF1 /* CustomUISlider.m */; };
 		57572D1717BAA88000B8D7F9 /* ClumsyScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */; };
 		57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */; };
 		57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */; };
@@ -92,6 +93,8 @@
 		5709810F17B6A9A900192234 /* ClumsyActionObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyActionObject.h; sourceTree = "<group>"; };
 		5709811017B6A9A900192234 /* ClumsyActionObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyActionObject.m; sourceTree = "<group>"; };
 		573BE2F81878BCF100F042A4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		57539D09189E53F9009B6CF1 /* CustomUISlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUISlider.h; sourceTree = "<group>"; };
+		57539D0A189E53F9009B6CF1 /* CustomUISlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUISlider.m; sourceTree = "<group>"; };
 		57572D1517BAA88000B8D7F9 /* ClumsyScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreView.h; sourceTree = "<group>"; };
 		57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreView.m; sourceTree = "<group>"; };
 		57572D1B17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreInnerBoxView.h; sourceTree = "<group>"; };
@@ -256,6 +259,8 @@
 			children = (
 				570980EF17B4F26500192234 /* MainClumsyViewController.h */,
 				570980F017B4F26500192234 /* MainClumsyViewController.m */,
+				57539D09189E53F9009B6CF1 /* CustomUISlider.h */,
+				57539D0A189E53F9009B6CF1 /* CustomUISlider.m */,
 				570980F417B4F5F000192234 /* CustomClumsyMainView.h */,
 				570980F517B4F5F000192234 /* CustomClumsyMainView.m */,
 				57F775CE17C4F25100D4788B /* ClumsyActionView.h */,
@@ -420,6 +425,7 @@
 				570980C317B4EF6800192234 /* main.m in Sources */,
 				570980C717B4EF6800192234 /* AppDelegate.m in Sources */,
 				578FAB96187DC33E00A0D90E /* HighScore.m in Sources */,
+				57539D0B189E53F9009B6CF1 /* CustomUISlider.m in Sources */,
 				570980D017B4EF6800192234 /* Clumsy.xcdatamodeld in Sources */,
 				570980F117B4F26500192234 /* MainClumsyViewController.m in Sources */,
 				570980F617B4F5F000192234 /* CustomClumsyMainView.m in Sources */,
