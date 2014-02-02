@@ -36,13 +36,13 @@
   CGFloat buttonShadowBlurRadius = 7;
   
   //// Frames
-  CGRect frame7 = self.frame;
+  //CGRect frame = self.frame;
   
   
   //// Group 2
   {
     //// Rectangle Drawing
-    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(CGRectGetMinX(frame7) + 20, CGRectGetMinY(frame7) + self.frame.size.height/2-135/2, 280, 135)];
+    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(self.center.x-140, self.center.y-135/2, 280, 135)];
     CGContextSaveGState(context);
     CGContextSetShadowWithColor(context, buttonShadowOffset, buttonShadowBlurRadius, buttonShadow.CGColor);
     [color7 setFill];

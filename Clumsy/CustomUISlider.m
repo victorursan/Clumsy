@@ -11,19 +11,18 @@
 @implementation CustomUISlider
 
 - (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-     // self.progressSlider = [[UISlider alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-      self.minimumValue = 0.0f;
-      self.maximumValue = 1.0f;
-      [self setTransform:CGAffineTransformMakeScale(1.2f, 10.0f)];
-      [self setThumbImage:[[UIImage alloc] init] forState:UIControlStateNormal];
-      self.minimumTrackTintColor = [UIColor greenColor];
-      self.maximumTrackTintColor = [UIColor colorWithWhite:0.4f alpha:0.5f];
-      self.continuous = NO;
-      self.hidden = YES;
-    }
-    return self;
+  self = [super initWithFrame:frame];
+  if (self) {
+    self.minimumValue = 0.0f;
+    self.maximumValue = 1.0f;
+    [self setTransform:CGAffineTransformMakeScale(1.2f, 10.0f)];
+    [self setThumbImage:[[UIImage alloc] init] forState:UIControlStateNormal];
+    self.minimumTrackTintColor = [UIColor greenColor];
+    self.maximumTrackTintColor = [UIColor colorWithWhite:0.4f alpha:0.5f];
+    self.continuous = NO;
+    self.hidden = YES;
+  }
+  return self;
 }
 
 + (id)sliderWithFrame:(CGRect)frame {
@@ -41,12 +40,12 @@
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect
+ {
+ // Drawing code
+ }
+ */
 
 @end

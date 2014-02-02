@@ -28,12 +28,12 @@
     self.delegate = delegate;
     self.playersScore = score;
     [self addSubview:[ClumsyScoreInnerBoxView viewWithFrame:self.bounds]];
-    [self addSubview:[ClumsyScoreLable lableWithFrame:CGRectMake(20, self.frame.size.height/2-135/2, 280, 90)
+    [self addSubview:[ClumsyScoreLable lableWithFrame:CGRectMake(self.center.x-140, self.center.y-70, 280, 90)
                                              andScore:self.playersScore
                                             andAction:[self transformeAction:action]]];
-    [self addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(20, self.bounds.size.height/2 + 60) andDelegate:self]];
-    [self addSubview:[ClumsySocialButton buttonWithFacebookPoint:CGPointMake(70, self.bounds.size.height/2 + 60) andDelegate:self]];
-    [self addSubview:[ClumsyScoreOkButton buttonWithPoint:CGPointMake(175, self.bounds.size.height/2 + 135/2 - 45) andDelegate:self]];
+    [self addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(self.center.x - 140, self.center.y + 60) andDelegate:self]];
+    [self addSubview:[ClumsySocialButton buttonWithFacebookPoint:CGPointMake(self.center.x - 90, self.center.y + 60) andDelegate:self]];
+    [self addSubview:[ClumsyScoreOkButton buttonWithPoint:CGPointMake(self.center.x+15, self.center.y+22) andDelegate:self]];
   }
   return self;
 }
@@ -64,7 +64,7 @@
 }
 
 - (void)setScore:(HighScore *)score {
-  [self addSubview:[ClumsyHighScoreLabel labelForScoreViewWithFrame:CGRectMake(30, self.bounds.size.height/2 + 25, 160, 22) andScore:[score highScore]]];
+  [self addSubview:[ClumsyHighScoreLabel labelForScoreViewWithFrame:CGRectMake(self.center.x-130, self.bounds.size.height/2 + 25, 160, 22) andScore:[score highScore]]];
 }
 
 /*

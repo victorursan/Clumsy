@@ -41,12 +41,12 @@
   [super viewDidLoad];
   self.mainView = [CustomClumsyMainView viewWithFrame:self.view.frame];
   self.actionView = [ClumsyActionView viewWithFrame:self.view.frame];
-  self.twitterButton = [ClumsySocialButton buttonWithTwitterPoint:CGPointMake(210, 0) andDelegate:self];
-  self.facebookButton = [ClumsySocialButton buttonWithFacebookPoint:CGPointMake(265, 0) andDelegate:self];
-  self.highScoreLabel = [ClumsyHighScoreLabel labelForMainViewWithFrame:CGRectMake(10, self.view.bounds.size.height-30, 320, 22) andScore:[self.score highScore]];
+  self.twitterButton = [ClumsySocialButton buttonWithTwitterPoint:CGPointMake(self.view.bounds.size.width-110, 0) andDelegate:self];
+  self.facebookButton = [ClumsySocialButton buttonWithFacebookPoint:CGPointMake(self.view.bounds.size.width-55, 0) andDelegate:self];
+  self.highScoreLabel = [ClumsyHighScoreLabel labelForMainViewWithFrame:CGRectMake(10, self.view.bounds.size.height-30, self.view.bounds.size.width, 22) andScore:[self.score highScore]];
   self.view = self.mainView;
   self.mainButton = [CustomMainUIButton buttonWithFrame:self.view.bounds andTarget:self];
-  self.progressSlider = [CustomUISlider sliderWithFrame:CGRectMake(0, 0, 320, 20)];
+  self.progressSlider = [CustomUISlider sliderWithFrame:CGRectMake(0, -3, self.view.bounds.size.width, 20)];
   
   [self.view addSubview:self.progressSlider];
   [self.view addSubview:self.actionView];
@@ -148,6 +148,7 @@
 }
 
 - (void)startScreen {
+  [self.progressSlider incrementSliderReset:YES];
   [self.mainButton removeDoubleTap];
   [self.mainButton addSingleTap];
   self.actionView.actionObject = [ClumsyActionObject startClumsyObject];
