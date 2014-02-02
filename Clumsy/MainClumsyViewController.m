@@ -33,6 +33,10 @@
 @property(strong, nonatomic) CMMotionManager *motionManager;
 @property(strong, nonatomic) NSTimer *timer;
 
+@property CGFloat oldX;
+@property CGFloat oldY;
+@property CGFloat oldZ;
+
 @end
 
 @implementation MainClumsyViewController
@@ -46,6 +50,7 @@
   self.highScoreLabel = [ClumsyHighScoreLabel labelForMainViewWithFrame:CGRectMake(10, self.view.bounds.size.height-30, self.view.bounds.size.width, 22) andScore:[self.score highScore]];
   self.view = self.mainView;
   self.mainButton = [CustomMainUIButton buttonWithFrame:self.view.bounds andTarget:self];
+  [self.mainButton addSingleTap];
   self.progressSlider = [CustomUISlider sliderWithFrame:CGRectMake(0, -3, self.view.bounds.size.width, 20)];
   
   [self.view addSubview:self.progressSlider];
@@ -78,15 +83,45 @@
   self.motionManager = nil;
   [self.timer invalidate];
   self.timer = nil;
+  
+  self.oldX = 0;
+  self.oldY = 0;
+  self.oldZ = 0;
 }
 
 - (void)pollAccel {
   CMAccelerometerData *data = self.motionManager.accelerometerData;
   CMAcceleration acc = data.acceleration;
-  if (fabsf(acc.x) > 0.9f || fabsf(acc.y) > 0.9f){
+  NSArray *check = [self differential:acc];
+  
+  CGFloat x = [check[0] doubleValue];
+  CGFloat y = [check[1] doubleValue];
+  CGFloat z = [check[2] doubleValue];
+  
+  CGFloat threshold = 1.1f;
+  
+  if (x > threshold || y > threshold || z > threshold ) {
     [self stopDeviceMotion];
     [self.engine verifyClumsyActionTaken:[ClumsyActionObject iPhoneWasShaken]];
   }
+}
+
+- (NSArray *)differential:(CMAcceleration)accel {
+  NSNumber *difX = @0;
+  NSNumber *difY = @0;
+  NSNumber *difZ = @0;
+  
+  if (self.oldX !=0 || self.oldY !=0 || self.oldZ !=0) {
+    difX = [NSNumber numberWithDouble:fabs(self.oldX-accel.x)];
+    difY = [NSNumber numberWithDouble:fabs(self.oldY-accel.y)];
+    difZ = [NSNumber numberWithDouble:fabs(self.oldZ-accel.z)];
+  }
+  
+  self.oldX = accel.x;
+  self.oldY = accel.y;
+  self.oldZ = accel.z;
+  
+  return @[difX,difY,difZ];
 }
 
 - (void)addSwipes {
@@ -121,11 +156,9 @@
 - (void)setClumsyMainLabelTextTo:(ClumsyActionObject *)clumsyObject {
   
   if ([clumsyObject.text isEqual:@"Double Tap"]) {
-    [self.mainButton addDoubleTap];
     [self.mainButton removeSingleTap];
   } else {
     [self.mainButton addSingleTap];
-    [self.mainButton removeDoubleTap];
   }
   self.actionView.actionObject = clumsyObject;
   
@@ -149,7 +182,6 @@
 
 - (void)startScreen {
   [self.progressSlider incrementSliderReset:YES];
-  [self.mainButton removeDoubleTap];
   [self.mainButton addSingleTap];
   self.actionView.actionObject = [ClumsyActionObject startClumsyObject];
   [self.mainView nextBackgroundColor];

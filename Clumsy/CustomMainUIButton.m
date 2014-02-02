@@ -27,6 +27,7 @@
     self.singleTap.numberOfTapsRequired = 1;
     self.doubleTap.numberOfTapsRequired = 2;
     [self addGestureRecognizer:self.singleTap];
+    [self addGestureRecognizer:self.doubleTap];
   }
   return self;
 }
