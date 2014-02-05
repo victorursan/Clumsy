@@ -59,7 +59,7 @@
   return score;
 }
 
-- (Score *)highScore {
+- (Score *)scoreValue {
   return self.score;
 }
 

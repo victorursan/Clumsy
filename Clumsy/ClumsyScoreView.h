@@ -16,8 +16,8 @@
 @interface ClumsyScoreView : UIView <ClumsyScoreOkButtonDelegate, ClumsySocialButtonDelegate>
 
 @property(strong, nonatomic) id<ClumsyScoreViewDelegate>delegate;
-@property(strong, nonatomic) HighScore *score;
+@property(strong, nonatomic) HighScore *highScore;
 
-+ (id)viewWithFrame:(CGRect)frame delegate:(id)delegate score:(NSNumber *)score andAction:(NSString *)action;
++ (id)viewWithFrame:(CGRect)frame delegate:(id)delegate score:(NSNumber *)score action:(NSString *)action andHighScore:(HighScore *)highScore;
 
 @end

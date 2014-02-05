@@ -35,10 +35,9 @@
 		57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */; };
 		57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */; };
 		57572D3417BF83F800B8D7F9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57572D3317BF83F800B8D7F9 /* Social.framework */; };
+		57576A3018A1614C00A059CA /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 57576A2F18A1614C00A059CA /* Score.m */; };
 		576F1B9E17C0B1CC00A2A919 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */; };
 		576F1BA417C17DEF00A2A919 /* ClumsySocialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */; };
-		578FAB92187DC1E800A0D90E /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB91187DC1E800A0D90E /* Score.m */; };
-		578FAB93187DC1E800A0D90E /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB91187DC1E800A0D90E /* Score.m */; };
 		578FAB96187DC33E00A0D90E /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB95187DC33E00A0D90E /* HighScore.m */; };
 		578FAB97187DC33E00A0D90E /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB95187DC33E00A0D90E /* HighScore.m */; };
 		578FAB9A187F23D400A0D90E /* ClumsyHighScoreLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB99187F23D400A0D90E /* ClumsyHighScoreLabel.m */; };
@@ -106,13 +105,13 @@
 		57572D2F17BEE16100B8D7F9 /* ClumsyScoreOkButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreOkButtonDelegate.h; sourceTree = "<group>"; };
 		57572D3317BF83F800B8D7F9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		57572D3517BF864500B8D7F9 /* ClumsyScoreViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreViewDelegate.h; sourceTree = "<group>"; };
+		57576A2E18A1614C00A059CA /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		57576A2F18A1614C00A059CA /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		576F1BA217C17DEE00A2A919 /* ClumsySocialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsySocialButton.h; sourceTree = "<group>"; };
 		576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsySocialButton.m; sourceTree = "<group>"; };
 		576F1BA517C1800C00A2A919 /* ClumsySocialButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsySocialButtonDelegate.h; sourceTree = "<group>"; };
 		578FAB8E187DBA7D00A0D90E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		578FAB90187DC1E800A0D90E /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
-		578FAB91187DC1E800A0D90E /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		578FAB94187DC33E00A0D90E /* HighScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighScore.h; sourceTree = "<group>"; };
 		578FAB95187DC33E00A0D90E /* HighScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighScore.m; sourceTree = "<group>"; };
 		578FAB98187F23D400A0D90E /* ClumsyHighScoreLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyHighScoreLabel.h; sourceTree = "<group>"; };
@@ -280,8 +279,8 @@
 		57AEB7301879B2DF00B057AE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				578FAB90187DC1E800A0D90E /* Score.h */,
-				578FAB91187DC1E800A0D90E /* Score.m */,
+				57576A2E18A1614C00A059CA /* Score.h */,
+				57576A2F18A1614C00A059CA /* Score.m */,
 				578FAB94187DC33E00A0D90E /* HighScore.h */,
 				578FAB95187DC33E00A0D90E /* HighScore.m */,
 				5709810B17B5367700192234 /* ClumsyEngine.h */,
@@ -424,6 +423,7 @@
 			files = (
 				570980C317B4EF6800192234 /* main.m in Sources */,
 				570980C717B4EF6800192234 /* AppDelegate.m in Sources */,
+				57576A3018A1614C00A059CA /* Score.m in Sources */,
 				578FAB96187DC33E00A0D90E /* HighScore.m in Sources */,
 				57539D0B189E53F9009B6CF1 /* CustomUISlider.m in Sources */,
 				570980D017B4EF6800192234 /* Clumsy.xcdatamodeld in Sources */,
@@ -441,7 +441,6 @@
 				57F775D017C4F25100D4788B /* ClumsyActionView.m in Sources */,
 				578FAB9A187F23D400A0D90E /* ClumsyHighScoreLabel.m in Sources */,
 				57F775D317C57EC800D4788B /* ClumsySocialHandler.m in Sources */,
-				578FAB92187DC1E800A0D90E /* Score.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +448,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				578FAB93187DC1E800A0D90E /* Score.m in Sources */,
 				570980E617B4EF6800192234 /* ClumsyTests.m in Sources */,
 				578FAB97187DC33E00A0D90E /* HighScore.m in Sources */,
 				570980F217B4F26500192234 /* MainClumsyViewController.m in Sources */,
@@ -549,7 +547,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Victor Ursan (94TWQJ7GSF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Victor Ursan (94TWQJ7GSF)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";
@@ -570,7 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Victor Ursan (94TWQJ7GSF)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Victor Ursan (94TWQJ7GSF)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Clumsy/Clumsy-Prefix.pch";

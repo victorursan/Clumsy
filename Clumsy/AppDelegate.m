@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   MainClumsyViewController *main = [[MainClumsyViewController alloc] init];
-  main.score = [[HighScore alloc] initWithContext:self.managedObjectContext];
+  main.highScore = [[HighScore alloc] initWithContext:self.managedObjectContext];
   [self.window setRootViewController:main];
   self.window.backgroundColor = [UIColor whiteColor];
   [self.window makeKeyAndVisible];

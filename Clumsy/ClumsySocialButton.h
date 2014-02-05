@@ -15,5 +15,6 @@
 
 + (id)buttonWithTwitterPoint:(CGPoint)point andDelegate:(id)delegate;
 + (id)buttonWithFacebookPoint:(CGPoint)point andDelegate:(id)delegate;
-
++ (id)buttonForScoreViewWithTwitterPoint:(CGPoint)point andDelegate:(id)delegate;
++ (id)buttonForScoreViewWithFacebookPoint:(CGPoint)point andDelegate:(id)delegate;
 @end

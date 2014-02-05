@@ -47,11 +47,11 @@
   self.actionView = [ClumsyActionView viewWithFrame:self.view.frame];
   self.twitterButton = [ClumsySocialButton buttonWithTwitterPoint:CGPointMake(self.view.bounds.size.width-110, 0) andDelegate:self];
   self.facebookButton = [ClumsySocialButton buttonWithFacebookPoint:CGPointMake(self.view.bounds.size.width-55, 0) andDelegate:self];
-  self.highScoreLabel = [ClumsyHighScoreLabel labelForMainViewWithFrame:CGRectMake(10, self.view.bounds.size.height-30, self.view.bounds.size.width, 22) andScore:[self.score highScore]];
+  self.highScoreLabel = [ClumsyHighScoreLabel labelForMainViewWithFrame:CGRectMake(10, self.view.bounds.size.height-30, self.view.bounds.size.width, 22) andScore:[self.highScore score]];
   self.view = self.mainView;
   self.mainButton = [CustomMainUIButton buttonWithFrame:self.view.bounds andTarget:self];
   [self.mainButton addSingleTap];
-  self.progressSlider = [CustomUISlider sliderWithFrame:CGRectMake(0, -3, self.view.bounds.size.width, 20)];
+  self.progressSlider = [CustomUISlider sliderWithFrame:CGRectMake(0, -7, self.view.bounds.size.width, 20)];
   
   [self.view addSubview:self.progressSlider];
   [self.view addSubview:self.actionView];
@@ -98,7 +98,7 @@
   CGFloat y = [check[1] doubleValue];
   CGFloat z = [check[2] doubleValue];
   
-  CGFloat threshold = 1.1f;
+  CGFloat threshold = 1.0f;
   
   if (x > threshold || y > threshold || z > threshold ) {
     [self stopDeviceMotion];
@@ -173,10 +173,7 @@
   self.mainButton.enabled = NO;
   self.engine = nil;
   [self stopDeviceMotion];
-  [self.score setHighScore:[score integerValue]];
-  [self.highScoreLabel setScore:[[[self.score highScore] highScore] integerValue]];
-  ClumsyScoreView *scoreView = [ClumsyScoreView viewWithFrame:self.view.bounds delegate:self score:score andAction:action];
-  scoreView.score = self.score;
+  ClumsyScoreView *scoreView = [ClumsyScoreView viewWithFrame:self.view.bounds delegate:self score:score action:action andHighScore:self.highScore];
   [self.view addSubview:scoreView];
 }
 
@@ -196,6 +193,7 @@
 }
 
 - (void)showSocialButtons {
+  [self.highScoreLabel setScore:[[[self.highScore scoreValue] highScore] integerValue]];
   self.progressSlider.hidden = YES;
   self.facebookButton.hidden = NO;
   self.twitterButton.hidden = NO;

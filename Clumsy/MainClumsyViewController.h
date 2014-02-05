@@ -19,6 +19,6 @@
 
 @interface MainClumsyViewController : UIViewController <ClumsySocialButtonDelegate, ClumsyScoreViewDelegate, ClumsyEngineDelegate, CustomMainUIButtonDelegate, CustomUISwipeGestureDelegate, UIGestureRecognizerDelegate>
 
-@property(strong, nonatomic) HighScore *score;
+@property(strong, nonatomic) HighScore *highScore;
 
 @end

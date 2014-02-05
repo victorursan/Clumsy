@@ -22,18 +22,25 @@
 
 @implementation ClumsyScoreView
 
-- (id)initWithFrame:(CGRect)frame delegate:(id)delegate score:(NSNumber *)score andAction:(NSString *)action {
+- (id)initWithFrame:(CGRect)frame delegate:(id)delegate score:(NSNumber *)score action:(NSString *)action andHighScore:(HighScore *)highScore {
   self = [super initWithFrame:frame];
   if (self) {
     self.delegate = delegate;
+    self.highScore = highScore;
     self.playersScore = score;
-    [self addSubview:[ClumsyScoreInnerBoxView viewWithFrame:self.bounds]];
+    
+    
+   // self.backgroundColor = [UIColor colorWithRed: 0.286 green: 0.286 blue: 0.286 alpha: 0.35];
+    [self.highScore setHighScore:[self.playersScore integerValue]];
+
+    [self addSubview:[ClumsyScoreInnerBoxView viewWithFrame:CGRectMake(self.center.x-140, self.center.y-70, 280, 140)]];
     [self addSubview:[ClumsyScoreLable lableWithFrame:CGRectMake(self.center.x-140, self.center.y-70, 280, 90)
                                              andScore:self.playersScore
                                             andAction:[self transformeAction:action]]];
-    [self addSubview:[ClumsySocialButton buttonWithTwitterPoint:CGPointMake(self.center.x - 140, self.center.y + 60) andDelegate:self]];
-    [self addSubview:[ClumsySocialButton buttonWithFacebookPoint:CGPointMake(self.center.x - 90, self.center.y + 60) andDelegate:self]];
+    [self addSubview:[ClumsySocialButton buttonForScoreViewWithTwitterPoint:CGPointMake(self.center.x - 140, self.center.y + 60) andDelegate:self]];
+    [self addSubview:[ClumsySocialButton buttonForScoreViewWithFacebookPoint:CGPointMake(self.center.x - 90, self.center.y + 60) andDelegate:self]];
     [self addSubview:[ClumsyScoreOkButton buttonWithPoint:CGPointMake(self.center.x+15, self.center.y+22) andDelegate:self]];
+    [self addSubview:[ClumsyHighScoreLabel labelForScoreViewWithFrame:CGRectMake(self.center.x-130, self.center.y + 25, 160, 22) andScore:[self.highScore scoreValue]]];
   }
   return self;
 }
@@ -53,8 +60,8 @@
   [self.delegate presentSocialViewController:[ClumsySocialHandler viewControllerForButton:sender andScore:self.playersScore]];
 }
 
-+ (id)viewWithFrame:(CGRect)frame delegate:(id)delegate score:(NSNumber *)score andAction:(NSString *)action {
-  return [[ClumsyScoreView alloc] initWithFrame:frame delegate:delegate score:score andAction:action];
++ (id)viewWithFrame:(CGRect)frame delegate:(id)delegate score:(NSNumber *)score action:(NSString *)action andHighScore:(HighScore *)highScore {
+  return [[ClumsyScoreView alloc] initWithFrame:frame delegate:delegate score:score action:action andHighScore:highScore];
 }
 
 - (void)okButtonPressed:(id)sender {
@@ -63,9 +70,7 @@
   [self removeFromSuperview];
 }
 
-- (void)setScore:(HighScore *)score {
-  [self addSubview:[ClumsyHighScoreLabel labelForScoreViewWithFrame:CGRectMake(self.center.x-130, self.bounds.size.height/2 + 25, 160, 22) andScore:[score highScore]]];
-}
+
 
 /*
  // Only override drawRect: if you perform custom drawing.

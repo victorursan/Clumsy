@@ -15,7 +15,7 @@
   if (self) {
     self.minimumValue = 0.0f;
     self.maximumValue = 1.0f;
-    [self setTransform:CGAffineTransformMakeScale(1.2f, 10.0f)];
+    [self setTransform:CGAffineTransformMakeScale(1.2f, 5.0f)];
     [self setThumbImage:[[UIImage alloc] init] forState:UIControlStateNormal];
     self.minimumTrackTintColor = [UIColor greenColor];
     self.maximumTrackTintColor = [UIColor colorWithWhite:0.4f alpha:0.5f];
