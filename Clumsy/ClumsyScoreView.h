@@ -18,6 +18,6 @@
 @property(strong, nonatomic) id<ClumsyScoreViewDelegate>delegate;
 @property(strong, nonatomic) HighScore *highScore;
 
-+ (id)viewWithFrame:(CGRect)frame delegate:(id)delegate score:(NSNumber *)score action:(NSString *)action andHighScore:(HighScore *)highScore;
++ (id)viewWithFrame:(CGRect)frame delegate:(id)delegate score:(NSNumber *)score andHighScore:(HighScore *)highScore;
 
 @end

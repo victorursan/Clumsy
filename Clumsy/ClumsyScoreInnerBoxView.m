@@ -13,8 +13,7 @@
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-       self.backgroundColor = [UIColor colorWithWhite:0.5f alpha:0.7f];
-      //[UIColor clearColor];
+       self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -23,37 +22,33 @@
   return [[ClumsyScoreInnerBoxView alloc] initWithFrame:frame];
 }
 
-//- (void)drawRect:(CGRect)rect
-//{//// General Declarations
-//  CGContextRef context = UIGraphicsGetCurrentContext();
-//  
-//  //// Color Declarations
-//  UIColor* shadowColor2 = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 1];
-//  UIColor* color7 = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 0.497];
-//  
-//  //// Shadow Declarations
-//  UIColor* buttonShadow = shadowColor2;
-//  CGSize buttonShadowOffset = CGSizeMake(0.1, -0.1);
-//  CGFloat buttonShadowBlurRadius = 7;
-//  
-//  //// Frames
-//  //CGRect frame = self.frame;
-//  
-//  
-//  //// Group 2
-//  {
-//    //// Rectangle Drawing
-//    UIBezierPath* rectanglePath = [UIBezierPath bezierPathWithRect: CGRectMake(self.center.x-140, self.center.y-135/2, 280, 135)];
-//    CGContextSaveGState(context);
-//    CGContextSetShadowWithColor(context, buttonShadowOffset, buttonShadowBlurRadius, buttonShadow.CGColor);
-//    [color7 setFill];
-//    [rectanglePath fill];
-//    CGContextRestoreGState(context);
-//    
-//  }
-//  
-//    
-//}  
+- (void)drawRect:(CGRect)rect{
+  //// General Declarations
+  CGContextRef context = UIGraphicsGetCurrentContext();
+  
+  //// Color Declarations
+  UIColor* shadowColor2 = [UIColor colorWithRed: 0 green: 0 blue: 0 alpha: 1];
+  UIColor* color18 = [UIColor colorWithRed: 0.286 green: 0.286 blue: 0.286 alpha: 0.45];
+  
+  //// Shadow Declarations
+  UIColor* buttonShadow = [shadowColor2 colorWithAlphaComponent: 0.67];
+  CGSize buttonShadowOffset = CGSizeMake(0.1, -0.1);
+  CGFloat buttonShadowBlurRadius = 7;
+
+  
+  {
+  //// Rounded Rectangle Drawing
+  UIBezierPath* roundedRectanglePath = [UIBezierPath bezierPathWithRoundedRect: CGRectMake(10, 25, 300, 200) cornerRadius: 4];
+  CGContextSaveGState(context);
+  CGContextSetShadowWithColor(context, buttonShadowOffset, buttonShadowBlurRadius, buttonShadow.CGColor);
+  [color18 setFill];
+  [roundedRectanglePath fill];
+  CGContextRestoreGState(context);
+  
+  }
+  
+
+}
 
 
 @end

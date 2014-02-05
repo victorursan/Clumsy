@@ -15,14 +15,14 @@
   self = [super initWithFrame:frame];
   if (self) {
     self.score = [score.highScore integerValue];
-    self.text = [NSString stringWithFormat:@"High score: %d",self.score];
+    self.text = [NSString stringWithFormat:@"HIGHSCORE: %d",self.score];
   }
   return self;
 }
 
 - (void)setScore:(NSInteger)score {
   _score = score;
-  self.text = [NSString stringWithFormat:@"High score: %d",self.score];
+  self.text = [NSString stringWithFormat:@"HIGHSCORE: %d",self.score];
   [self sizeToFit];
 }
 
@@ -30,15 +30,6 @@
   ClumsyHighScoreLabel *scoreLabel = [[ClumsyHighScoreLabel alloc] initWithFrame:frame andScore:score];
   scoreLabel.textColor = [UIColor whiteColor];
   scoreLabel.textAlignment = NSTextAlignmentLeft;
-  [scoreLabel sizeToFit];
-  return scoreLabel;
-}
-
-+ (id)labelForScoreViewWithFrame:(CGRect)frame andScore:(Score *)score {
-  ClumsyHighScoreLabel *scoreLabel = [[ClumsyHighScoreLabel alloc] initWithFrame:frame andScore:score];
-  scoreLabel.font = [UIFont fontWithName:@"arial" size:16];
-  scoreLabel.textColor = [UIColor lightTextColor];
-  scoreLabel.textAlignment = NSTextAlignmentCenter;
   [scoreLabel sizeToFit];
   return scoreLabel;
 }

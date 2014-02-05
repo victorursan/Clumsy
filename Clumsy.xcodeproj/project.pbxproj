@@ -32,10 +32,12 @@
 		57539D0B189E53F9009B6CF1 /* CustomUISlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 57539D0A189E53F9009B6CF1 /* CustomUISlider.m */; };
 		57572D1717BAA88000B8D7F9 /* ClumsyScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */; };
 		57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */; };
-		57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */; };
 		57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */; };
 		57572D3417BF83F800B8D7F9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57572D3317BF83F800B8D7F9 /* Social.framework */; };
 		57576A3018A1614C00A059CA /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = 57576A2F18A1614C00A059CA /* Score.m */; };
+		57576A3318A28BA200A059CA /* ClumsyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 57576A3218A28BA200A059CA /* ClumsyHeader.m */; };
+		57576A3618A2913000A059CA /* ClumsyScoreLabelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57576A3518A2913000A059CA /* ClumsyScoreLabelView.m */; };
+		57576A3918A2967F00A059CA /* ClumsyNewHighScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57576A3818A2967F00A059CA /* ClumsyNewHighScoreView.m */; };
 		576F1B9E17C0B1CC00A2A919 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */; };
 		576F1BA417C17DEF00A2A919 /* ClumsySocialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */; };
 		578FAB96187DC33E00A0D90E /* HighScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 578FAB95187DC33E00A0D90E /* HighScore.m */; };
@@ -98,8 +100,6 @@
 		57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreView.m; sourceTree = "<group>"; };
 		57572D1B17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreInnerBoxView.h; sourceTree = "<group>"; };
 		57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreInnerBoxView.m; sourceTree = "<group>"; };
-		57572D2317BAD21F00B8D7F9 /* ClumsyScoreLable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreLable.h; sourceTree = "<group>"; };
-		57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreLable.m; sourceTree = "<group>"; };
 		57572D2C17BEE14100B8D7F9 /* ClumsyScoreOkButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreOkButton.h; sourceTree = "<group>"; };
 		57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreOkButton.m; sourceTree = "<group>"; };
 		57572D2F17BEE16100B8D7F9 /* ClumsyScoreOkButtonDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreOkButtonDelegate.h; sourceTree = "<group>"; };
@@ -107,6 +107,12 @@
 		57572D3517BF864500B8D7F9 /* ClumsyScoreViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreViewDelegate.h; sourceTree = "<group>"; };
 		57576A2E18A1614C00A059CA /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		57576A2F18A1614C00A059CA /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
+		57576A3118A28BA200A059CA /* ClumsyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyHeader.h; sourceTree = "<group>"; };
+		57576A3218A28BA200A059CA /* ClumsyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyHeader.m; sourceTree = "<group>"; };
+		57576A3418A2913000A059CA /* ClumsyScoreLabelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyScoreLabelView.h; sourceTree = "<group>"; };
+		57576A3518A2913000A059CA /* ClumsyScoreLabelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyScoreLabelView.m; sourceTree = "<group>"; };
+		57576A3718A2967F00A059CA /* ClumsyNewHighScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsyNewHighScoreView.h; sourceTree = "<group>"; };
+		57576A3818A2967F00A059CA /* ClumsyNewHighScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsyNewHighScoreView.m; sourceTree = "<group>"; };
 		576F1B9C17C0B1C100A2A919 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		576F1BA217C17DEE00A2A919 /* ClumsySocialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClumsySocialButton.h; sourceTree = "<group>"; };
 		576F1BA317C17DEF00A2A919 /* ClumsySocialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClumsySocialButton.m; sourceTree = "<group>"; };
@@ -242,13 +248,17 @@
 				57572D1517BAA88000B8D7F9 /* ClumsyScoreView.h */,
 				57572D1617BAA88000B8D7F9 /* ClumsyScoreView.m */,
 				57572D3517BF864500B8D7F9 /* ClumsyScoreViewDelegate.h */,
+				57576A3118A28BA200A059CA /* ClumsyHeader.h */,
+				57576A3218A28BA200A059CA /* ClumsyHeader.m */,
+				57576A3418A2913000A059CA /* ClumsyScoreLabelView.h */,
+				57576A3518A2913000A059CA /* ClumsyScoreLabelView.m */,
+				57576A3718A2967F00A059CA /* ClumsyNewHighScoreView.h */,
+				57576A3818A2967F00A059CA /* ClumsyNewHighScoreView.m */,
 				57572D1B17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.h */,
 				57572D1C17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m */,
 				57572D2C17BEE14100B8D7F9 /* ClumsyScoreOkButton.h */,
 				57572D2D17BEE14200B8D7F9 /* ClumsyScoreOkButton.m */,
 				57572D2F17BEE16100B8D7F9 /* ClumsyScoreOkButtonDelegate.h */,
-				57572D2317BAD21F00B8D7F9 /* ClumsyScoreLable.h */,
-				57572D2417BAD21F00B8D7F9 /* ClumsyScoreLable.m */,
 			);
 			name = ClumsyScoreView;
 			sourceTree = "<group>";
@@ -426,16 +436,18 @@
 				57576A3018A1614C00A059CA /* Score.m in Sources */,
 				578FAB96187DC33E00A0D90E /* HighScore.m in Sources */,
 				57539D0B189E53F9009B6CF1 /* CustomUISlider.m in Sources */,
+				57576A3918A2967F00A059CA /* ClumsyNewHighScoreView.m in Sources */,
 				570980D017B4EF6800192234 /* Clumsy.xcdatamodeld in Sources */,
+				57576A3318A28BA200A059CA /* ClumsyHeader.m in Sources */,
 				570980F117B4F26500192234 /* MainClumsyViewController.m in Sources */,
 				570980F617B4F5F000192234 /* CustomClumsyMainView.m in Sources */,
 				570980F917B4F81500192234 /* CustomMainUIButton.m in Sources */,
 				5709810617B4FFFF00192234 /* CustomUISwipeGesture.m in Sources */,
+				57576A3618A2913000A059CA /* ClumsyScoreLabelView.m in Sources */,
 				5709810D17B5367800192234 /* ClumsyEngine.m in Sources */,
 				5709811117B6A9A900192234 /* ClumsyActionObject.m in Sources */,
 				57572D1717BAA88000B8D7F9 /* ClumsyScoreView.m in Sources */,
 				57572D1D17BABE3700B8D7F9 /* ClumsyScoreInnerBoxView.m in Sources */,
-				57572D2517BAD21F00B8D7F9 /* ClumsyScoreLable.m in Sources */,
 				57572D2E17BEE14200B8D7F9 /* ClumsyScoreOkButton.m in Sources */,
 				576F1BA417C17DEF00A2A919 /* ClumsySocialButton.m in Sources */,
 				57F775D017C4F25100D4788B /* ClumsyActionView.m in Sources */,

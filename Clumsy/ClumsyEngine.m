@@ -90,7 +90,7 @@
 
 - (void)failedAction {
   [self stopTimer];
-  [self.delegate failedClumsyActionWithScore:[NSNumber numberWithInt:score] atAction:[self.clumsyObject text]];
+  [self.delegate failedClumsyActionWithScore:[NSNumber numberWithInt:score]];
 }
 
 @end

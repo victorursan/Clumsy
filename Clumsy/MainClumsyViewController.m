@@ -169,11 +169,11 @@
   [self.mainView nextBackgroundColor];
 }
 
-- (void)failedClumsyActionWithScore:(NSNumber *)score atAction:(NSString *)action {
+- (void)failedClumsyActionWithScore:(NSNumber *)score {
   self.mainButton.enabled = NO;
   self.engine = nil;
   [self stopDeviceMotion];
-  ClumsyScoreView *scoreView = [ClumsyScoreView viewWithFrame:self.view.bounds delegate:self score:score action:action andHighScore:self.highScore];
+  ClumsyScoreView *scoreView = [ClumsyScoreView viewWithFrame:self.view.bounds delegate:self score:score andHighScore:self.highScore];
   [self.view addSubview:scoreView];
 }
 

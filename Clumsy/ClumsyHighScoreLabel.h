@@ -15,5 +15,5 @@
 @property(nonatomic) NSInteger score;
 
 + (id)labelForMainViewWithFrame:(CGRect)frame andScore:(Score *)score;
-+ (id)labelForScoreViewWithFrame:(CGRect)frame andScore:(Score *)score;
+
 @end

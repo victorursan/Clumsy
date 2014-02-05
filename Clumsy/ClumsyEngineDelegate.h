@@ -12,7 +12,7 @@
 @protocol ClumsyEngineDelegate <NSObject>
 
 - (void)setClumsyMainLabelTextTo:(ClumsyActionObject *)clumsyObject;
-- (void)failedClumsyActionWithScore:(NSNumber *)score atAction:(NSString *)action;
+- (void)failedClumsyActionWithScore:(NSNumber *)score;
 - (void)incrementProgressViewReset:(BOOL)reset;
 
 @end
