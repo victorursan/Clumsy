@@ -26,7 +26,7 @@
 }
 
 + (id)screenWasSwipedInDirection:(UISwipeGestureRecognizer *)swipe {
-  NSString *swipeToString = [NSString stringWithFormat:@"%u",[swipe direction]];
+  NSString *swipeToString = [NSString stringWithFormat:@"%lu",[swipe direction]];
   NSDictionary *swipeDirection = @{@"1":@"Swipe Right",
                                    @"2":@"Swipe Left",
                                    @"4":@"Swipe Up",

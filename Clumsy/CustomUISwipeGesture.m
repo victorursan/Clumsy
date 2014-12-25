@@ -17,6 +17,7 @@
     self.numberOfTouchesRequired = 1;
     self.direction = direction;
     [self addTarget:self.delegate action:@selector(screenWasSwiped:)];
+    
   }
   return self;
 }

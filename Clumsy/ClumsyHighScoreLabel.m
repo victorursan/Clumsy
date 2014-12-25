@@ -15,14 +15,14 @@
   self = [super initWithFrame:frame];
   if (self) {
     self.score = [score.highScore integerValue];
-    self.text = [NSString stringWithFormat:@"HIGHSCORE: %d",self.score];
+    self.text = [NSString stringWithFormat:@"HIGHSCORE: %ld",(long)self.score];
   }
   return self;
 }
 
 - (void)setScore:(NSInteger)score {
   _score = score;
-  self.text = [NSString stringWithFormat:@"HIGHSCORE: %d",self.score];
+  self.text = [NSString stringWithFormat:@"HIGHSCORE: %ld",(long)self.score];
   [self sizeToFit];
 }
 

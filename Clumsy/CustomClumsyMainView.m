@@ -173,6 +173,7 @@
   CGContextDrawLinearGradient(context, gradient, CGPointMake(160, 0), CGPointMake(160, self.frame.size.height), 0);
   CGContextRestoreGState(context);
   
+  
   //// Cleanup
   CGGradientRelease(gradient);
   CGColorSpaceRelease(colorSpace);
